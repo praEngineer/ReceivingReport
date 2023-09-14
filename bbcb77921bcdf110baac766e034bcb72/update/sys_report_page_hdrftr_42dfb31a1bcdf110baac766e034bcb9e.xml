@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report_page_hdrftr">
+    <sys_report_page_hdrftr action="INSERT_OR_UPDATE">
+        <ftr_data>Run by, Run Date and Time, Page X of Y</ftr_data>
+        <hdr_data>Report Title, Empty, Page X</hdr_data>
+        <left_ftr_content>3</left_ftr_content>
+        <left_ftr_img/>
+        <left_ftr_text/>
+        <left_hdr_content>2</left_hdr_content>
+        <left_hdr_img/>
+        <left_hdr_text/>
+        <mid_ftr_content>4</mid_ftr_content>
+        <mid_ftr_img/>
+        <mid_ftr_text/>
+        <mid_hdr_content>7</mid_hdr_content>
+        <mid_hdr_img/>
+        <mid_hdr_text/>
+        <name>ReceivingReport</name>
+        <right_ftr_content>1</right_ftr_content>
+        <right_ftr_img/>
+        <right_ftr_text/>
+        <right_hdr_content>0</right_hdr_content>
+        <right_hdr_img/>
+        <right_hdr_text/>
+        <sys_class_name>sys_report_page_hdrftr</sys_class_name>
+        <sys_created_by>sfarkas</sys_created_by>
+        <sys_created_on>2023-09-05 19:44:42</sys_created_on>
+        <sys_id>42dfb31a1bcdf110baac766e034bcb9e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>ReceivingReport</sys_name>
+        <sys_package display_value="ReceivingReport" source="x_dosny_vendorrepo">bbcb77921bcdf110baac766e034bcb72</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ReceivingReport">bbcb77921bcdf110baac766e034bcb72</sys_scope>
+        <sys_update_name>sys_report_page_hdrftr_42dfb31a1bcdf110baac766e034bcb9e</sys_update_name>
+        <sys_updated_by>sfarkas</sys_updated_by>
+        <sys_updated_on>2023-09-05 19:44:58</sys_updated_on>
+    </sys_report_page_hdrftr>
+</record_update>

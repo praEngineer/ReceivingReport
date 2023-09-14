@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_doc_template_category">
+    <sn_doc_template_category action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <name>BIT Procurement</name>
+        <sys_class_name>sn_doc_template_category</sys_class_name>
+        <sys_created_by>sfarkas</sys_created_by>
+        <sys_created_on>2023-09-05 20:36:37</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>7efb04661b013510baac766e034bcb40</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>BIT Procurement</sys_name>
+        <sys_package display_value="ReceivingReport" source="x_dosny_vendorrepo">bbcb77921bcdf110baac766e034bcb72</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ReceivingReport">bbcb77921bcdf110baac766e034bcb72</sys_scope>
+        <sys_update_name>sn_doc_template_category_7efb04661b013510baac766e034bcb40</sys_update_name>
+        <sys_updated_by>sfarkas</sys_updated_by>
+        <sys_updated_on>2023-09-05 20:36:37</sys_updated_on>
+    </sn_doc_template_category>
+</record_update>

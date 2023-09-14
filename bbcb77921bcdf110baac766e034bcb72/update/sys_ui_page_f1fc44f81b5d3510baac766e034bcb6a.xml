@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>cms</category>
+        <client_script><![CDATA[// Create an HTML table to display the results
+var htmlHeader = 
+	'<table style="width:100%;"><tbody><tr><td style="width:25%;"><p class="s1" style="padding-left: 9pt;text-indent: 0pt;text-align: left;">23&nbsp;BS-3<span style=" color: #3A3A3A;">(Rev. 8/96)</span></p><p class="s1" style="padding-left: 9pt;text-indent: 0pt;text-align: left;"><span style=" color: #3A3A3A;">180M-0-125 034</span></p></td><td style="width:30%;"><p class="s6" style="padding-top: 4pt;text-indent: 0pt;line-height: 9pt;padding-left: 35pt;"><span style=" color: #3A3A3A;">RECEIVING&nbsp;</span><span style=" color: #3A3A3A;">REPORT</span></p></td><td style="width:45%;"><p class="s6" style="padding-top: 4pt;text-indent: 0pt;line-height: 9pt;padding-left: 35pt;"><span class="s1" style="padding-top: 4pt;padding-left: 4pt;text-indent: 0pt;line-height: 9pt;text-align: right;">THE CITY OF NEW YORK</span><br><br><span class="s2" style="padding-left: 4pt;text-indent: 0pt;line-height: 9pt;text-align: right;">DEPARTMENT OF CITY  WIDE ADMINISTRATIVE SERVICES</span><br><br><span class="s2" style="padding-left: 4pt;text-indent: 0pt;text-align: right;">DIVISION OF MUNICIPAL SUPPLY SERVICES</span></p></td></tr></tbody></table>'+
+	'<p style="text-indent: 0pt;text-align: left;"><br><br></p>' +
+	'<p style="padding-left: 56pt;text-indent: 0pt;text-align: justify;"><b>NOTE TO AGENCY SUBMITTING RECEIVING REPORTS:</b><u>THIS REPORT IS TO BE COMPLETED IMMEDIATELY UPON<br><br>DELIVERY.</u><span style=" color: #000;">THE NO. 1 COPY IS TO BE SENT TO THE BUREAU OF QUALITY ASSURANCE. THE nO. 2, 3, 4 COPIES ARE<br><br>TO BE UTILIZED FOR AUDIT AND ACCOUNTING PURPOSES AND SHOULD BE DISTRIBUTED AS DIRECTED WITHIN<br><br>YOUR OWN AGENCY.</span></p>'+
+	'<p style="text-indent: 0pt;text-align: left;"><br><br></p>'+
+	'<h2 style="padding-left: 31pt;text-indent: 0pt;text-align: left;">SHADED AREAS FOR THE USE OF DIV. OF MUNICIPAL SUPPLY SERVICES</h2>' +
+	'<p style="text-indent: 0pt;text-align: left;"><br><br></p>';
+
+var htmlTop = '<table style="border-collapse:collapse;margin-left:5.23954pt" cellspacing="0"><tbody><tr style="height:11pt"><td style="width:50pt;border-top-style:solid;border-top-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s15" style="padding-left: 5pt;padding-right: 5pt;text-indent: 10pt;text-align: left;">DATE PREPARED</p></td><td style="width:40pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p class="s15" style="padding-top: 2pt;padding-left: 3pt;text-indent: 0pt;line-height: 8pt;text-align: left;">RECEIVED</p></td><td style="width:14pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p class="s16" style="padding-top: 2pt;padding-left: 1pt;text-indent: 0pt;line-height: 8pt;text-align: left;">BY</p></td><td style="width:172pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:10pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:30pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:35pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:3pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:23pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:5pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:61pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s17" style="padding-left: 2pt;padding-right: 1pt;text-indent: 5pt;text-align: left;">OMPA OR<br><br>CONTRACT NO.</p></td><td style="width:62pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s19" style="text-indent: 0pt;line-height: 8pt;text-align: left;">ORDER NO.</p></td><td style="width:35pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s19" style="padding-top: 1pt;padding-left: 2pt;text-indent: 0pt;text-align: left;">SHIPPING</p><p class="s19" style="padding-left: 2pt;text-indent: 0pt;text-align: left;">INSTR NO.</p></td><td style="width:34pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt" rowspan="2"><p class="s19" style="padding-top: 1pt;padding-left: 2pt;text-indent: 0pt;text-align: left;">RECEIVING</p><p class="s19" style="padding-left: 2pt;text-indent: 0pt;text-align: left;">REPORT NO.</p></td></tr><tr style="height:10pt"><td style="width:42pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt;background-color:#D3D3D3;" colspan="2"><p class="s24" style="padding-left: 2pt;text-indent: 0pt;text-align: left;background-color:#D3D3D3;">STOREHOUSE</p></td><td style="width:290pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="7"><p class="s15" style="padding-left: 3pt;text-indent: 0pt;line-height: 8pt;text-align: left;">AGENCY AND UNIT</p></td></tr><tr style="height:26pt"><td style="width:50pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:42pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;background-color:#D3D3D3" colspan="2"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:290pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="7"><p class="s25" style="padding-left: 3pt;text-indent: 0pt;text-align: left;">ADDRESS<span class="s26">DSNY IT 357 Pearl St 19th fl</span></p></td><td style="width:61pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s27" style="padding-top: 5pt;padding-left: 2pt;text-indent: 0pt;text-align: left;">Credit Card</p></td><td style="width:62pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:35pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:34pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td></tr><tr style="height:55pt"><td style="width:250pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="4"><p class="s15" style="padding-top: 1pt;text-indent: 0pt;text-align: left;">RECEIVED FROM: NAME OF SELLER (VENDOR)</p></td><td style="width:78pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="4"><p class="s15" style="padding-left: 11pt;text-indent: 0pt;text-align: left;">BILL OF LADING /<br><br>DEL. TICKET NO.</p></td><td style="width:246pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt" colspan="6"><table style="width:100%"><tbody><tr><td valign="top" colspan="2" style="width:100%"><span class="s15" style="padding-left: 11pt;text-indent: 0pt;text-align: left;">CHECK ONE:</span></td></tr><tr><td colspan="1" style="width:10%"><span class="s32" style="padding-top: 3pt;padding-left: 2pt;padding-right: 1pt;line-height: 39%;text-align: left;"><span class="s31">□</span></span></td><td colspan="1" style="width:90%;text-align: left;"><span class="s32" style="padding-left: 2pt;padding-right: 1pt;text-align: left;"><span style=" color: #131313;">THIS IS A PARTIAL DELIVERY</span><br><br><span style=" color: #4F4F4F;">(MORE DELIVERIS DUE ON SAME ORDER)</span></span></td></tr><tr><td valign="top" colspan="1" style="width:10%"><span class="s32" style="padding-left: 2pt;padding-right: 1pt;line-height: 39%;text-align: left;"><span class="s31">□</span></span></td><td valign="top" colspan="1" style="width:90%;text-align: left;"><span class="s32" style="padding-left: 2pt;padding-right: 1pt;text-align: left;"><span style=" color: #131313;">FINAL DELIVERY</span><br><br></span></td></tr></tbody></table></tr></tbody></table></div>';
+
+htmlBottom = '<div><table style="width:100%;border-collapse:collapse;margin-left:5.23954pt" cellspacing="0" border="1"><tr style="height: 23pt;"><th style="width: 22pt; border-top-style: solid; border-top-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;">ITEM NO</th><th style="width: 44pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 2pt;background-color:#D3D3D3;text-align: center;" colspan="2">STOREHOUSE<br/>COMMODITY<br/>CODE</th><th style="width: 230pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 2pt;text-align: center" colspan="3">Description</th><th style="width: 38pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 2pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;background-color:#D3D3D3;" colspan="2">Quantity</th><th style="width: 23pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;text-align: center;background-color:#D3D3D3;">Unit</th><th style="width: 40pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 2pt;text-align: center;background-color:#D3D3D3;" colspan="2">Unit<br/>Price</th><th style="width: 41pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 2pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;">Quantity</th><th style="width: 22pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;text-align: center;">Unit</th><th style="width: 42pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;text-align: center;">Unit<br/>Price</th><th style="width: 52pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt;">Total Cost</th></tr>';
+
+var frame = '<div><table><tbody><tr><td>'+ htmlHeader + '</td></tr><tr><td>'+ htmlTop + '</td></tr><tr><td>'+ htmlBottom;
+
+html = frame;
+
+// Specify the desired rr_year and rr_month values
+var desiredRRYear = '2023'; // Replace with your desired year
+var desiredRRMonth = '9';   // Replace with your desired month
+// Query the x_dosny_bit_procur_bit_procurement_credit_card_line_items table
+// Initialize a GlideAjax instance for making server calls
+var ga = new GlideAjax('ReceivingReportAjaxCall'); // your GlideAjax script include class name
+
+
+// if (ga) {
+//     // ga is not null, you can proceed with further actions
+//     // For example, you can make a server call or perform other operations.
+//     alert('ReceivingReportAjaxCall: ga is not null');
+// } else {
+//     // ga is null or undefined, handle this case as needed
+//     alert('ReceivingReportAjaxCall; ga is null or undefined');
+// }
+
+// Make the asynchronous server call
+/*
+You have a few options for making server-side calls. The primary method for making asynchronous server calls using GlideAjax is getXML(). However, there are some other methods available for different use cases:
+
+getXML(callbackFunction): This is the most common method. It makes an asynchronous server call and expects an XML response. When the response is received, it invokes the callbackFunction you provide, passing the response as a parameter.
+
+getXMLWait(): This method also makes an asynchronous server call and expects an XML response. However, it doesn't use a callback function. Instead, it blocks the client-side code execution until the response is received. This is a less common approach because it can potentially freeze the UI if the server response is slow.
+
+getXMLAnswer(): This method is used when you expect a single string response from the server. It doesn't use a callback function but immediately returns the response as a string. It's synchronous, so use it carefully to avoid blocking the UI.
+
+getXMLWaitTimeout(ms): Similar to getXMLWait(), this method blocks execution until a response is received, but you can set a timeout in milliseconds to limit how long it will wait. If the timeout is reached, it returns null.
+
+For most cases, getXML() with a callback function is the recommended way to make asynchronous server calls because it doesn't block the UI and allows you to handle the response when it arrives. However, the choice depends on your specific use case and requirements.
+*/
+/*
+ga.addParam('sysparm_name', 'canIconnect'); // Replace with your GlideAjax function name within class declaration
+ga.addParam('sysparm_rr_year', desiredRRYear);
+ga.addParam('sysparm_rr_month', desiredRRMonth);
+
+
+Cannot make two ag.getXMLs in the same client script.
+ga.getXML(canIconnectJSON); // make the asynchronous call
+// canIconnect is a function defined in the script include ReceivingReportAjaxCall
+function canIconnectJSON(response) { // call back function name is same as agruement passed in asynch call
+		alert('executing ga.getXML(function(response)');
+		answer = JSON.parse(response.responseXML.documentElement.getAttribute("answer")); // answer because it is a simple string
+		if(answer){
+			alert('0. answer is: ' + answer);
+		}
+		else {
+			alert('0. answer was null');
+		}
+}
+*/
+
+// Set the function to call and any required parameters
+ga.addParam('sysparm_name', 'getRecords'); // Replace with your GlideAjax function name within class declaration
+ga.addParam('sysparm_rr_year', desiredRRYear);
+ga.addParam('sysparm_rr_month', desiredRRMonth);
+
+ga.getXML(getRecordsJSON);
+function getRecordsJSON(response) {
+	var answer = "";
+	var step = 1.0;
+	try {
+		answer = response.responseXML.querySelector('xml').getAttribute('answer');
+		// above line retrieves
+		// the response attribute for the 'getRecords' function you defined in your server script.
+		step = 2;
+		if (answer) {
+			step = 3;
+			// Process the response data (assuming the response is a JSON array)
+			var data = "";
+			try {
+				data = JSON.parse(answer);
+				//alert(step + '. data is: ' + data);
+			}
+			catch (error) {
+				alert(step + '. data catch: ' + error.toString());
+			}
+			step = 4;
+			// Iterate through the results and add rows to the HTML table
+			var currRow=1;
+			var formattedRow = '';
+			data.forEach(function(record) {
+				formattedRow = currRow < 10 ? 'Row0' + currRow : 'Row' + currRow;
+				html += '<tr style="height: 23pt;"><td style="width: 22pt; border-top-style: solid; border-top-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;text-align: center;"><div id="' + formattedRow +'Cell01">' + record.quantity + '<div></td><td style="width: 294pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 2pt;" colspan="5"><div id="' + formattedRow +'Cell02">' + record.number + '&nbsp;' + record.subject + '<br/>' + record.vendor + '<div></td>' + '</td><td style="width: 38pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 2pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;background-color:#D3D3D3;" colspan="2"><div id="' + formattedRow +'Cell03">' +  '&nbsp;' + '<div></td>' + '</td><td style="width: 23pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;background-color:#D3D3D3;"><div id="' + formattedRow +'Cell04">' +  '&nbsp;' + '<div></td>' + '</td><td style="width: 40pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 2pt;background-color:#D3D3D3;" colspan="2"><div id="' + formattedRow +'Cell05">' +  '&nbsp;' + '<div></td>' + '<td style="width: 41pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 2pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;text-align: center;"><div id="' + formattedRow +'Cell06">' +  record.quantity + '<div></td>'+ '</td><td style="width: 22pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;"><div id="' + formattedRow +'Cell07">' +  '&nbsp;' + '<div></td>' + '<td style="width: 42pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;text-align: right;"><div id="' + formattedRow +'Cell08">' +  record.unit_price + '<div></td>'+ '</td><td style="width: 52pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt;ext-align: right;"><div id="' + formattedRow +'Cell09">' +  '&nbsp;' + '<div></td>' + '</tr>';
+			});
+
+			// Close the HTML table
+			html += '</td></tr></tbody></table></div>';
+			step = 5;
+			// alert(step + '. html: ' + html);
+		} else {
+			step = 6;
+			alert(step + '. answer catch: ' + error.toString());
+		}		
+		// document.getElementById('render_table').innerHTML = html;
+		// Wait for the DOM to be ready
+		step = 7;
+		// alert(step + '. html length is ' + html.length);
+		// jslog(html);
+		document.getElementById('render_table').innerHTML = '<div>' + html + '</div>';
+
+		var anotherOption = '';
+		step = 8;
+		var currentYear = new Date().getFullYear();
+		//alert(step + '. currentYear is ' + currentYear);
+		step = 9;
+		var yearChoices = [currentYear - 2, currentYear - 1, currentYear, currentYear + 1, currentYear + 2];
+		step = 10;
+		var defaultYear = new Date().getFullYear();
+		step = 11;
+		// Populate year options
+		var htmlSelectYear = ''
+		+ '<label for="yearSelect">Select Year:</label>'
+		+ '<select id="yearSelect">'
+		+ '<option value=""></option>';
+		step = 12;
+		var htmlSelectClose = ''
+		+'</select>';
+		step = 13;
+		// alert(step + '. htmlSelectYear is ' + htmlSelectYear);	
+
+		for (var i = 0; i < yearChoices.length; i++) {
+			anotherOption = '<option ';
+			if (yearChoices[i] === defaultYear) {
+				anotherOption = anotherOption + ' selected '; // Set the default year as selected
+			}
+			anotherOption = anotherOption + 'value="' + yearChoices[i] + '">';
+
+			anotherOption = anotherOption +  yearChoices[i] + '</option>';
+
+			htmlSelectYear = htmlSelectYear + anotherOption;
+		}
+		step = 14;
+		htmlSelectYear = htmlSelectYear + htmlSelectClose;
+		// alert('htmlSelectYear is now: ' + htmlSelectYear);
+
+		document.getElementById('render_yearSelect').innerHTML = '<div>' + htmlSelectYear + '</div>';
+		// document.getElementById('render_tablet').innerHTML = '<div>' + html + '</div>';
+		step = 15;
+/*
+		document.addEventListener('DOMContentLoaded', function() {
+
+
+			// Find the <div> element by its id
+			var renderYearSelect = document.getElementById('render_yearSelect');
+			if (renderYearSelect) {
+				step=16;
+				renderYearSelect.innerHTML = '<div>' + htmlSelectYear + '</div>';
+				
+			} else {
+				alert('Element with id "yearSelect" not found.');
+			}
+
+			
+			step = 17;
+			var renderTableDiv = document.getElementById('render_table');
+			// Check if the <div> element exists
+			if (renderTableDiv) {
+				// Access and manipulate the contents of the <div> here
+				// For example, you can change its innerHTML or perform other actions.
+				// Here's an example of changing its content:
+				step = 18;
+				renderTableDiv.innerHTML = html;
+				step = 19;
+			} else {
+				alert('Element with id "render_table" not found.');
+			}
+		});
+*/
+	}
+	catch (error){
+		html = step + '. from client catch: ' + error.toString() + '<br />' + answer;
+	}
+	alert('made it to step ' + step);
+}
+
+]]></client_script>
+        <description>Retrieve rows from x_dosny_bit_procur_bit_procurement_credit_card_line_items and present those in a nicely formatted HTML table. This script will use a specified rr_year and rr_month from the x_dosny_bit_procur_bit_procurement_receiving_report reference table.</description>
+        <direct>false</direct>
+        <endpoint>x_dosny_vendorrepo_ReceivingReportTable.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+<html>
+	<head>
+		<style type="text/css">* {
+      margin: 0;
+      padding: 0;
+      text-indent: 0;
+    }
+
+    .s1 {
+      color: #262626;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 6pt;
+    }
+
+    .s2 {
+      color: #131313;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 6pt;
+    }
+
+    h3 {
+      color: #131313;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 6pt;
+    }
+
+    .s6 {
+      color: #131313;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 9pt;
+    }
+
+    h2 {
+      color: #131313;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 7pt;
+    }
+
+    p {
+      color: #131313;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 7pt;
+      margin: 0pt;
+    }
+
+    .s8 {
+      color: #262626;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: underline;
+      font-size: 7pt;
+    }
+
+    .s14 {
+      color: #131313;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 17pt;
+    }
+
+    .s15 {
+      color: #131313;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 7pt;
+    }
+    .s15a {
+      color: #131313;
+	  background-color: #D3D3D3;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 7pt;
+    }
+    .s16 {
+      color: black;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 7pt;
+    }
+
+    .s17 {
+      color: #262626;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 6pt;
+    }
+
+    .s19 {
+      color: #A5A5A5;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 6pt;
+    }
+
+    .s20 {
+      color: #4F4F4F;
+      font-family: "Times New Roman", serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 4pt;
+    }
+
+    .s21 {
+      color: #4F4F4F;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 4pt;
+    }
+
+    .s23 {
+      color: #4F4F4F;
+      font-family: "Times New Roman", serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 4.5pt;
+    }
+
+    .s24 {
+      color: #131313;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 6pt;
+    }
+
+    .s25 {
+      color: #131313;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 7pt;
+      vertical-align: 4pt;
+    }
+
+    .s26 {
+      color: black;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 12pt;
+    }
+
+    .s27 {
+      color: black;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 10.5pt;
+    }
+
+    .s28 {
+      color: #3A3A3A;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 6pt;
+    }
+
+    .s30 {
+      color: #262626;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 6pt;
+    }
+
+    .s31 {
+      color: #131313;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 17pt;
+      vertical-align: -8pt;
+    }
+
+    .s32 {
+      color: #262626;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 6pt;
+    }
+
+    .s36 {
+      color: black;
+      font-family: "Times New Roman", serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 10pt;
+    }
+
+    .s39 {
+      color: #131313;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 6pt;
+    }
+
+    .s40 {
+      color: #B8B8B8;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 4.5pt;
+    }
+
+    .s41 {
+      color: #A5A5A5;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 9pt;
+    }
+
+    .s42 {
+      color: #A5A5A5;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 13pt;
+    }
+
+    .s43 {
+      color: #4F4F4F;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 25pt;
+    }
+
+    .s44 {
+      color: black;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 12pt;
+    }
+
+    .s45 {
+      color: #131313;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: underline;
+      font-size: 7pt;
+    }
+
+    .s47 {
+      color: #262626;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 6pt;
+    }
+
+    .s51 {
+      color: #4F4F4F;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: underline;
+      font-size: 7pt;
+    }
+
+    .s56 {
+      color: #131313;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 4.5pt;
+    }
+
+    .s57 {
+      color: #131313;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 5pt;
+    }
+
+    h1 {
+      color: #262626;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 9pt;
+    }
+
+    .s59 {
+      color: #3A3A3A;
+      font-family: "Times New Roman", serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 6pt;
+    }
+
+    .s60 {
+      color: #4F4F4F;
+      font-family: "Times New Roman", serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 6pt;
+    }
+
+    .s61 {
+      color: #262626;
+      font-family: "Times New Roman", serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 6.5pt;
+    }
+
+    .s62 {
+      color: #3A3A3A;
+      font-family: "Times New Roman", serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 6.5pt;
+    }
+
+    .s63 {
+      color: #3A3A3A;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 4pt;
+    }
+
+    .s64 {
+      color: #262626;
+      font-family: "Times New Roman", serif;
+      font-style: normal;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 4.5pt;
+    }
+
+    .s65 {
+      color: #262626;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 4pt;
+    }
+
+    .s66 {
+      color: #262626;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 7pt;
+    }
+
+    .s67 {
+      color: #262626;
+      font-family: "Times New Roman", serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 6pt;
+    }
+
+    table,
+    tbody {
+      vertical-align: top;
+      overflow: visible;
+    }</style>
+	</head>
+	<body>
+		<div>Receiving Report Month and Year Choices</div><br />
+		<div id='render_yearSelect'>Default year select</div>
+		<div id='render_monthSelect'></div>
+		<div id='render_table'></div> 
+
+	</body>
+	</html>
+</j:jelly>]]></html>
+        <name>ReceivingReportTable</name>
+        <processing_script><![CDATA[// ]]></processing_script>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>sfarkas</sys_created_by>
+        <sys_created_on>2023-09-12 20:30:51</sys_created_on>
+        <sys_id>f1fc44f81b5d3510baac766e034bcb6a</sys_id>
+        <sys_mod_count>172</sys_mod_count>
+        <sys_name>ReceivingReportTable</sys_name>
+        <sys_package display_value="ReceivingReport" source="x_dosny_vendorrepo">bbcb77921bcdf110baac766e034bcb72</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ReceivingReport">bbcb77921bcdf110baac766e034bcb72</sys_scope>
+        <sys_update_name>sys_ui_page_f1fc44f81b5d3510baac766e034bcb6a</sys_update_name>
+        <sys_updated_by>sfarkas</sys_updated_by>
+        <sys_updated_on>2023-09-14 21:12:10</sys_updated_on>
+    </sys_ui_page>
+</record_update>

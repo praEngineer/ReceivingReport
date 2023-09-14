@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="ff91f9681bb83d106c1036ef034bcb8c" table="sys_template">
+    <sys_template action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <global>false</global>
+        <group/>
+        <groups/>
+        <link_element/>
+        <name>ReceivingReport_TEMPLATE</name>
+        <next/>
+        <next_child/>
+        <roles/>
+        <short_description>static header content and rows resulting from a GlideRecord query</short_description>
+        <show_on_template_bar>true</show_on_template_bar>
+        <stand_alone>false</stand_alone>
+        <sys_class_name>sys_template</sys_class_name>
+        <sys_created_by>sfarkas</sys_created_by>
+        <sys_created_on>2023-09-13 23:36:42</sys_created_on>
+        <sys_domain>ff91f9681bb83d106c1036ef034bcb8c</sys_domain>
+        <sys_id>857146051b99b510baac766e034bcb38</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>ReceivingReport_TEMPLATE</sys_name>
+        <sys_package display_value="ReceivingReport" source="x_dosny_vendorrepo">bbcb77921bcdf110baac766e034bcb72</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ReceivingReport">bbcb77921bcdf110baac766e034bcb72</sys_scope>
+        <sys_update_name>sys_template_857146051b99b510baac766e034bcb38</sys_update_name>
+        <sys_updated_by>sfarkas</sys_updated_by>
+        <sys_updated_on>2023-09-13 23:38:44</sys_updated_on>
+        <table>x_dosny_bit_procur_bit_procurement_credit_card_line_items</table>
+        <template>receiving_report.rr_month=^receiving_report.rr_year=^vendor.name=^EQ</template>
+        <user display_value="Steven Farkas">955a9cdddb07a7005cbb9806b99619db</user>
+        <view/>
+    </sys_template>
+</record_update>

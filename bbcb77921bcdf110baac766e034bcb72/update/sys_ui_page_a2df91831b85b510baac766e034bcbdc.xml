@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[/*
+What is the difference between g:evaluate and g2:evaluate?
+
+Order of execution is g:evaluate then g2:evaluate
+
+g:evaluate results are cached and do not change for life of the page.
+	Use ${} to evaluate the expressions in HTML
+
+g2:evaluate results are determined during each page refresh
+	Use $[] to evaluate expresssions in the HTML
+*/
+
+var myScriptInclude = Class.create();
+
+	myScriptInclude.prototype = {
+		initialize: function() {},
+
+		getAnything: function() {
+			return "anything";
+		},
+
+		yearChoices: function(){
+			var currentYear = new Date().getFullYear();
+			var startYear = currentYear - 2;
+			var endYear = currentYear + 2;
+			var yearRange = [];
+
+			for (var year = startYear; year <= endYear; year++) {
+				yearRange.push(year);
+			}
+
+			// Set the calculated year range as a global variable to be used in the UI Page
+			return yearRange;
+		}
+	};
+
+/*
+var getanything2 = "then another something";
+
+function getAnything() {
+    var rtn = "anything";
+	return rtn;
+}
+
+function yearChoices() {
+    var currentYear = new Date().getFullYear();
+    var startYear = currentYear - 2;
+    var endYear = currentYear + 2;
+    var yearRange = [];
+
+    for (var year = startYear; year <= endYear; year++) {
+        yearRange.push(year);
+    }
+
+    // Set the calculated year range as a global variable to be used in the UI Page
+    return yearRange;
+}
+console.dir("test 1")
+
+*/
+]]></client_script>
+        <description>Offer the user a choice of Receiving Report Year and Recieving Report Month.  These filters will be used to generate a single Receiving Report</description>
+        <direct>false</direct>
+        <endpoint>x_dosny_vendorrepo_RecievingReportMenu.do</endpoint>
+        <html><![CDATA[<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<g:ui_form>
+    <div>
+        <div>
+            <label for="yearDropdown">Select a Year:</label>
+            <g:set var="currentYear" value="new Date().getFullYear()" jelly="true" />
+            <g:set var="yearChoices" value="[currentYear - 2, currentYear - 1, currentYear, currentYear + 1, currentYear + 2]" jelly="true" />
+            <g:set var="defaultYear" value="new Date().getFullYear()" jelly="true" />
+        </div>
+        <div>
+            ${yearChoices[0]};
+        </div><br />
+        <div>
+            ${defaultYear};
+        </div>	
+    </div>
+	</g:ui_form>
+
+    <script type="text/javascript">
+        function renderReport() {
+            // Get selected year and month
+            var selectedYear = document.getElementById("yearDropdown").value;
+            var selectedMonth = document.getElementById("monthDropdown").value;
+
+            // Make a server call to fetch the data based on selectedYear and selectedMonth
+            var gaResult = myS.fetchData(selectedYear, selectedMonth);
+
+            // Clear the existing table rows
+            $("#reportTableBody").empty();
+
+            // Populate the table with the retrieved data
+            for (var i = 0; i .lt. gaResult.length; i++) {
+                var row = gaResult[i];
+                $("#reportTableBody").append("<tr><td>" + row.rrYear + "</td><td>" + row.rrMonth + "</td></tr>");
+                // Add other columns as needed
+            }
+        }
+    </script>
+</j:jelly>
+]]></html>
+        <name>RecievingReportMenu</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>sfarkas</sys_created_by>
+        <sys_created_on>2023-09-07 16:01:37</sys_created_on>
+        <sys_id>a2df91831b85b510baac766e034bcbdc</sys_id>
+        <sys_mod_count>261</sys_mod_count>
+        <sys_name>RecievingReportMenu</sys_name>
+        <sys_package display_value="ReceivingReport" source="x_dosny_vendorrepo">bbcb77921bcdf110baac766e034bcb72</sys_package>
+        <sys_policy>protected</sys_policy>
+        <sys_scope display_value="ReceivingReport">bbcb77921bcdf110baac766e034bcb72</sys_scope>
+        <sys_update_name>sys_ui_page_a2df91831b85b510baac766e034bcbdc</sys_update_name>
+        <sys_updated_by>sfarkas</sys_updated_by>
+        <sys_updated_on>2023-09-11 17:51:51</sys_updated_on>
+    </sys_ui_page>
+</record_update>

@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_doc_html_template">
+    <sn_doc_html_template action="INSERT_OR_UPDATE">
+        <acknowledgement_text/>
+        <active>true</active>
+        <category display_value="BIT Procurement">7efb04661b013510baac766e034bcb40</category>
+        <custom_font/>
+        <footer_image>da7dc0a61b013510baac766e034bcbaf</footer_image>
+        <footer_image_height>40</footer_image_height>
+        <footer_image_position>CENTER</footer_image_position>
+        <footnote/>
+        <footnote_position>RIGHT</footnote_position>
+        <footnote_vertical_position>BELOW</footnote_vertical_position>
+        <header_image>9ddc44661b013510baac766e034bcb2d</header_image>
+        <header_image_height>40</header_image_height>
+        <header_image_position>CENTER</header_image_position>
+        <html_script_body><![CDATA[<table class="MsoNormalTable" style="margin-left: 5.25pt; border-collapse: collapse; width: 99.1866%; height: 1057.22px;" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr style="height: 27.2049px;">
+<td style="width: 13.9218%; border-style: solid solid none none; border-color: black black windowtext windowtext; border-width: 1pt; padding: 0in; height: 56.0243px;" colspan="2" rowspan="2" valign="top">
+<p style="margin: 0.2pt 5.6pt 0.0001pt 5.95pt; text-indent: 10.05pt; line-height: 98%; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 7.0pt; line-height: 98%; color: #131313;">DATE</span><span style="font-size: 7.0pt; line-height: 98%; color: #131313;"> </span><span style="font-size: 7.0pt; line-height: 98%; color: #131313;">PREPARED</span></p>
+</td>
+<td style="width: 8.09294%; border-top: 1pt solid black; border-left: none; border-bottom: 1pt solid black; border-right: 1pt none windowtext; padding: 0in; height: 27.2049px;" valign="top">
+<p style="margin: 2.05pt 0in 0.0001pt 3.75pt; line-height: 7.95pt; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 7.0pt; color: #131313;">RECEIVED</span></p>
+</td>
+<td style="width: 5.36749%; border-top: 1pt solid black; border-left: none; border-bottom: 1pt solid black; border-right: 1pt none windowtext; padding: 0in; height: 27.2049px;" colspan="2" valign="top">
+<p style="margin: 2.05pt 0in 0.0001pt 1.2pt; line-height: 7.95pt; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 7.0pt;">BY</span></p>
+</td>
+<td style="width: 9.30084%; border-top: 1pt solid black; border-left: none; border-bottom: 1pt solid black; border-right: 1pt none windowtext; padding: 0in; height: 27.2049px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 9.30084%; border-top: 1pt solid black; border-left: none; border-bottom: 1pt solid black; border-right: 1pt none windowtext; padding: 0in; height: 27.2049px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 9.30084%; border-top: 1pt solid black; border-left: none; border-bottom: 1pt solid black; border-right: 1pt none windowtext; padding: 0in; height: 27.2049px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 2.77817%; border-top: 1pt solid black; border-left: none; border-bottom: 1pt solid black; border-right: 1pt none windowtext; padding: 0in; height: 27.2049px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 2.89896%; border-top: 1pt solid black; border-left: none; border-bottom: 1pt solid black; border-right: 1pt none windowtext; padding: 0in; height: 27.2049px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 3.26133%; border-top: 1pt solid black; border-left: none; border-bottom: 1pt solid black; border-right: 1pt none windowtext; padding: 0in; height: 27.2049px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 0.362371%; border-top: 1pt solid black; border-right: 1pt solid black; border-bottom: 1pt solid black; border-image: initial; border-left: none; padding: 0in; height: 27.2049px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 12.3664%; border-top: 1pt solid black; border-left: none; border-bottom: 1pt none windowtext; border-right: 1pt solid black; padding: 0in; height: 56.0243px;" colspan="2" rowspan="2" valign="top">
+<p style="margin: 0.45pt 1.15pt 0.0001pt 4.65pt; text-indent: 10.35pt; line-height: 98%; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 7.0pt; line-height: 98%; color: #262626;">OMPA OR CONTRACT </span><span style="font-size: 7.0pt; line-height: 98%; color: #131313;">NO</span><span style="font-size: 7.0pt; line-height: 98%; color: #4f4f4f;">.</span></p>
+</td>
+<td style="width: 10.1325%; border-top: 1pt solid black; border-left: none; border-bottom: 1pt none windowtext; border-right: 1pt solid black; padding: 0in; height: 56.0243px;" colspan="3" rowspan="2" valign="top">
+<p style="margin: 0in 0in 0in -0.1pt; line-height: 7.95pt; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 7.0pt; color: #a5a5a5;">.</span><span style="font-size: 7.0pt; color: #a5a5a5;">&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 7.0pt; color: #262626;">ORDER </span><span style="font-size: 7.0pt; color: #131313;">NO</span><span style="font-size: 7.0pt; color: #4f4f4f;">.</span></p>
+</td>
+<td style="width: 7.13502%; border-top: 1pt solid black; border-left: none; border-bottom: 1pt none windowtext; border-right: 1pt solid black; padding: 0in; height: 56.0243px;" colspan="2" rowspan="2" valign="top">
+<p style="margin: 1.55pt 0in 0.0001pt 9.6pt; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 4.0pt; font-family: 'Times New Roman', serif; color: #4f4f4f;">SHIPPING</span></p>
+<p style="margin: 0.15pt 0in 0.0001pt 8.25pt; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 4.0pt; color: #4f4f4f;">INSTR</span><span style="font-size: 4.0pt; color: #4f4f4f;"> </span><span style="font-size: 4.0pt; color: #3a3a3a;">NO</span></p>
+</td>
+<td style="width: 5.55635%; border-top: 1pt solid black; border-left: none; border-bottom: 1pt none windowtext; border-right: 1pt none windowtext; padding: 0in; height: 56.0243px;" rowspan="2" valign="top">
+<p style="margin: 1.05pt 0in 0.0001pt 9.6pt; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 4.5pt; font-family: 'Times New Roman', serif; color: #4f4f4f;">RECEIVING</span></p>
+<p style="margin: 0.35pt 0in 0.0001pt 7.95pt; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 4.0pt; color: #4f4f4f;">REPORT </span><span style="font-size: 4.0pt; color: #3a3a3a;">NO</span></p>
+</td>
+</tr>
+<tr style="height: 28.8194px;">
+<td style="width: 11.9987%; border-top: none; border-left: none; border-bottom: 1pt none windowtext; border-right: 1pt solid black; padding: 0in; height: 28.8194px;" colspan="2" valign="top">
+<p style="margin: 0.35pt 0in 0.0001pt 2.1pt; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; color: #131313;">STOREHOUSE</span></p>
+</td>
+<td style="width: 38.6651%; border-top: none; border-left: none; border-bottom: 1pt none windowtext; border-right: 1pt solid black; padding: 0in; height: 28.8194px;" colspan="8" valign="top">
+<p style="margin: 0.85pt 0in 0.0001pt 3.85pt; line-height: 8pt; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 7.0pt; color: #131313;">AGENCY</span><span style="font-size: 7.0pt; color: #131313;"> </span><span style="font-size: 7.0pt; color: #131313;">AND</span><span style="font-size: 7.0pt; color: #131313;"> </span><span style="font-size: 7.0pt; color: #131313;">UNIT</span></p>
+</td>
+</tr>
+<tr style="height: 86.9792px;">
+<td style="width: 13.9218%; border-top: none; border-left: 1pt none windowtext; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 86.9792px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 11.9987%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 86.9792px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 38.6651%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 86.9792px;" colspan="8" valign="top">
+<p style="margin: 0.25pt 0in 0.0001pt 3.85pt; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 7.0pt; color: #131313; position: relative; top: -4.5pt;">ADDRESS </span><span style="font-size: 12pt; color: black;">DSNY IT 357 Pearl St 19th fl</span></p>
+</td>
+<td style="width: 12.3664%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 86.9792px;" colspan="2" valign="top">
+<p style="margin: 5.45pt 0in 0.0001pt 2.75pt; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 10.5pt;">Credit Card</span></p>
+</td>
+<td style="width: 10.1325%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 86.9792px;" colspan="3" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 7.13502%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 86.9792px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 5.55635%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt none windowtext; padding: 0in; height: 86.9792px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="height: 78.316px;">
+<td style="width: 36.6831%; border-top: none; border-left: 1pt none windowtext; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 78.316px;" colspan="6" valign="top">
+<p style="margin: 1.1pt 0in 0.0001pt 0.15pt; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 7.0pt; color: #131313;">RECEIVED FROM: NAME OF SELLER </span><span style="font-size: 7.0pt; color: #262626;">(VENDOR)</span></p>
+</td>
+<td style="width: 24.2788%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 78.316px;" colspan="4" valign="top">
+<p style="margin: 0.45pt 0in 0.0001pt 11.1pt; text-indent: 0.5pt; line-height: 98%; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 7.0pt; line-height: 98%; color: #131313;">BILL </span><span style="font-size: 7.0pt; line-height: 98%; color: #262626;">OF </span><span style="font-size: 7.0pt; line-height: 98%; color: #131313;">LADING</span><span style="font-size: 7.0pt; line-height: 98%; color: #4f4f4f;">/ </span><span style="font-size: 7.0pt; line-height: 98%; color: #131313;">DEL. TICKET NO</span><span style="font-size: 7.0pt; line-height: 98%; color: #4f4f4f;">.</span></p>
+</td>
+<td style="width: 38.8139%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt none windowtext; padding: 0in; height: 78.316px;" colspan="10" valign="top">
+<p style="margin: 2.5pt 0in 0.0001pt 4.95pt; line-height: 6pt; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; color: #3a3a3a;">CHECK O</span><span style="font-size: 6.0pt; color: #131313;">N</span><span style="font-size: 6.0pt; color: #3a3a3a;">E</span><span style="font-size: 6.0pt; color: #6e6e6e;">: </span><span style="font-size: 6.0pt; color: #131313;">THIS IS </span><span style="font-size: 6.0pt; color: #262626;">A</span></p>
+<p style="margin: 3.7pt 37.35pt 0.0001pt 18.4pt; text-indent: -14.9pt; line-height: 38%; font-size: 12pt; font-family: Arial, sans-serif;"><span style="position: absolute; z-index: -1895824384; left: 0px; margin-left: 2px; margin-top: 6px; width: 13px; height: 13px;"><br /></span><span style="position: absolute; z-index: -1895823360; left: 0px; margin-left: 3px; margin-top: 24px; width: 13px; height: 12px;"><br /></span><span style="font-size: 17.0pt; line-height: 38%; color: #131313; position: relative; top: 8.5pt;">□ </span><span style="font-size: 6.0pt; line-height: 38%; color: #262626;">PARTIAL DELIVERY </span><span style="font-size: 6.0pt; line-height: 38%; color: #4f4f4f;">(</span><span style="font-size: 6.0pt; line-height: 38%; color: #131313;">M</span><span style="font-size: 6.0pt; line-height: 38%; color: #3a3a3a;">ORE </span><span style="font-size: 6.0pt; line-height: 38%; color: #262626;">DELIVERIE</span><span style="font-size: 6.0pt; line-height: 38%; color: #4f4f4f;">S </span><span style="font-size: 6.0pt; line-height: 38%; color: #3a3a3a;">DUE ON SAME ORDER)</span></p>
+<p style="margin: 4.95pt 0in 0.0001pt 18.2pt; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; color: #262626;">FINAL DELIVERY</span></p>
+</td>
+</tr>
+<tr style="height: 50.9549px;">
+<td style="width: 4.22766%; border-top: none; border-left: 1pt none windowtext; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 160px;" rowspan="3" valign="top">
+<p style="margin: 0.3pt 0in 0in; font-size: 12pt; font-family: Arial, sans-serif;"><strong><span style="font-size: 10.5pt;">&nbsp;</span></strong></p>
+<p style="margin: 0in 0in 0in 5.95pt; text-indent: -3.05pt; line-height: 100%; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 7.0pt; line-height: 100%; color: #131313;">ITEM</span><span style="font-size: 7.0pt; line-height: 100%; color: #131313;"> </span><span style="font-size: 7.0pt; line-height: 100%; color: #131313;">NO</span></p>
+</td>
+<td style="width: 23.1546%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 160px;" colspan="4" rowspan="3" valign="top">
+<p style="margin: 6.65pt 16.3pt 0.0001pt 16.5pt; text-align: center; line-height: 110%; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 7.0pt; line-height: 110%; color: #131313;">STOREHOUSE</span><span style="font-size: 7.0pt; line-height: 110%; color: #131313;"> </span><strong><span style="font-size: 7.0pt; line-height: 110%; color: #131313;">COMMODITY</span></strong><strong><span style="font-size: 7.0pt; line-height: 110%; color: #131313;"> </span></strong><span style="font-size: 7.0pt; line-height: 110%; color: #131313;">CODE</span></p>
+</td>
+<td style="width: 27.9025%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1.5pt solid black; padding: 0in; height: 160px;" colspan="3" rowspan="3" valign="top">
+<p style="margin: 0.45pt 0in 0in; font-size: 12pt; font-family: Arial, sans-serif;"><strong><span style="font-size: 8.5pt;">&nbsp;</span></strong></p>
+<p style="margin: 0in 49.7pt 0.0001pt 50.7pt; text-align: center; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 7.0pt; color: #131313;">DESCRIPTION</span></p>
+<p style="margin: 1.1pt 49.7pt 0.0001pt 50.85pt; text-align: center; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 7.0pt; color: #131313;">INCL.</span><span style="font-size: 7.0pt; color: #131313;"> </span><span style="font-size: 7.0pt; color: #3a3a3a;">CATALOG</span><span style="font-size: 7.0pt; color: #3a3a3a;"> </span><span style="font-size: 7.0pt; color: #131313;">NUMBER</span><span style="font-size: 7.0pt; color: #4f4f4f;">,</span><span style="font-size: 7.0pt; color: #4f4f4f;"> </span><span style="font-size: 7.0pt; color: black;">IF</span><span style="font-size: 7.0pt; color: black;"> </span><span style="font-size: 7.0pt; color: #131313;">ANY</span></p>
+</td>
+<td style="width: 44.4911%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt none windowtext; padding: 0in; height: 50.9549px;" colspan="12" valign="top">
+<p style="margin: 2.75pt 0in 0.0001pt 81.5pt; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; color: #131313;">RECEIVED</span></p>
+</td>
+</tr>
+<tr style="height: 21.5799px;">
+<td style="width: 17.9982%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1.5pt solid black; padding: 0in; height: 21.5799px;" colspan="5" valign="top">
+<p style="margin: 0.6pt 0in 0.0001pt 16.25pt; line-height: 5.8pt; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 7.0pt; color: #131313;">STOREHOUSE</span><span style="font-size: 7.0pt; color: #131313;"> </span><strong><span style="font-size: 7.0pt; color: #131313;">DATA</span></strong></p>
+</td>
+<td style="width: 26.4929%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt none windowtext; padding: 0in; height: 21.5799px;" colspan="7" valign="top">
+<p style="margin: 0.6pt 0in 0.0001pt 47.85pt; line-height: 5.8pt; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 7.0pt; color: #131313;">PURCHASING</span><span style="font-size: 7.0pt; color: #131313;"> </span><span style="font-size: 7.0pt; color: #131313;">DATA</span></p>
+</td>
+</tr>
+<tr style="height: 87.4653px;">
+<td style="width: 5.67714%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 87.4653px;" colspan="2" valign="top">
+<p style="margin: 5.15pt 0in 0.0001pt 4.3pt; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; color: #131313;">QUANTITY</span></p>
+</td>
+<td style="width: 3.26133%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 87.4653px;" valign="top">
+<p style="margin: 0.2pt 0in 0in; font-size: 12pt; font-family: Arial, sans-serif;"><strong><span style="font-size: 4.5pt;">&nbsp;</span></strong></p>
+<p style="margin: 0.05pt 0in 0.0001pt 5.75pt; font-size: 12pt; font-family: Arial, sans-serif;"><strong><span style="font-size: 6.0pt; color: #131313;">UNIT</span></strong></p>
+</td>
+<td style="width: 9.05968%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1.5pt solid black; padding: 0in; height: 87.4653px;" colspan="2" valign="top">
+<p style="margin: 0.2pt 0in 0in; font-size: 12pt; font-family: Arial, sans-serif;"><strong><span style="font-size: 4.5pt;">&nbsp;</span></strong></p>
+<p style="margin: 0.05pt 0in 0.0001pt 3.45pt; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; color: #131313;">UNIT</span><span style="font-size: 6.0pt; color: #131313;"> </span><span style="font-size: 6.0pt; color: #131313;">PRICE</span></p>
+</td>
+<td style="width: 6.76016%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 87.4653px;" colspan="2" valign="top">
+<p style="margin: 0.2pt 0in 0in; font-size: 12pt; font-family: Arial, sans-serif;"><strong><span style="font-size: 4.5pt;">&nbsp;</span></strong></p>
+<p style="margin: 0.05pt 0in 0.0001pt 5.6pt; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; color: #3a3a3a;">QUANTITY</span></p>
+</td>
+<td style="width: 3.26133%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 87.4653px;" valign="top">
+<p style="margin: 0.2pt 0in 0in; font-size: 12pt; font-family: Arial, sans-serif;"><strong><span style="font-size: 4.5pt;">&nbsp;</span></strong></p>
+<p style="margin: 0.05pt 0in 0.0001pt 5.2pt; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; color: #262626;">UNIT</span></p>
+</td>
+<td style="width: 8.03553%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 87.4653px;" colspan="2" valign="top">
+<p style="margin: 0.2pt 0in 0in; font-size: 12pt; font-family: Arial, sans-serif;"><strong><span style="font-size: 4.5pt;">&nbsp;</span></strong></p>
+<p style="margin: 0.05pt 0in 0.0001pt 5.6pt; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; color: #262626;">UNIT </span><span style="font-size: 6.0pt; color: #131313;">PRICE</span></p>
+</td>
+<td style="width: 8.43591%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt none windowtext; padding: 0in; height: 87.4653px;" colspan="2" valign="top">
+<p style="margin: 0.2pt 0in 0in; font-size: 12pt; font-family: Arial, sans-serif;"><strong><span style="font-size: 4.5pt;">&nbsp;</span></strong></p>
+<p style="margin: 0.05pt 0in 0.0001pt 0.15in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; color: #3a3a3a;">TOTAL</span><span style="font-size: 6.0pt; color: #3a3a3a;"> </span><span style="font-size: 6.0pt; color: #3a3a3a;">COST</span></p>
+</td>
+</tr>
+<tr style="height: 34.566px;">
+<td style="width: 4.22766%; border-top: none; border-left: 1pt none windowtext; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 34.566px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 51.0571%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1.5pt solid black; padding: 0in; height: 34.566px;" colspan="7" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 5.67714%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 34.566px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 3.26133%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 34.566px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 9.05968%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1.5pt solid black; padding: 0in; height: 34.566px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 6.76016%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 34.566px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 3.26133%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 34.566px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 8.03553%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 34.566px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 8.43591%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt none windowtext; padding: 0in; height: 34.566px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="height: 35.6944px;">
+<td style="width: 4.22766%; border-top: none; border-left: 1pt none windowtext; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 35.6944px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 51.0571%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1.5pt solid black; padding: 0in; height: 35.6944px;" colspan="7" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 5.67714%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 35.6944px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 3.26133%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 35.6944px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 9.05968%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1.5pt solid black; padding: 0in; height: 35.6944px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 6.76016%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 35.6944px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 3.26133%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 35.6944px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 8.03553%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 35.6944px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 8.43591%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt none windowtext; padding: 0in; height: 35.6944px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="height: 36.059px;">
+<td style="width: 4.22766%; border-top: none; border-left: 1pt none windowtext; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 51.0571%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1.5pt solid black; padding: 0in; height: 36.059px;" colspan="7" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 5.67714%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 3.26133%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 9.05968%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1.5pt solid black; padding: 0in; height: 36.059px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 6.76016%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 3.26133%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 8.03553%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 8.43591%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt none windowtext; padding: 0in; height: 36.059px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="height: 36.059px;">
+<td style="width: 4.22766%; border-top: none; border-left: 1pt none windowtext; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 51.0571%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1.5pt solid black; padding: 0in; height: 36.059px;" colspan="7" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 5.67714%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 3.26133%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 9.05968%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1.5pt solid black; padding: 0in; height: 36.059px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 6.76016%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 3.26133%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 8.03553%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 8.43591%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt none windowtext; padding: 0in; height: 36.059px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="height: 35.6944px;">
+<td style="width: 4.22766%; border-top: none; border-left: 1pt none windowtext; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 35.6944px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 51.0571%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1.5pt solid black; padding: 0in; height: 35.6944px;" colspan="7" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 5.67714%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 35.6944px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 3.26133%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 35.6944px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 9.05968%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1.5pt solid black; padding: 0in; height: 35.6944px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 6.76016%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 35.6944px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 3.26133%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 35.6944px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 8.03553%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 35.6944px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 8.43591%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt none windowtext; padding: 0in; height: 35.6944px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="height: 36.059px;">
+<td style="width: 4.22766%; border-top: none; border-left: 1pt none windowtext; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 51.0571%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1.5pt solid black; padding: 0in; height: 36.059px;" colspan="7" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 5.67714%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 3.26133%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 9.05968%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1.5pt solid black; padding: 0in; height: 36.059px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 6.76016%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 3.26133%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 8.03553%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 8.43591%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt none windowtext; padding: 0in; height: 36.059px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="height: 36.059px;">
+<td style="width: 4.22766%; border-top: none; border-left: 1pt none windowtext; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 51.0571%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1.5pt solid black; padding: 0in; height: 36.059px;" colspan="7" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 5.67714%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 3.26133%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 9.05968%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1.5pt solid black; padding: 0in; height: 36.059px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 6.76016%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 3.26133%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 8.03553%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 8.43591%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt none windowtext; padding: 0in; height: 36.059px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="height: 43.8021px;">
+<td style="width: 4.22766%; border-top: none; border-left: 1pt none windowtext; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 43.8021px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 51.0571%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1.5pt solid black; padding: 0in; height: 43.8021px;" colspan="7" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 5.67714%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 43.8021px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 3.26133%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 43.8021px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 9.05968%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1.5pt solid black; padding: 0in; height: 43.8021px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 6.76016%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 43.8021px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 3.26133%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 43.8021px;" valign="top">&nbsp;</td>
+<td style="width: 8.03553%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 43.8021px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 8.43591%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt none windowtext; padding: 0in; height: 43.8021px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="height: 36.059px;">
+<td style="width: 4.22766%; border-top: none; border-left: 1pt none windowtext; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 51.0571%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1.5pt solid black; padding: 0in; height: 36.059px;" colspan="7" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 5.67714%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 3.26133%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 9.05968%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1.5pt solid black; padding: 0in; height: 36.059px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 6.76016%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 3.26133%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 8.03553%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 8.43591%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt none windowtext; padding: 0in; height: 36.059px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="height: 36.059px;">
+<td style="width: 4.22766%; border-top: none; border-left: 1pt none windowtext; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 51.0571%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1.5pt solid black; padding: 0in; height: 36.059px;" colspan="7" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 5.67714%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 3.26133%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 9.05968%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1.5pt solid black; padding: 0in; height: 36.059px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 6.76016%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 3.26133%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 8.03553%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.059px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 8.43591%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt none windowtext; padding: 0in; height: 36.059px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="height: 36.2326px;">
+<td style="width: 4.22766%; border-top: none; border-left: 1pt none windowtext; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.2326px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 51.0571%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1.5pt solid black; padding: 0in; height: 36.2326px;" colspan="7" valign="top">
+<p style="margin: 5.3pt 0in 0.0001pt 3.05pt; font-size: 12pt; font-family: Arial, sans-serif;">TOTAL</p>
+</td>
+<td style="width: 5.67714%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.2326px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 3.26133%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.2326px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 9.05968%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1.5pt solid black; padding: 0in; height: 36.2326px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 6.76016%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.2326px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 3.26133%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.2326px;" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 8.03553%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0in; height: 36.2326px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+<td style="width: 8.43591%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt none windowtext; padding: 0in; height: 36.2326px;" colspan="2" valign="top">
+<p style="margin: 0in; font-size: 12pt; font-family: Arial, sans-serif;"><span style="font-size: 6.0pt; font-family: 'Times New Roman', serif;">&nbsp;</span></p>
+</td>
+</tr>
+</tbody>
+</table>]]></html_script_body>
+        <language>en</language>
+        <left_right_margin>36</left_right_margin>
+        <name>BIT Procurement -- Receiving Report</name>
+        <page_number_config/>
+        <page_size>LETTER</page_size>
+        <set_signing_order>true</set_signing_order>
+        <signing_type>servicenow_sign</signing_type>
+        <source_template/>
+        <state>draft</state>
+        <sys_class_name>sn_doc_html_template</sys_class_name>
+        <sys_created_by>sfarkas</sys_created_by>
+        <sys_created_on>2023-09-05 20:39:57</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>2eabcc261b013510baac766e034bcb6b</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>BIT Procurement -- Receiving Report</sys_name>
+        <sys_package display_value="ReceivingReport" source="x_dosny_vendorrepo">bbcb77921bcdf110baac766e034bcb72</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ReceivingReport">bbcb77921bcdf110baac766e034bcb72</sys_scope>
+        <sys_update_name>sn_doc_html_template_2eabcc261b013510baac766e034bcb6b</sys_update_name>
+        <sys_updated_by>sfarkas</sys_updated_by>
+        <sys_updated_on>2023-09-05 21:04:18</sys_updated_on>
+        <table>x_dosny_bit_procur_bit_procurement_credit_card_line_items</table>
+        <toc_config/>
+        <top_bottom_margin>22</top_bottom_margin>
+        <user_criteria/>
+    </sn_doc_html_template>
+    <sys_translated_text action="delete_multiple" query="documentkey=2eabcc261b013510baac766e034bcb6b"/>
+</record_update>

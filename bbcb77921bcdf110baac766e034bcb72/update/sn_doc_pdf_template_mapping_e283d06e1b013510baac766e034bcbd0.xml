@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_doc_pdf_template_mapping">
+    <sn_doc_pdf_template_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced_script_toggle>false</advanced_script_toggle>
+        <box_height/>
+        <box_width/>
+        <date_offset_quantity>0</date_offset_quantity>
+        <date_offset_type>on</date_offset_type>
+        <date_offset_units>days</date_offset_units>
+        <doc_left/>
+        <doc_top/>
+        <document display_value="BIT Procurement -- Receiving Report PDF Template">a5331c2e1b013510baac766e034bcb64</document>
+        <document_field>TOTAL COSTRow6</document_field>
+        <document_field_label>TOTAL COSTRow6</document_field_label>
+        <document_field_type>text</document_field_type>
+        <format/>
+        <mandatory>false</mandatory>
+        <mapping_field/>
+        <mapping_table>x_dosny_bit_procur_bit_procurement_credit_card_line_items</mapping_table>
+        <page_number>1</page_number>
+        <participant/>
+        <preview_value>TOTAL COSTRow6</preview_value>
+        <read_only>false</read_only>
+        <script/>
+        <select_date_format/>
+        <sign_left/>
+        <sign_top/>
+        <specific_date_format/>
+        <states/>
+        <sys_class_name>sn_doc_pdf_template_mapping</sys_class_name>
+        <sys_created_by>sfarkas</sys_created_by>
+        <sys_created_on>2023-09-05 21:09:30</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>e283d06e1b013510baac766e034bcbd0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>a5331c2e1b013510baac766e034bcb64</sys_name>
+        <sys_package display_value="ReceivingReport" source="x_dosny_vendorrepo">bbcb77921bcdf110baac766e034bcb72</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ReceivingReport">bbcb77921bcdf110baac766e034bcb72</sys_scope>
+        <sys_update_name>sn_doc_pdf_template_mapping_e283d06e1b013510baac766e034bcbd0</sys_update_name>
+        <sys_updated_by>sfarkas</sys_updated_by>
+        <sys_updated_on>2023-09-05 21:09:30</sys_updated_on>
+    </sn_doc_pdf_template_mapping>
+</record_update>

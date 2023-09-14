@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="87adcb601b593510baac766e034bcb84" sys_domain="global" table="x_dosny_bit_procur_bit_procurement_credit_card_line_items" version="3" view="receivingreportapp">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-09-13 15:35:15</sys_created_on>
+            <sys_id>90c394c91b51b510baac766e034bcb79</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_bit_procur_bit_procurement_credit_card_line_items" sys_domain="global" view="8badcb601b593510baac766e034bcb7d">87adcb601b593510baac766e034bcb84</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-09-13 15:35:15</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>receiving_report.rr_year</element>
+            <position>1</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-09-13 15:35:15</sys_created_on>
+            <sys_id>94c394c91b51b510baac766e034bcb79</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_bit_procur_bit_procurement_credit_card_line_items" sys_domain="global" view="8badcb601b593510baac766e034bcb7d">87adcb601b593510baac766e034bcb84</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-09-13 15:35:15</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>receiving_report.rr_month</element>
+            <position>2</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-09-13 15:35:15</sys_created_on>
+            <sys_id>98c394c91b51b510baac766e034bcb79</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_bit_procur_bit_procurement_credit_card_line_items" sys_domain="global" view="8badcb601b593510baac766e034bcb7d">87adcb601b593510baac766e034bcb84</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-09-13 15:35:15</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>receiving_report</element>
+            <position>3</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-09-13 15:35:15</sys_created_on>
+            <sys_id>9cc394c91b51b510baac766e034bcb79</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_bit_procur_bit_procurement_credit_card_line_items" sys_domain="global" view="8badcb601b593510baac766e034bcb7d">87adcb601b593510baac766e034bcb84</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-09-13 15:35:15</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>status</element>
+            <position>4</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-09-13 15:35:15</sys_created_on>
+            <sys_id>90c394c91b51b510baac766e034bcb7a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_bit_procur_bit_procurement_credit_card_line_items" sys_domain="global" view="8badcb601b593510baac766e034bcb7d">87adcb601b593510baac766e034bcb84</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-09-13 15:35:15</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>vendor</element>
+            <position>5</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-09-13 15:35:15</sys_created_on>
+            <sys_id>94c394c91b51b510baac766e034bcb7a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_bit_procur_bit_procurement_credit_card_line_items" sys_domain="global" view="8badcb601b593510baac766e034bcb7d">87adcb601b593510baac766e034bcb84</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-09-13 15:35:15</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>order_date</element>
+            <position>6</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-09-13 15:35:15</sys_created_on>
+            <sys_id>98c394c91b51b510baac766e034bcb7a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_bit_procur_bit_procurement_credit_card_line_items" sys_domain="global" view="8badcb601b593510baac766e034bcb7d">87adcb601b593510baac766e034bcb84</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-09-13 15:35:15</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>requested_by</element>
+            <position>7</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-09-13 15:35:15</sys_created_on>
+            <sys_id>9cc394c91b51b510baac766e034bcb7a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_bit_procur_bit_procurement_credit_card_line_items" sys_domain="global" view="8badcb601b593510baac766e034bcb7d">87adcb601b593510baac766e034bcb84</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-09-13 15:35:15</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>8</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-09-13 15:35:15</sys_created_on>
+            <sys_id>90c394c91b51b510baac766e034bcb7b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_bit_procur_bit_procurement_credit_card_line_items" sys_domain="global" view="8badcb601b593510baac766e034bcb7d">87adcb601b593510baac766e034bcb84</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-09-13 15:35:15</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>quantity</element>
+            <position>9</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-09-13 15:35:15</sys_created_on>
+            <sys_id>94c394c91b51b510baac766e034bcb7b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_bit_procur_bit_procurement_credit_card_line_items" sys_domain="global" view="8badcb601b593510baac766e034bcb7d">87adcb601b593510baac766e034bcb84</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-09-13 15:35:15</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>unit_price</element>
+            <position>10</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-09-13 15:35:15</sys_created_on>
+            <sys_id>98c394c91b51b510baac766e034bcb7b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_bit_procur_bit_procurement_credit_card_line_items" sys_domain="global" view="8badcb601b593510baac766e034bcb7d">87adcb601b593510baac766e034bcb84</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-09-13 15:35:15</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>price</element>
+            <position>11</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-09-13 15:35:15</sys_created_on>
+            <sys_id>9cc394c91b51b510baac766e034bcb7b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_bit_procur_bit_procurement_credit_card_line_items" sys_domain="global" view="8badcb601b593510baac766e034bcb7d">87adcb601b593510baac766e034bcb84</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-09-13 15:35:15</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>signature</element>
+            <position>12</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-09-13 15:35:15</sys_created_on>
+            <sys_id>90c394c91b51b510baac766e034bcb7c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_bit_procur_bit_procurement_credit_card_line_items" sys_domain="global" view="8badcb601b593510baac766e034bcb7d">87adcb601b593510baac766e034bcb84</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-09-13 15:35:15</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>assigned_to</element>
+            <position>13</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-09-13 15:35:15</sys_created_on>
+            <sys_id>94c394c91b51b510baac766e034bcb7c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_bit_procur_bit_procurement_credit_card_line_items" sys_domain="global" view="8badcb601b593510baac766e034bcb7d">87adcb601b593510baac766e034bcb84</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-09-13 15:35:15</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>14</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-09-13 15:35:15</sys_created_on>
+            <sys_id>98c394c91b51b510baac766e034bcb7c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_bit_procur_bit_procurement_credit_card_line_items" sys_domain="global" view="8badcb601b593510baac766e034bcb7d">87adcb601b593510baac766e034bcb84</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-09-13 15:35:15</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>short_description</element>
+            <position>15</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-09-13 15:35:15</sys_created_on>
+            <sys_id>9cc394c91b51b510baac766e034bcb7c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_bit_procur_bit_procurement_credit_card_line_items" sys_domain="global" view="8badcb601b593510baac766e034bcb7d">87adcb601b593510baac766e034bcb84</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-09-13 15:35:15</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_dosny_bit_procur_bit_procurement_credit_card_line_items</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-09-12 15:50:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>87adcb601b593510baac766e034bcb84</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_dosny_bit_procur_bit_procurement_credit_card_line_items</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="ReceivingReport" source="x_dosny_vendorrepo">bbcb77921bcdf110baac766e034bcb72</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="ReceivingReport">bbcb77921bcdf110baac766e034bcb72</sys_scope>
+            <sys_update_name>sys_ui_section_87adcb601b593510baac766e034bcb84</sys_update_name>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-09-12 15:50:34</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="ReceivingReportApp" name="receivingreportapp">8badcb601b593510baac766e034bcb7d</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>
