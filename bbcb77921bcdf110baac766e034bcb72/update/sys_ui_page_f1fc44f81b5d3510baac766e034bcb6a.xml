@@ -180,7 +180,7 @@ function getRecordsJSON(response) {
 				// For example, you can change its innerHTML or perform other actions.
 				// Here's an example of changing its content:
 				step = 18;
-				renderTableDiv.innerHTML = html;
+				renderTableDiv.innerHTML = '<div>' + html+ '</div>';
 				step = 19;
 			} else {
 				alert('Element with id "render_table" not found.');
@@ -645,13 +645,13 @@ function getRecordsJSON(response) {
         <sys_created_by>sfarkas</sys_created_by>
         <sys_created_on>2023-09-12 20:30:51</sys_created_on>
         <sys_id>f1fc44f81b5d3510baac766e034bcb6a</sys_id>
-        <sys_mod_count>172</sys_mod_count>
+        <sys_mod_count>174</sys_mod_count>
         <sys_name>ReceivingReportTable</sys_name>
         <sys_package display_value="ReceivingReport" source="x_dosny_vendorrepo">bbcb77921bcdf110baac766e034bcb72</sys_package>
         <sys_policy/>
         <sys_scope display_value="ReceivingReport">bbcb77921bcdf110baac766e034bcb72</sys_scope>
         <sys_update_name>sys_ui_page_f1fc44f81b5d3510baac766e034bcb6a</sys_update_name>
         <sys_updated_by>sfarkas</sys_updated_by>
-        <sys_updated_on>2023-09-14 21:12:10</sys_updated_on>
+        <sys_updated_on>2023-09-14 21:18:19</sys_updated_on>
     </sys_ui_page>
 </record_update>
