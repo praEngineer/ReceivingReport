@@ -152,11 +152,35 @@ function getRecordsJSON(response) {
 		}
 		step = 14;
 		htmlSelectYear = htmlSelectYear + htmlSelectClose;
-		// alert('htmlSelectYear is now: ' + htmlSelectYear);
 
 		document.getElementById('render_yearSelect').innerHTML = '<div>' + htmlSelectYear + '</div>';
-		// document.getElementById('render_tablet').innerHTML = '<div>' + html + '</div>';
 		step = 15;
+
+		var currentDate = new Date();
+		currentDate.setMonth(currentDate.getMonth() - 1);
+		var previousMonth = currentDate.getMonth() + 1; // Months are 0-based
+		
+		document.getElementById('render_monthSelect').innerHTML = '';
+		var selHTML = '<label for="monthSelect">Select Month:</label>';
+		selHTML += '<select id="monthSelect">';
+		selHTML += '<option value=""></option>';
+
+		for (var month = 1; month <= 12; month++) {
+			selHTML += '<option value="' + month + '"';
+			if (month === previousMonth) {
+				selHTML += ' selected';
+			}
+			selHTML += '>' + getMonthName(month) + '</option>';
+		}
+
+		selHTML += '</select>';
+		//alert(step + '. selHTML is ' + selHTML);
+		document.getElementById('render_monthSelect').innerHTML = '<div>' + selHTML + '</div>';
+		step = 16.1;
+
+
+		document.getElementById('rrTitle').innerHTML = 'Receiving Report Month (' + desiredRRMonth + ') and Year (' + desiredRRYear + ') Choices';
+		
 /*
 		document.addEventListener('DOMContentLoaded', function() {
 
@@ -194,7 +218,24 @@ function getRecordsJSON(response) {
 	alert('made it to step ' + step);
 }
 
-]]></client_script>
+document.getElementById("yearSelect").addEventListener("change", function () {
+        desiredRRYear = this.value;
+		document.getElementById('rrTitle').innerHTML = 'Receiving Report Month (' + desiredRRMonth + ') and Year (' + desiredRRYear + ') Choices';
+    });
+
+document.getElementById("monthSelect").addEventListener("change", function () {
+        desiredRRMonth = this.value;
+		document.getElementById('rrTitle').innerHTML = 'Receiving Report Month (' + desiredRRMonth + ') and Year (' + desiredRRYear + ') Choices';
+    });
+
+function getMonthName(monthNumber) {
+    var months = [
+        'January', 'February', 'March', 'April',
+        'May', 'June', 'July', 'August',
+        'September', 'October', 'November', 'December'
+    ];
+    return months[monthNumber - 1];
+}]]></client_script>
         <description>Retrieve rows from x_dosny_bit_procur_bit_procurement_credit_card_line_items and present those in a nicely formatted HTML table. This script will use a specified rr_year and rr_month from the x_dosny_bit_procur_bit_procurement_receiving_report reference table.</description>
         <direct>false</direct>
         <endpoint>x_dosny_vendorrepo_ReceivingReportTable.do</endpoint>
@@ -631,7 +672,7 @@ function getRecordsJSON(response) {
     }</style>
 	</head>
 	<body>
-		<div>Receiving Report Month and Year Choices</div><br />
+		<div id='rrTitle'>Receiving Report Month and Year Choices</div><br />
 		<div id='render_yearSelect'>Default year select</div>
 		<div id='render_monthSelect'></div>
 		<div id='render_table'></div> 
@@ -645,13 +686,13 @@ function getRecordsJSON(response) {
         <sys_created_by>sfarkas</sys_created_by>
         <sys_created_on>2023-09-12 20:30:51</sys_created_on>
         <sys_id>f1fc44f81b5d3510baac766e034bcb6a</sys_id>
-        <sys_mod_count>174</sys_mod_count>
+        <sys_mod_count>180</sys_mod_count>
         <sys_name>ReceivingReportTable</sys_name>
         <sys_package display_value="ReceivingReport" source="x_dosny_vendorrepo">bbcb77921bcdf110baac766e034bcb72</sys_package>
         <sys_policy/>
         <sys_scope display_value="ReceivingReport">bbcb77921bcdf110baac766e034bcb72</sys_scope>
         <sys_update_name>sys_ui_page_f1fc44f81b5d3510baac766e034bcb6a</sys_update_name>
         <sys_updated_by>sfarkas</sys_updated_by>
-        <sys_updated_on>2023-09-14 21:18:19</sys_updated_on>
+        <sys_updated_on>2023-09-14 22:03:39</sys_updated_on>
     </sys_ui_page>
 </record_update>
