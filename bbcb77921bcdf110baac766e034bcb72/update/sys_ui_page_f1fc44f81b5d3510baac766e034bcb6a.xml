@@ -131,7 +131,7 @@ function getRecordsJSON(response) {
 		// Populate year options
 		var htmlSelectYear = ''
 		+ '<label for="yearSelect">Select Year:</label>'
-		+ '<select id="yearSelect">'
+		+ '<select id="yearSelect" onChange="chgYear()">'
 		+ '<option value=""></option>';
 		step = 12;
 		var htmlSelectClose = ''
@@ -158,11 +158,11 @@ function getRecordsJSON(response) {
 
 		var currentDate = new Date();
 		currentDate.setMonth(currentDate.getMonth() - 1);
-		var previousMonth = currentDate.getMonth() + 1; // Months are 0-based
+		var previousMonth = currentDate.getMonth() +1; // Months are 0-based but my xref is 1-12
 		
 		document.getElementById('render_monthSelect').innerHTML = '';
 		var selHTML = '<label for="monthSelect">Select Month:</label>';
-		selHTML += '<select id="monthSelect">';
+		selHTML += '<select id="monthSelect" onChange="chgMonth()">';
 		selHTML += '<option value=""></option>';
 
 		for (var month = 1; month <= 12; month++) {
@@ -179,7 +179,7 @@ function getRecordsJSON(response) {
 		step = 16.1;
 
 
-		document.getElementById('rrTitle').innerHTML = 'Receiving Report Month (' + desiredRRMonth + ') and Year (' + desiredRRYear + ') Choices';
+		document.getElementById('rrTitle').innerHTML = 'Receiving Report Month (' + previousMonth + ') and Year (' + desiredRRYear + ') Choices';
 		
 /*
 		document.addEventListener('DOMContentLoaded', function() {
@@ -218,15 +218,15 @@ function getRecordsJSON(response) {
 	alert('made it to step ' + step);
 }
 
-document.getElementById("yearSelect").addEventListener("change", function () {
-        desiredRRYear = this.value;
+function chgYear () {
+        desiredRRYear = document.getElementById('yearSelect').value;
 		document.getElementById('rrTitle').innerHTML = 'Receiving Report Month (' + desiredRRMonth + ') and Year (' + desiredRRYear + ') Choices';
-    });
+    }
 
-document.getElementById("monthSelect").addEventListener("change", function () {
-        desiredRRMonth = this.value;
+function chgMonth() {
+        desiredRRMonth = document.getElementById('monthSelect').value;
 		document.getElementById('rrTitle').innerHTML = 'Receiving Report Month (' + desiredRRMonth + ') and Year (' + desiredRRYear + ') Choices';
-    });
+    }
 
 function getMonthName(monthNumber) {
     var months = [
@@ -672,11 +672,12 @@ function getMonthName(monthNumber) {
     }</style>
 	</head>
 	<body>
+		<form id='frmReceivingReport' onSubmit='javascript:alert("submitted")'>
 		<div id='rrTitle'>Receiving Report Month and Year Choices</div><br />
 		<div id='render_yearSelect'>Default year select</div>
 		<div id='render_monthSelect'></div>
 		<div id='render_table'></div> 
-
+		</form>
 	</body>
 	</html>
 </j:jelly>]]></html>
@@ -686,13 +687,13 @@ function getMonthName(monthNumber) {
         <sys_created_by>sfarkas</sys_created_by>
         <sys_created_on>2023-09-12 20:30:51</sys_created_on>
         <sys_id>f1fc44f81b5d3510baac766e034bcb6a</sys_id>
-        <sys_mod_count>180</sys_mod_count>
+        <sys_mod_count>186</sys_mod_count>
         <sys_name>ReceivingReportTable</sys_name>
         <sys_package display_value="ReceivingReport" source="x_dosny_vendorrepo">bbcb77921bcdf110baac766e034bcb72</sys_package>
         <sys_policy/>
         <sys_scope display_value="ReceivingReport">bbcb77921bcdf110baac766e034bcb72</sys_scope>
         <sys_update_name>sys_ui_page_f1fc44f81b5d3510baac766e034bcb6a</sys_update_name>
         <sys_updated_by>sfarkas</sys_updated_by>
-        <sys_updated_on>2023-09-14 22:03:39</sys_updated_on>
+        <sys_updated_on>2023-09-15 15:57:22</sys_updated_on>
     </sys_ui_page>
 </record_update>
