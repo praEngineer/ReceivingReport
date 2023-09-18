@@ -2,38 +2,27 @@
     <sys_ui_page action="INSERT_OR_UPDATE">
         <category>cms</category>
         <client_script><![CDATA[// Create an HTML table to display the results
-var htmlHeader = 
-	'<table style="width:100%;"><tbody><tr><td style="width:25%;"><p class="s1" style="padding-left: 9pt;text-indent: 0pt;text-align: left;">23&nbsp;BS-3<span style=" color: #3A3A3A;">(Rev. 8/96)</span></p><p class="s1" style="padding-left: 9pt;text-indent: 0pt;text-align: left;"><span style=" color: #3A3A3A;">180M-0-125 034</span></p></td><td style="width:30%;"><p class="s6" style="padding-top: 4pt;text-indent: 0pt;line-height: 9pt;padding-left: 35pt;"><span style=" color: #3A3A3A;">RECEIVING&nbsp;</span><span style=" color: #3A3A3A;">REPORT</span></p></td><td style="width:45%;"><p class="s6" style="padding-top: 4pt;text-indent: 0pt;line-height: 9pt;padding-left: 35pt;"><span class="s1" style="padding-top: 4pt;padding-left: 4pt;text-indent: 0pt;line-height: 9pt;text-align: right;">THE CITY OF NEW YORK</span><br><br><span class="s2" style="padding-left: 4pt;text-indent: 0pt;line-height: 9pt;text-align: right;">DEPARTMENT OF CITY  WIDE ADMINISTRATIVE SERVICES</span><br><br><span class="s2" style="padding-left: 4pt;text-indent: 0pt;text-align: right;">DIVISION OF MUNICIPAL SUPPLY SERVICES</span></p></td></tr></tbody></table>'+
-	'<p style="text-indent: 0pt;text-align: left;"><br><br></p>' +
-	'<p style="padding-left: 56pt;text-indent: 0pt;text-align: justify;"><b>NOTE TO AGENCY SUBMITTING RECEIVING REPORTS:</b><u>THIS REPORT IS TO BE COMPLETED IMMEDIATELY UPON<br><br>DELIVERY.</u><span style=" color: #000;">THE NO. 1 COPY IS TO BE SENT TO THE BUREAU OF QUALITY ASSURANCE. THE nO. 2, 3, 4 COPIES ARE<br><br>TO BE UTILIZED FOR AUDIT AND ACCOUNTING PURPOSES AND SHOULD BE DISTRIBUTED AS DIRECTED WITHIN<br><br>YOUR OWN AGENCY.</span></p>'+
-	'<p style="text-indent: 0pt;text-align: left;"><br><br></p>'+
-	'<h2 style="padding-left: 31pt;text-indent: 0pt;text-align: left;">SHADED AREAS FOR THE USE OF DIV. OF MUNICIPAL SUPPLY SERVICES</h2>' +
-	'<p style="text-indent: 0pt;text-align: left;"><br><br></p>';
+var htmlHeader = '';
+// 	'<table style="width:100%;"><tbody><tr><td style="width:25%;"><p class="s1" style="padding-left: 9pt;text-indent: 0pt;text-align: left;">23&nbsp;BS-3<span style=" color: #3A3A3A;">(Rev. 8/96)</span></p><p class="s1" style="padding-left: 9pt;text-indent: 0pt;text-align: left;"><span style=" color: #3A3A3A;">180M-0-125 034</span></p></td><td style="width:30%;"><p class="s6" style="padding-top: 4pt;text-indent: 0pt;line-height: 9pt;padding-left: 35pt;"><span style=" color: #3A3A3A;">RECEIVING&nbsp;</span><span style=" color: #3A3A3A;">REPORT</span></p></td><td style="width:45%;"><p class="s6" style="padding-top: 4pt;text-indent: 0pt;line-height: 9pt;padding-left: 35pt;"><span class="s1" style="padding-top: 4pt;padding-left: 4pt;text-indent: 0pt;line-height: 9pt;text-align: right;">THE CITY OF NEW YORK</span><br><br><span class="s2" style="padding-left: 4pt;text-indent: 0pt;line-height: 9pt;text-align: right;">DEPARTMENT OF CITY  WIDE ADMINISTRATIVE SERVICES</span><br><br><span class="s2" style="padding-left: 4pt;text-indent: 0pt;text-align: right;">DIVISION OF MUNICIPAL SUPPLY SERVICES</span></p></td></tr></tbody></table>'+
+// 	'<p style="text-indent: 0pt;text-align: left;"><br><br></p>' +
+// 	'<p style="padding-left: 56pt;text-indent: 0pt;text-align: justify;"><b>NOTE TO AGENCY SUBMITTING RECEIVING REPORTS:</b><u>THIS REPORT IS TO BE COMPLETED IMMEDIATELY UPON<br><br>DELIVERY.</u><span style=" color: #000;">THE NO. 1 COPY IS TO BE SENT TO THE BUREAU OF QUALITY ASSURANCE. THE nO. 2, 3, 4 COPIES ARE<br><br>TO BE UTILIZED FOR AUDIT AND ACCOUNTING PURPOSES AND SHOULD BE DISTRIBUTED AS DIRECTED WITHIN<br><br>YOUR OWN AGENCY.</span></p>'+
+// 	'<p style="text-indent: 0pt;text-align: left;"><br><br></p>'+
+// 	'<h2 style="padding-left: 31pt;text-indent: 0pt;text-align: left;">SHADED AREAS FOR THE USE OF DIV. OF MUNICIPAL SUPPLY SERVICES</h2>' +
+// 	'<p style="text-indent: 0pt;text-align: left;"><br><br></p>';
 
 var htmlTop = '<table style="border-collapse:collapse;margin-left:5.23954pt" cellspacing="0"><tbody><tr style="height:11pt"><td style="width:50pt;border-top-style:solid;border-top-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s15" style="padding-left: 5pt;padding-right: 5pt;text-indent: 10pt;text-align: left;">DATE PREPARED</p></td><td style="width:40pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p class="s15" style="padding-top: 2pt;padding-left: 3pt;text-indent: 0pt;line-height: 8pt;text-align: left;">RECEIVED</p></td><td style="width:14pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p class="s16" style="padding-top: 2pt;padding-left: 1pt;text-indent: 0pt;line-height: 8pt;text-align: left;">BY</p></td><td style="width:172pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:10pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:30pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:35pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:3pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:23pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:5pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:61pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s17" style="padding-left: 2pt;padding-right: 1pt;text-indent: 5pt;text-align: left;">OMPA OR<br><br>CONTRACT NO.</p></td><td style="width:62pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s19" style="text-indent: 0pt;line-height: 8pt;text-align: left;">ORDER NO.</p></td><td style="width:35pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s19" style="padding-top: 1pt;padding-left: 2pt;text-indent: 0pt;text-align: left;">SHIPPING</p><p class="s19" style="padding-left: 2pt;text-indent: 0pt;text-align: left;">INSTR NO.</p></td><td style="width:34pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt" rowspan="2"><p class="s19" style="padding-top: 1pt;padding-left: 2pt;text-indent: 0pt;text-align: left;">RECEIVING</p><p class="s19" style="padding-left: 2pt;text-indent: 0pt;text-align: left;">REPORT NO.</p></td></tr><tr style="height:10pt"><td style="width:42pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt;background-color:#D3D3D3;" colspan="2"><p class="s24" style="padding-left: 2pt;text-indent: 0pt;text-align: left;background-color:#D3D3D3;">STOREHOUSE</p></td><td style="width:290pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="7"><p class="s15" style="padding-left: 3pt;text-indent: 0pt;line-height: 8pt;text-align: left;">AGENCY AND UNIT</p></td></tr><tr style="height:26pt"><td style="width:50pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:42pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;background-color:#D3D3D3" colspan="2"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:290pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="7"><p class="s25" style="padding-left: 3pt;text-indent: 0pt;text-align: left;">ADDRESS<span class="s26">DSNY IT 357 Pearl St 19th fl</span></p></td><td style="width:61pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s27" style="padding-top: 5pt;padding-left: 2pt;text-indent: 0pt;text-align: left;">Credit Card</p></td><td style="width:62pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:35pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:34pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td></tr><tr style="height:55pt"><td style="width:250pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="4"><p class="s15" style="padding-top: 1pt;text-indent: 0pt;text-align: left;">RECEIVED FROM: NAME OF SELLER (VENDOR)</p></td><td style="width:78pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="4"><p class="s15" style="padding-left: 11pt;text-indent: 0pt;text-align: left;">BILL OF LADING /<br><br>DEL. TICKET NO.</p></td><td style="width:246pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt" colspan="6"><table style="width:100%"><tbody><tr><td valign="top" colspan="2" style="width:100%"><span class="s15" style="padding-left: 11pt;text-indent: 0pt;text-align: left;">CHECK ONE:</span></td></tr><tr><td colspan="1" style="width:10%"><span class="s32" style="padding-top: 3pt;padding-left: 2pt;padding-right: 1pt;line-height: 39%;text-align: left;"><span class="s31">□</span></span></td><td colspan="1" style="width:90%;text-align: left;"><span class="s32" style="padding-left: 2pt;padding-right: 1pt;text-align: left;"><span style=" color: #131313;">THIS IS A PARTIAL DELIVERY</span><br><br><span style=" color: #4F4F4F;">(MORE DELIVERIS DUE ON SAME ORDER)</span></span></td></tr><tr><td valign="top" colspan="1" style="width:10%"><span class="s32" style="padding-left: 2pt;padding-right: 1pt;line-height: 39%;text-align: left;"><span class="s31">□</span></span></td><td valign="top" colspan="1" style="width:90%;text-align: left;"><span class="s32" style="padding-left: 2pt;padding-right: 1pt;text-align: left;"><span style=" color: #131313;">FINAL DELIVERY</span><br><br></span></td></tr></tbody></table></tr></tbody></table></div>';
 
-htmlBottom = '<div><table style="width:100%;border-collapse:collapse;margin-left:5.23954pt" cellspacing="0" border="1"><tr style="height: 23pt;"><th style="width: 22pt; border-top-style: solid; border-top-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;">ITEM NO</th><th style="width: 44pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 2pt;background-color:#D3D3D3;text-align: center;" colspan="2">STOREHOUSE<br/>COMMODITY<br/>CODE</th><th style="width: 230pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 2pt;text-align: center" colspan="3">Description</th><th style="width: 38pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 2pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;background-color:#D3D3D3;" colspan="2">Quantity</th><th style="width: 23pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;text-align: center;background-color:#D3D3D3;">Unit</th><th style="width: 40pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 2pt;text-align: center;background-color:#D3D3D3;" colspan="2">Unit<br/>Price</th><th style="width: 41pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 2pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;">Quantity</th><th style="width: 22pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;text-align: center;">Unit</th><th style="width: 42pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;text-align: center;">Unit<br/>Price</th><th style="width: 52pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt;">Total Cost</th></tr>';
+htmlBottom = 
+'<div><table style="width:100%;border-collapse:collapse;margin-left:5.23954pt" cellspacing="0" border="1"><tr style="height: 23pt;"><th style="width: 22pt; border-top-style: solid; border-top-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;">ITEM NO</th><th style="width: 44pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 2pt;background-color:#D3D3D3;text-align: center;" colspan="2">STOREHOUSE<br/>COMMODITY<br/>CODE</th><th style="width: 230pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 2pt;text-align: center" colspan="3">Description</th><th style="width: 38pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 2pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;background-color:#D3D3D3;" colspan="2">Quantity</th><th style="width: 23pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;text-align: center;background-color:#D3D3D3;">Unit</th><th style="width: 40pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 2pt;text-align: center;background-color:#D3D3D3;" colspan="2">Unit<br/>Price</th><th style="width: 41pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 2pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;">Quantity</th><th style="width: 22pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;text-align: center;">Unit</th><th style="width: 42pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;text-align: center;">Unit<br/>Price</th><th style="width: 52pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt;">Total Cost</th></tr>';
 
+/*
 var frame = '<div><table><tbody><tr><td>'+ htmlHeader + '</td></tr><tr><td>'+ htmlTop + '</td></tr><tr><td>'+ htmlBottom;
-
-html = frame;
-
+*/
 // Specify the desired rr_year and rr_month values
-var desiredRRYear = '2023'; // Replace with your desired year
-var desiredRRMonth = '9';   // Replace with your desired month
-// Query the x_dosny_bit_procur_bit_procurement_credit_card_line_items table
-// Initialize a GlideAjax instance for making server calls
-var ga = new GlideAjax('ReceivingReportAjaxCall'); // your GlideAjax script include class name
+setDesiredRRYear('2023'); // Replace with your desired year
+setDesiredRRMonth('9');   // Replace with your desired month
 
-
-// if (ga) {
-//     // ga is not null, you can proceed with further actions
-//     // For example, you can make a server call or perform other operations.
-//     alert('ReceivingReportAjaxCall: ga is not null');
-// } else {
-//     // ga is null or undefined, handle this case as needed
-//     alert('ReceivingReportAjaxCall; ga is null or undefined');
-// }
+refreshTbl();
 
 // Make the asynchronous server call
 /*
@@ -70,15 +59,11 @@ function canIconnectJSON(response) { // call back function name is same as agrue
 }
 */
 
-// Set the function to call and any required parameters
-ga.addParam('sysparm_name', 'getRecords'); // Replace with your GlideAjax function name within class declaration
-ga.addParam('sysparm_rr_year', desiredRRYear);
-ga.addParam('sysparm_rr_month', desiredRRMonth);
 
-ga.getXML(getRecordsJSON);
 function getRecordsJSON(response) {
 	var answer = "";
-	var step = 1.0;
+	step = 1.1;
+	// alert('getRecordsJSON');
 	try {
 		answer = response.responseXML.querySelector('xml').getAttribute('answer');
 		// above line retrieves
@@ -101,32 +86,45 @@ function getRecordsJSON(response) {
 			var formattedRow = '';
 			data.forEach(function(record) {
 				formattedRow = currRow < 10 ? 'Row0' + currRow : 'Row' + currRow;
-				html += '<tr style="height: 23pt;"><td style="width: 22pt; border-top-style: solid; border-top-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;text-align: center;"><div id="' + formattedRow +'Cell01">' + record.quantity + '<div></td><td style="width: 294pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 2pt;" colspan="5"><div id="' + formattedRow +'Cell02">' + record.number + '&nbsp;' + record.subject + '<br/>' + record.vendor + '<div></td>' + '</td><td style="width: 38pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 2pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;background-color:#D3D3D3;" colspan="2"><div id="' + formattedRow +'Cell03">' +  '&nbsp;' + '<div></td>' + '</td><td style="width: 23pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;background-color:#D3D3D3;"><div id="' + formattedRow +'Cell04">' +  '&nbsp;' + '<div></td>' + '</td><td style="width: 40pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 2pt;background-color:#D3D3D3;" colspan="2"><div id="' + formattedRow +'Cell05">' +  '&nbsp;' + '<div></td>' + '<td style="width: 41pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 2pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;text-align: center;"><div id="' + formattedRow +'Cell06">' +  record.quantity + '<div></td>'+ '</td><td style="width: 22pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;"><div id="' + formattedRow +'Cell07">' +  '&nbsp;' + '<div></td>' + '<td style="width: 42pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;text-align: right;"><div id="' + formattedRow +'Cell08">' +  record.unit_price + '<div></td>'+ '</td><td style="width: 52pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt;ext-align: right;"><div id="' + formattedRow +'Cell09">' +  '&nbsp;' + '<div></td>' + '</tr>';
+				// alert(formattedRow);
+				html += '<tr style="height: 23pt;"><td style="width: 22pt; border-top-style: solid; border-top-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;text-align: center;"><div id="' + formattedRow +'Cell01">' + record.quantity + '<div></td><td style="width: 294pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 2pt;" colspan="5"><div id="' + formattedRow +'Cell02">' + record.number + '&nbsp;' + record.subject + '<br/>' + record.vendor + '<div></td>' + '</td><td style="width: 38pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 2pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;background-color:#D3D3D3;" colspan="2"><div id="' + formattedRow +'Cell03">' +  '&nbsp;' + '<div></td>' + '</td><td style="width: 23pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;background-color:#D3D3D3;"><div id="' + formattedRow +'Cell04">' +  '&nbsp;' + '<div></td>' + '</td><td style="width: 40pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 2pt;background-color:#D3D3D3;" colspan="2"><div id="' + formattedRow +'Cell05">' +  '&nbsp;' + '<div></td>' + '<td style="width: 41pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 2pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;text-align: center;"><div id="' + formattedRow +'Cell06">' +  record.quantity + '<div></td>'+ '</td><td style="width: 22pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;"><div id="' + formattedRow +'Cell07">' +  '&nbsp;' + '<div></td>' + '<td style="width: 42pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;text-align: center;"><div id="' + formattedRow +'Cell08">' +  record.unit_price + '<div></td>'+ '</td><td style="width: 52pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt;text-align: right;"><div id="' + formattedRow +'Cell09">' + (record.quantity * record.unit_price).toLocaleString('en-US', { style: 'currency', currency: 'USD' }) + '<div></td>' + '</tr>';
+							currRow += 1;
 			});
-
+			if(currRow < 15){
+				// alert('make empty rows');
+				for (var currRowEmpty = currRow; currRowEmpty <= 15; currRowEmpty++) {
+				formattedRow = currRowEmpty < 10 ? 'Row0' + currRowEmpty : 'Row' + currRowEmpty;
+				html += '<tr style="height: 23pt;"><td style="width: 22pt; border-top-style: solid; border-top-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;text-align: center;"><div id="' + formattedRow +'Cell01">' + '&nbsp;' + '<div></td><td style="width: 294pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 2pt;" colspan="5"><div id="' + formattedRow +'Cell02">' + '&nbsp;' + '&nbsp;' + '&nbsp;' + '<br/>' + '&nbsp;' + '<div></td>' + '</td><td style="width: 38pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 2pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;background-color:#D3D3D3;" colspan="2"><div id="' + formattedRow +'Cell03">' +  '&nbsp;' + '<div></td>' + '</td><td style="width: 23pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;background-color:#D3D3D3;"><div id="' + formattedRow +'Cell04">' +  '&nbsp;' + '<div></td>' + '</td><td style="width: 40pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 2pt;background-color:#D3D3D3;" colspan="2"><div id="' + formattedRow +'Cell05">' +  '&nbsp;' + '<div></td>' + '<td style="width: 41pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 2pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;text-align: center;"><div id="' + formattedRow +'Cell06">' + '&nbsp;' + '<div></td>'+ '</td><td style="width: 22pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;"><div id="' + formattedRow +'Cell07">' +  '&nbsp;' + '<div></td>' + '<td style="width: 42pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;text-align: right;"><div id="' + formattedRow +'Cell08">' + '&nbsp;' + '<div></td>'+ '</td><td style="width: 52pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt;ext-align: right;"><div id="' + formattedRow +'Cell09">' +  '&nbsp;' + '<div></td>' + '</tr>';
+				}
+			}
 			// Close the HTML table
 			html += '</td></tr></tbody></table></div>';
 			step = 5;
-			// alert(step + '. html: ' + html);
+			// alert(step + '. ');
 		} else {
 			step = 6;
 			alert(step + '. answer catch: ' + error.toString());
 		}		
-		// document.getElementById('render_table').innerHTML = html;
-		// Wait for the DOM to be ready
-		step = 7;
-		// alert(step + '. html length is ' + html.length);
-		// jslog(html);
-		document.getElementById('render_table').innerHTML = '<div>' + html + '</div>';
+		document.getElementById('render_table').innerHTML = html;
 
+		step = 7;
+	}
+	catch (error){
+		alert('from client catch: ' + error.toString());
+		// html = step + '. from client catch: ' + error.toString() + '<br />' + answer;
+	}
+
+}
+
+function renderYearDropDown() {
 		var anotherOption = '';
 		step = 8;
-		var currentYear = new Date().getFullYear();
+		var currentYear = parseInt(getDesiredRRYear()); // new Date().getFullYear();
 		//alert(step + '. currentYear is ' + currentYear);
 		step = 9;
 		var yearChoices = [currentYear - 2, currentYear - 1, currentYear, currentYear + 1, currentYear + 2];
 		step = 10;
-		var defaultYear = new Date().getFullYear();
+		var defaultYear =  parseInt(getDesiredRRYear()); // new Date().getFullYear();
 		step = 11;
 		// Populate year options
 		var htmlSelectYear = ''
@@ -154,17 +152,25 @@ function getRecordsJSON(response) {
 		htmlSelectYear = htmlSelectYear + htmlSelectClose;
 
 		document.getElementById('render_yearSelect').innerHTML = '<div>' + htmlSelectYear + '</div>';
+}
+
+function renderMonthDropDown() {
 		step = 15;
 
-		var currentDate = new Date();
-		currentDate.setMonth(currentDate.getMonth() - 1);
-		var previousMonth = currentDate.getMonth() +1; // Months are 0-based but my xref is 1-12
-		
+// 		var currentDate = new Date();
+// 		setDesiredRRMonth(currentDate.setMonth(currentDate.getMonth() - 1));
+		step = 16.04;
+		var previousMonth =  getDesiredRRMonth(); 
+		// currentDate.getMonth() +1; 
+		// Months are 0-based but my xref is 1-12
+		// alert('previousMonth is ' + previousMonth);
+		step = 16.05;
 		document.getElementById('render_monthSelect').innerHTML = '';
+		step = 16.06;
 		var selHTML = '<label for="monthSelect">Select Month:</label>';
 		selHTML += '<select id="monthSelect" onChange="chgMonth()">';
 		selHTML += '<option value=""></option>';
-
+		step = 16.07;
 		for (var month = 1; month <= 12; month++) {
 			selHTML += '<option value="' + month + '"';
 			if (month === previousMonth) {
@@ -172,61 +178,55 @@ function getRecordsJSON(response) {
 			}
 			selHTML += '>' + getMonthName(month) + '</option>';
 		}
-
+		step = 16.08;
 		selHTML += '</select>';
-		//alert(step + '. selHTML is ' + selHTML);
+		// alert(step + '. selHTML is ' + selHTML);
 		document.getElementById('render_monthSelect').innerHTML = '<div>' + selHTML + '</div>';
-		step = 16.1;
-
-
-		document.getElementById('rrTitle').innerHTML = 'Receiving Report Month (' + previousMonth + ') and Year (' + desiredRRYear + ') Choices';
-		
-/*
-		document.addEventListener('DOMContentLoaded', function() {
-
-
-			// Find the <div> element by its id
-			var renderYearSelect = document.getElementById('render_yearSelect');
-			if (renderYearSelect) {
-				step=16;
-				renderYearSelect.innerHTML = '<div>' + htmlSelectYear + '</div>';
-				
-			} else {
-				alert('Element with id "yearSelect" not found.');
-			}
-
-			
-			step = 17;
-			var renderTableDiv = document.getElementById('render_table');
-			// Check if the <div> element exists
-			if (renderTableDiv) {
-				// Access and manipulate the contents of the <div> here
-				// For example, you can change its innerHTML or perform other actions.
-				// Here's an example of changing its content:
-				step = 18;
-				renderTableDiv.innerHTML = '<div>' + html+ '</div>';
-				step = 19;
-			} else {
-				alert('Element with id "render_table" not found.');
-			}
-		});
-*/
-	}
-	catch (error){
-		html = step + '. from client catch: ' + error.toString() + '<br />' + answer;
-	}
-	alert('made it to step ' + step);
+		step = 16.09;
 }
 
-function chgYear () {
-        desiredRRYear = document.getElementById('yearSelect').value;
-		document.getElementById('rrTitle').innerHTML = 'Receiving Report Month (' + desiredRRMonth + ') and Year (' + desiredRRYear + ') Choices';
-    }
+function renderTheTable(parmHTML){
+	// alert('renderTheTable');
+	document.getElementById('render_table').innerHTML = '<div>' + parmHTML + '</div>';
+}
 
-function chgMonth() {
-        desiredRRMonth = document.getElementById('monthSelect').value;
-		document.getElementById('rrTitle').innerHTML = 'Receiving Report Month (' + desiredRRMonth + ') and Year (' + desiredRRYear + ') Choices';
-    }
+
+
+
+function refreshTbl() {
+// Query the x_dosny_bit_procur_bit_procurement_credit_card_line_items table
+// Initialize a GlideAjax instance for making server calls
+		var ga = new GlideAjax('ReceivingReportAjaxCall'); // your GlideAjax script include class name
+
+		ga.addParam('sysparm_name', 'getRecords'); 
+			// Replace with your (e.g., getRecords) GlideAjax function name within class declaration
+		var lclYear = getDesiredRRYear();
+		var lclMonth = getDesiredRRMonth();
+		ga.addParam('sysparm_rr_year', lclYear);
+		ga.addParam('sysparm_rr_month', lclMonth);
+
+		var frame = '<div><table><tbody><tr><td>'+ htmlHeader + '</td></tr><tr><td>'+ htmlTop + '</td></tr><tr><td>'+ htmlBottom;
+		step = 71;
+		html = frame;
+		step = 72;
+
+		ga.getXML(getRecordsJSON);	
+		step = 73;
+	
+		renderTheTable(html);
+		step = 74;
+
+		renderYearDropDown();
+		step = 75;
+		
+		renderMonthDropDown();
+		step = 76;
+
+		document.getElementById('rrTitle').innerHTML = 'Receiving Report Month (' + getDesiredRRMonth() + ') and Year (' + getDesiredRRYear() + ') Choices';
+		step = 77;
+
+	// alert('made it to step ' + step);	
+}
 
 function getMonthName(monthNumber) {
     var months = [
@@ -235,7 +235,67 @@ function getMonthName(monthNumber) {
         'September', 'October', 'November', 'December'
     ];
     return months[monthNumber - 1];
-}]]></client_script>
+}
+
+function chgYear () {
+		//alert('chgYear event');
+		ctrlYear = document.getElementById('yearSelect').value;
+        setDesiredRRYear(ctrlYear);
+		refreshTbl();
+    }
+
+function chgMonth() {
+		//alert('chgMonth event');
+		var ctrlMonth = document.getElementById('monthSelect').value;
+        setDesiredRRMonth(ctrlMonth);
+		refreshTbl();
+    }
+
+
+var desiredRRYear = '';
+var desiredRRMonth = 0;
+
+// Getter function for desiredRRYear
+function getDesiredRRYear() {
+  if(desiredRRYear.length == 0){
+	setDesiredRRYear('2023');
+  }
+  return desiredRRYear;
+}
+
+// Setter function for desiredRRYear
+function setDesiredRRYear(newYear) {
+  desiredRRYear = newYear;
+}
+
+
+// Setter function for desiredRRMonth
+function setDesiredRRMonth(newMonth) {
+  step = 16.044;
+  desiredRRMonth = parseInt(newMonth);
+}
+
+// Getter function for desiredRRMonth
+function getDesiredRRMonth() {
+	step = 16.041;
+	if(desiredRRMonth.length == 0){
+		step = 16.0421;
+		var lclDate = new Date();
+		step = 16.0422;
+		lclDate.setMonth(lclDate.getMonth());
+		step = 16.0423;
+		var lclMonth = lclDate.getMonth();
+		step = 16.0424;
+		//alert(step + '. lclMonth is ' + lclMonth);
+		setDesiredRRMonth(lclMonth);
+		step = 16.0425;
+	}
+	step = 16.043;
+  //alert(step + '. getDesiredRRMonth is ' + desiredRRMonth);
+  return desiredRRMonth;
+}
+
+]]></client_script>
         <description>Retrieve rows from x_dosny_bit_procur_bit_procurement_credit_card_line_items and present those in a nicely formatted HTML table. This script will use a specified rr_year and rr_month from the x_dosny_bit_procur_bit_procurement_receiving_report reference table.</description>
         <direct>false</direct>
         <endpoint>x_dosny_vendorrepo_ReceivingReportTable.do</endpoint>
@@ -664,7 +724,12 @@ function getMonthName(monthNumber) {
       text-decoration: none;
       font-size: 6pt;
     }
-
+	.resize-image {
+		max-width: 850px;
+		max-height: 340px;
+		text-align: center;
+	  }
+			
     table,
     tbody {
       vertical-align: top;
@@ -675,8 +740,14 @@ function getMonthName(monthNumber) {
 		<form id='frmReceivingReport' onSubmit='javascript:alert("submitted")'>
 		<div id='rrTitle'>Receiving Report Month and Year Choices</div><br />
 		<div id='render_yearSelect'>Default year select</div>
-		<div id='render_monthSelect'></div>
-		<div id='render_table'></div> 
+		<div id='render_monthSelect'>Default month select</div>
+		<div id='render_header'>
+			<img src="ReceivingReportHeader.jpg" class="resize-image"/>
+		</div>
+		<div id='render_table'></div>
+		<div id='render_footer'>
+			<img src="ReceivingReportFooter.jpg" class="resize-image"/>
+		</div>
 		</form>
 	</body>
 	</html>
@@ -687,13 +758,13 @@ function getMonthName(monthNumber) {
         <sys_created_by>sfarkas</sys_created_by>
         <sys_created_on>2023-09-12 20:30:51</sys_created_on>
         <sys_id>f1fc44f81b5d3510baac766e034bcb6a</sys_id>
-        <sys_mod_count>186</sys_mod_count>
+        <sys_mod_count>239</sys_mod_count>
         <sys_name>ReceivingReportTable</sys_name>
         <sys_package display_value="ReceivingReport" source="x_dosny_vendorrepo">bbcb77921bcdf110baac766e034bcb72</sys_package>
         <sys_policy/>
         <sys_scope display_value="ReceivingReport">bbcb77921bcdf110baac766e034bcb72</sys_scope>
         <sys_update_name>sys_ui_page_f1fc44f81b5d3510baac766e034bcb6a</sys_update_name>
         <sys_updated_by>sfarkas</sys_updated_by>
-        <sys_updated_on>2023-09-15 15:57:22</sys_updated_on>
+        <sys_updated_on>2023-09-18 19:22:35</sys_updated_on>
     </sys_ui_page>
 </record_update>
