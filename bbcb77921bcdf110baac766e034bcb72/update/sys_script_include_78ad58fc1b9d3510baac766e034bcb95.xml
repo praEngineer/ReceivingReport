@@ -19,6 +19,111 @@ ReceivingReportAjaxCall.prototype = Object.extendsObject(global.AbstractAjaxProc
 	canIconnect: function() {
 		return JSON.stringify('correct response from canIconnect');
 	},
+	getVendorsThisMonth: function() {
+		try {
+			var receivingReportCatalogue = 'x_dosny_bit_procur_bit_procurement_receiving_report';
+			var creditCardLineItems = 'x_dosny_bit_procur_bit_procurement_credit_card_line_items'; // 
+			var response = [];
+			
+			var fullYear = this.getParameter('sysparm_rr_year');
+			var lastDigitOfYear = fullYear % 10;		
+			var desiredRRYear = lastDigitOfYear.toString();
+
+			// Define an array to map numeric month values to month names
+			var monthNames = [
+				"January", "February", "March", "April", "May", "June",
+				"July", "August", "September", "October", "November", "December"
+			];
+			// Get the value of sysparm_rr_month (either numeric or string)
+			var sysparm_rr_month = this.getParameter('sysparm_rr_month');
+
+			// Initialize desiredRRMonth as an empty string
+			var desiredRRMonth = "";
+
+			// Check if sysparm_rr_month is a numeric value (1 to 12)
+			if (!isNaN(sysparm_rr_month)) {
+				// Convert the numeric value to an integer (just in case) and get the corresponding month name
+				var monthIndex = parseInt(sysparm_rr_month, 10) - 1; // Subtract 1 because arrays are 0-based
+				desiredRRMonth =monthIndex+1; // a numeric value (1 to 12) not (0 to 11)
+			} else {
+				// Assume sysparm_rr_month is a string, capitalize the first letter (e.g., "september" to "September")
+				desiredRRMonth = sysparm_rr_month.charAt(0).toUpperCase() + sysparm_rr_month.slice(1);
+				var monthNameToNumber = {
+					"January": "1",
+					"February": "2",
+					"March": "3",
+					"April": "4",
+					"May": "5",
+					"June": "6",
+					"July": "7",
+					"August": "8",
+					"September": "9",
+					"October": "10",
+					"November": "11",
+					"December": "12"
+				};
+
+				// Check if desiredRRMonth is a valid month name
+				if (desiredRRMonth in monthNameToNumber) {
+					desiredRRMonth = monthNameToNumber[desiredRRMonth];
+				} else {
+					desiredRRMonth = "13";
+				}
+			}		
+
+			// find the name of the catelogue item for the given RR_YEAR and RR_MONTH
+			var grRRCat = new GlideRecord(receivingReportCatalogue);
+			grRRCat.addQuery('rr_month', desiredRRMonth.toString()); // choices "1" to "12"
+			grRRCat.addQuery('rr_year', desiredRRYear); // choices "1" to "4" but configured to allow up to 2029
+			grRRCat.query();
+
+			if(grRRCat.next()){
+				receivingReportCatalogueRow = grRRCat.getValue('number');
+
+				// Query records using GlideRecord
+				var ga = new GlideAggregate(creditCardLineItems);
+				ga.addQuery('receiving_report.number', receivingReportCatalogueRow);
+				// Add the GROUPBY aggregation to get unique vendor names
+				ga.addAggregate('GROUPBY', 'vendor.name');	
+				ga.orderBy('vendor.name');
+				ga.query();
+				while (ga.next()) {
+					var record = {};
+					var vendorName = ga.getValue('vendor.name');
+					if (vendorName !== null) {
+						if (typeof vendorName === 'string' && vendorName.trim() !== '') {
+							// It's a non-empty string
+							record.vendor = vendorName;
+						} else {
+							// It's either an empty string or just whitespace
+							record.vendor = 'not provided for ' + grRRCat.getValue('number');
+						}
+					} else {
+						// It's null
+						record.vendor = 'not provided for ' + grRRCat.getValue('number');
+					}
+					response.push(record);
+				}	
+			}
+			else {
+					var elserecordOuter = {};
+					// Populate record data as needed
+					elserecordOuter.vendor = 'no rows for ' + monthNames[desiredRRMonth-1] + ' ' + fullYear;
+					response.push(elserecordOuter);				
+			}		
+
+			var rs = JSON.stringify(response);
+			return rs;			
+		}
+		catch (error){
+				var recordCatch = {};
+				// Populate record data as needed
+				recordCatch.vendor = 'catch of receivingReportCatalogue did not work. ' + error.toString();
+				response.push(recordCatch);	
+			return JSON.stringify(response);
+		}
+		
+	},
     getRecords: function() {
 		var receivingReportCatalogue = 'x_dosny_bit_procur_bit_procurement_receiving_report';
 		var receivingReportCatalogueRow = 'unknown';
@@ -102,6 +207,10 @@ ReceivingReportAjaxCall.prototype = Object.extendsObject(global.AbstractAjaxProc
 			}
 		}		
 		
+		// Get the value of sysparm_rr_vendor (a string)
+		var sysparm_rr_vendor = this.getParameter('sysparm_rr_vendor');
+
+		
 		// find the name of the catelogue item for the given RR_YEAR and RR_MONTH
 		var grRRCat = new GlideRecord(receivingReportCatalogue);
 		grRRCat.addQuery('rr_month', desiredRRMonth.toString()); // choices "1" to "12"
@@ -114,15 +223,20 @@ ReceivingReportAjaxCall.prototype = Object.extendsObject(global.AbstractAjaxProc
 			// Query records using GlideRecord
 			var gr = new GlideRecord(creditCardLineItems);
 			gr.addQuery('receiving_report.number', receivingReportCatalogueRow);
+			if(sysparm_rr_vendor !== null) {
+				if(typeof sysparm_rr_vendor === 'string' && sysparm_rr_vendor.trim() !== '' ){
+					gr.addQuery('vendor.name', sysparm_rr_vendor);
+				}
+			}
 			gr.query();
 			while (gr.next()) {
 				var record = {};
 				// Populate record data as needed
 				record.number = gr.getValue('number');
-				record.vendor = gr.getValue('vendor.name');
+				record.vendor = sysparm_rr_vendor; // gr.getValue('vendor.name');
 				record.quantity = gr.getValue('quantity');
 				record.unit_price = gr.getValue('unit_price');
-				record.subject = gr.getValue('subject');
+				record.subject = gr.getValue('description');
 				record.receiving_report_sysid = gr.getValue('receiving_report.sys_id');
 				response.push(record);
 			}	
@@ -131,6 +245,14 @@ ReceivingReportAjaxCall.prototype = Object.extendsObject(global.AbstractAjaxProc
 				var elserecordOuter = {};
 				// Populate record data as needed
 				elserecordOuter.number = 'no rows for ' + monthNames[desiredRRMonth-1] + ' ' + fullYear;
+				if(sysparm_rr_vendor !== null) {
+					if(typeof sysparm_rr_vendor === 'string' && sysparm_rr_vendor.trim() !== '' ){
+						elserecordOuter.vendor = sysparm_rr_vendor;
+					}
+				}
+				else {
+					elserecordOuter.vendor = '';
+				}
 				elserecordOuter.vendor = '';
 				elserecordOuter.quantity = '';
 				elserecordOuter.unit_price = '';
@@ -146,7 +268,7 @@ ReceivingReportAjaxCall.prototype = Object.extendsObject(global.AbstractAjaxProc
 		catch (error){
 				var recordCatch = {};
 				// Populate record data as needed
-				recordCatch.number = 'catch of receivingReportCatalogue did not work. ' + error.toString();
+				recordCatch.number = 'catch -- receivingReportCatalogue did not work. ' + error.toString();
 				recordCatch.vendor = '';
 				recordCatch.quantity = '';
 				recordCatch.unit_price = '';
@@ -165,13 +287,13 @@ ReceivingReportAjaxCall.prototype = Object.extendsObject(global.AbstractAjaxProc
         <sys_created_by>sfarkas</sys_created_by>
         <sys_created_on>2023-09-12 21:46:45</sys_created_on>
         <sys_id>78ad58fc1b9d3510baac766e034bcb95</sys_id>
-        <sys_mod_count>33</sys_mod_count>
+        <sys_mod_count>47</sys_mod_count>
         <sys_name>ReceivingReportAjaxCall</sys_name>
         <sys_package display_value="ReceivingReport" source="x_dosny_vendorrepo">bbcb77921bcdf110baac766e034bcb72</sys_package>
         <sys_policy/>
         <sys_scope display_value="ReceivingReport">bbcb77921bcdf110baac766e034bcb72</sys_scope>
         <sys_update_name>sys_script_include_78ad58fc1b9d3510baac766e034bcb95</sys_update_name>
         <sys_updated_by>sfarkas</sys_updated_by>
-        <sys_updated_on>2023-09-18 19:33:20</sys_updated_on>
+        <sys_updated_on>2023-09-19 20:57:49</sys_updated_on>
     </sys_script_include>
 </record_update>
