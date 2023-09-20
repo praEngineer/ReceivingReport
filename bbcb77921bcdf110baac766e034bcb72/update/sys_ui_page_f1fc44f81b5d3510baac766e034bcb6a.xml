@@ -23,7 +23,8 @@ var defDate = new Date();
 defDate.setMonth(defDate.getMonth()-1);
 setDesiredRRYear(defDate.getFullYear()); // Replace with your desired year
 setDesiredRRMonth(defDate.getMonth()+1);   // Replace with your desired month, a digit from 1 to 12
-
+var htmlButton = '<button id="printButton" >Print Page</button>';
+document.getElementById('render_buttonPrint').innerHTML = htmlButton;
 refreshTbl();
 
 // Make the asynchronous server call
@@ -164,7 +165,7 @@ function getRecordsJSON(response) {
 			});
 			if(currRow < 15){
 				// alert('make empty rows');
-				for (var currRowEmpty = currRow; currRowEmpty <= 15; currRowEmpty++) {
+				for (var currRowEmpty = currRow; currRowEmpty <= 9; currRowEmpty++) {
 				formattedRow = currRowEmpty < 10 ? 'Row0' + currRowEmpty : 'Row' + currRowEmpty;
 				html += '<tr style="height: 23pt;"><td style="width: 22pt; border-top-style: solid; border-top-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;text-align: center;"><div id="' + formattedRow +'Cell01">' + '&nbsp;' + '<div></td><td style="width: 294pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 2pt;" colspan="5"><div id="' + formattedRow +'Cell02">' + '&nbsp;' + '&nbsp;' + '&nbsp;' + '<br/>' + '&nbsp;' + '<div></td>' + '</td><td style="width: 38pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 2pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;background-color:#D3D3D3;" colspan="2"><div id="' + formattedRow +'Cell03">' +  '&nbsp;' + '<div></td>' + '</td><td style="width: 23pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;background-color:#D3D3D3;"><div id="' + formattedRow +'Cell04">' +  '&nbsp;' + '<div></td>' + '</td><td style="width: 40pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 2pt;background-color:#D3D3D3;" colspan="2"><div id="' + formattedRow +'Cell05">' +  '&nbsp;' + '<div></td>' + '<td style="width: 41pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 2pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;text-align: center;"><div id="' + formattedRow +'Cell06">' + '&nbsp;' + '<div></td>'+ '</td><td style="width: 22pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;"><div id="' + formattedRow +'Cell07">' +  '&nbsp;' + '<div></td>' + '<td style="width: 42pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;text-align: right;"><div id="' + formattedRow +'Cell08">' + '&nbsp;' + '<div></td>'+ '</td><td style="width: 52pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt;ext-align: right;"><div id="' + formattedRow +'Cell09">' +  '&nbsp;' + '<div></td>' + '</tr>';
 				}
@@ -362,7 +363,9 @@ function refreshTbl() {
 
 function chgYear () {
 		// alert('chgYear event');
-		ctrlYear = document.getElementById('yearSelect').value.toString();
+		var ctrlYear = document.getElementById('yearSelect').value.toString();
+		var ctrlMonth = document.getElementById('monthSelect').value;
+		setDesiredRRMonth(ctrlMonth);
 		setDesiredRRVendor('');
         setDesiredRRYear(ctrlYear);
 		refreshTbl();
@@ -370,7 +373,9 @@ function chgYear () {
 
 function chgMonth() {
 		// alert('chgMonth event');
+		var ctrlYear = document.getElementById('yearSelect').value.toString();
 		var ctrlMonth = document.getElementById('monthSelect').value;
+        setDesiredRRYear(ctrlYear);
 		setDesiredRRVendor('');
 		setDesiredRRMonth(ctrlMonth);
 		refreshTbl();
@@ -379,6 +384,11 @@ function chgMonth() {
 function chgVendor(){
 		// alert('chgVendor fired');
 		var ctrlVendor = document.getElementById('vendorSelect').value;
+		var ctrlMonth = document.getElementById('monthSelect').value;
+		var ctrlYear = document.getElementById('yearSelect').value.toString();
+		//alert('ctrlYear is ' + ctrlYear + ' and ctrlMonth is ' + ctrlMonth + ' and vendor is ' + ctrlVendor);
+		setDesiredRRYear(ctrlYear);
+		setDesiredRRMonth(ctrlMonth);
         setDesiredRRVendor(ctrlVendor);
 		refreshTbl();	
 }
@@ -472,6 +482,27 @@ function getDesiredRRMonth() {
   //alert(step + '. getDesiredRRMonth is ' + desiredRRMonth);
   return lclMonth;
 }
+
+// function printPage() {
+//     // Preload images (replace URLs with your image URLs)
+//     var image1 = new Image();
+// 	image1.crossOrigin = "anonymous"; // Add this line
+// 	image1.src = "https://nycdsdev1.service-now.com/ac4fb16a1b59b9106c1036ef034bcb46.iix";
+//     var image2 = new Image();
+// 	image2.crossOrigin = "anonymous"; // Add this line
+// 	image2.src = "https://nycdsdev1.service-now.com/ec828e2e1b59b9106c1036ef034bcb15.iix";
+	
+//     // Wait for images to load (you can use a promise or callback)
+//     // Once the images are loaded, trigger the print dialog
+// 	Promise.all([image1, image2].map(function(img) {
+// 		return new Promise(function(resolve) {
+// 			img.onload = resolve;
+// 		});
+// 	})).then(function() {
+// 		// Use the window.print() method to trigger the browser's print dialog.
+// 		window.print();
+// 	});
+// }
 
 ]]></client_script>
         <description>Retrieve rows from x_dosny_bit_procur_bit_procurement_credit_card_line_items and present those in a nicely formatted HTML table. This script will use a specified rr_year and rr_month from the x_dosny_bit_procur_bit_procurement_receiving_report reference table.</description>
@@ -913,21 +944,56 @@ function getDesiredRRMonth() {
       vertical-align: top;
       overflow: visible;
     }</style>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	</head>
 	<body>
+		<div id='render_buttonPrint'>Place for Button</div>
 		<form id='frmReceivingReport' onSubmit='javascript:alert("submitted")'>
 		<div id='rrTitle'>Receiving Report Month and Year Choices</div><br />
 		<div id='render_yearSelect'>Default year select</div>
 		<div id='render_monthSelect'>Default month select</div>
 		<div id='render_vendorSelect'>Default vendor select</div>
 		<div id='render_header'>
-			<img src="ReceivingReportHeader.jpg" class="resize-image"/>
+			<img style="visibility: visible; display: block;" id='render_header_jpg' src="https://nycdsdev1.service-now.com/ac4fb16a1b59b9106c1036ef034bcb46.iix" class="resize-image"/>
 		</div>
 		<div id='render_table'></div>
 		<div id='render_footer'>
-			<img src="ReceivingReportFooter.jpg" class="resize-image"/>
+			<img style="visibility: visible; display: block;" id='render_footer_jpg' src="https://nycdsdev1.service-now.com/ec828e2e1b59b9106c1036ef034bcb15.iix" class="resize-image"/>
+			<!--
+						In order to force the image to appear on the browser print preview and 
+						in the actual print page, should have this style inside the <img> tag:
+						style="visibility: visible; display: block;"
+						
+						jQuery below assures there are two JPGs loaded before the print button will
+						open the print dialogue.
+				-->
 		</div>
 		</form>
+		<script>
+			$(document).ready(function() {
+			// Counter to keep track of loaded images
+			var loadedImages = 0;
+
+			// Function to check if all images are loaded
+			function checkImagesLoaded() {
+			loadedImages++;
+			if (loadedImages === 2) { // Adjust the count if you have more images
+			// All images are loaded, enable the print button
+			$('#printButton').prop('disabled', false);
+			}
+			}
+
+			// Bind the onload event to both images
+			$('#render_header_jpg').on('load', checkImagesLoaded);
+			$('#render_footer_jpg').on('load', checkImagesLoaded);
+
+			// Bind click event to the print button
+			$('#printButton').click(function() {
+			// Trigger the print dialog when the button is clicked
+			window.print();
+			});
+			});
+		</script>
 	</body>
 	</html>
 </j:jelly>]]></html>
@@ -937,13 +1003,13 @@ function getDesiredRRMonth() {
         <sys_created_by>sfarkas</sys_created_by>
         <sys_created_on>2023-09-12 20:30:51</sys_created_on>
         <sys_id>f1fc44f81b5d3510baac766e034bcb6a</sys_id>
-        <sys_mod_count>308</sys_mod_count>
+        <sys_mod_count>335</sys_mod_count>
         <sys_name>ReceivingReportTable</sys_name>
         <sys_package display_value="ReceivingReport" source="x_dosny_vendorrepo">bbcb77921bcdf110baac766e034bcb72</sys_package>
         <sys_policy/>
         <sys_scope display_value="ReceivingReport">bbcb77921bcdf110baac766e034bcb72</sys_scope>
         <sys_update_name>sys_ui_page_f1fc44f81b5d3510baac766e034bcb6a</sys_update_name>
         <sys_updated_by>sfarkas</sys_updated_by>
-        <sys_updated_on>2023-09-19 20:59:19</sys_updated_on>
+        <sys_updated_on>2023-09-20 16:06:46</sys_updated_on>
     </sys_ui_page>
 </record_update>
