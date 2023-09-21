@@ -952,6 +952,14 @@ function getDesiredRRMonth() {
       vertical-align: top;
       overflow: visible;
     }</style>
+	<!-- 
+		In most web browsers, when you print a webpage, the default behavior is to include the 
+		anchor (<a>) tag around the text of a link. If you want to customize how links are 
+		displayed when printing, you can use CSS to style the print output.
+
+		To hide the anchor tag and only display the text of the link when printing, you can 
+		use CSS to set the content property of the ::after pseudo-element for the anchor tag. 
+	-->
 	<!-- src="https://code.jquery.com/jquery-3.7.1.min.js">  -->
 	</head>
 	<body>
@@ -969,7 +977,7 @@ function getDesiredRRMonth() {
 		</div>
 		<div id='render_table'></div>
 		<div id='render_footer'>
-			<img style="margin-top: 5px;visibility: visible; display: block;" id='render_footer_jpg' src="https://nycdsdev1.service-now.com/ec828e2e1b59b9106c1036ef034bcb15.iix" class="resize-image"/>
+			<img style="margin-top: 5px;visibility: visible; display: block;" id='render_footer_jpg' src="https://nycdsdev1.service-now.com/537cf5a71b51fd106c1036ef034bcbcf.iix" class="resize-image"/>
 			<!--
 						In order to force the image to appear on the browser print preview and 
 						in the actual print page, should have this style inside the <img> tag:
@@ -1014,13 +1022,13 @@ function getDesiredRRMonth() {
         <sys_created_by>sfarkas</sys_created_by>
         <sys_created_on>2023-09-12 20:30:51</sys_created_on>
         <sys_id>f1fc44f81b5d3510baac766e034bcb6a</sys_id>
-        <sys_mod_count>374</sys_mod_count>
+        <sys_mod_count>376</sys_mod_count>
         <sys_name>ReceivingReportTable</sys_name>
         <sys_package display_value="ReceivingReport" source="x_dosny_vendorrepo">bbcb77921bcdf110baac766e034bcb72</sys_package>
         <sys_policy/>
         <sys_scope display_value="ReceivingReport">bbcb77921bcdf110baac766e034bcb72</sys_scope>
         <sys_update_name>sys_ui_page_f1fc44f81b5d3510baac766e034bcb6a</sys_update_name>
         <sys_updated_by>sfarkas</sys_updated_by>
-        <sys_updated_on>2023-09-21 15:46:27</sys_updated_on>
+        <sys_updated_on>2023-09-21 17:40:17</sys_updated_on>
     </sys_ui_page>
 </record_update>
