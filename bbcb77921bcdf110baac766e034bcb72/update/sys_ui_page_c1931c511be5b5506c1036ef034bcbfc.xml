@@ -10,10 +10,14 @@ var htmlHeader = '';
 // 	'<h2 style="padding-left: 31pt;text-indent: 0pt;text-align: left;">SHADED AREAS FOR THE USE OF DIV. OF MUNICIPAL SUPPLY SERVICES</h2>' +
 // 	'<p style="text-indent: 0pt;text-align: left;"><br><br></p>';
 
-var htmlTop = '<div><table class="header avoid-break-before" style="border-collapse:collapse;margin-left:5.23954pt" cellspacing="0"><tbody><tr style="height:11pt"><td style="width:50pt;border-top-style:solid;border-top-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s15" style="padding-left: 5pt;padding-right: 5pt;text-indent: 10pt;text-align: left;">DATE PREPARED</p></td><td style="width:40pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p class="s15" style="padding-top: 2pt;padding-left: 3pt;text-indent: 0pt;line-height: 8pt;text-align: left;">RECEIVED</p></td><td style="width:14pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p class="s16" style="padding-top: 2pt;padding-left: 1pt;text-indent: 0pt;line-height: 8pt;text-align: left;">BY</p></td><td style="width:172pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:10pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:30pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:35pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:3pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:23pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:5pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:61pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s17" style="padding-left: 2pt;padding-right: 1pt;text-indent: 5pt;text-align: left;">OMPA OR<br><br>CONTRACT NO.</p></td><td style="width:62pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s19" style="text-indent: 0pt;line-height: 8pt;text-align: left;">ORDER NO.</p></td><td style="width:35pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s19" style="padding-top: 1pt;padding-left: 2pt;text-indent: 0pt;text-align: left;">SHIPPING</p><p class="s19" style="padding-left: 2pt;text-indent: 0pt;text-align: left;">INSTR NO.</p></td><td style="width:34pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt" rowspan="2"><p class="s19" style="padding-top: 1pt;padding-left: 2pt;text-indent: 0pt;text-align: left;">RECEIVING</p><p class="s19" style="padding-left: 2pt;text-indent: 0pt;text-align: left;">REPORT NO.</p></td></tr><tr style="height:10pt"><td style="width:42pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt;background-color:#D3D3D3;" colspan="2"><p class="s24" style="padding-left: 2pt;text-indent: 0pt;text-align: left;background-color:#D3D3D3;">STOREHOUSE</p></td><td style="width:290pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="7"><p class="s15" style="padding-left: 3pt;text-indent: 0pt;line-height: 8pt;text-align: left;">AGENCY AND UNIT</p></td></tr><tr style="height:26pt"><td style="width:50pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:42pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;background-color:#D3D3D3" colspan="2"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:290pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="7"><p class="s25" style="padding-left: 3pt;text-indent: 0pt;text-align: left;">ADDRESS<span class="s26">DSNY IT 357 Pearl St 19th fl</span></p></td><td style="width:61pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s27" style="padding-top: 5pt;padding-left: 2pt;text-indent: 0pt;text-align: left;">Credit Card</p></td><td style="width:62pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:35pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:34pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td></tr><tr style="height:55pt"><td style="width:250pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="4"><p class="s15" style="padding-top: 1pt;text-indent: 0pt;text-align: left;">RECEIVED FROM: NAME OF SELLER (VENDOR)</p><p><div id="nameOfSeller"></div></p></td><td style="width:78pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="4"><p class="s15" style="padding-left: 11pt;text-indent: 0pt;text-align: left;">BILL OF LADING /<br><br>DEL. TICKET NO.</p></td><td style="width:246pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt" colspan="6"><table style="width:100%"><tbody><tr><td valign="top" colspan="2" style="width:100%"><span class="s15" style="padding-left: 11pt;text-indent: 0pt;text-align: left;">CHECK ONE:</span></td></tr><tr><td colspan="1" style="width:10%"><span class="s32" style="padding-top: 3pt;padding-left: 2pt;padding-right: 1pt;line-height: 39%;text-align: left;"><span class="s31">□</span></span></td><td colspan="1" style="width:90%;text-align: left;"><span class="s32" style="padding-left: 2pt;padding-right: 1pt;text-align: left;"><span style=" color: #131313;">THIS IS A PARTIAL DELIVERY</span><br><br><span style=" color: #4F4F4F;">(MORE DELIVERIS DUE ON SAME ORDER)</span></span></td></tr><tr><td valign="top" colspan="1" style="width:10%"><span class="s32" style="padding-left: 2pt;padding-right: 1pt;line-height: 39%;text-align: left;"><span class="s31">□</span></span></td><td valign="top" colspan="1" style="width:90%;text-align: left;"><span class="s32" style="padding-left: 2pt;padding-right: 1pt;text-align: left;"><span style=" color: #131313;">FINAL DELIVERY</span><br><br></span></td></tr></tbody></table></tr></tbody></table></div>';
+var htmlTop = '<table class="header avoid-break-before" style="table-layout:fixed;border-collapse:collapse;margin-left:5.23954pt" cellspacing="0"><tbody><tr style="height:11pt"><td style="width:50pt;border-top-style:solid;border-top-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s15" style="padding-left: 5pt;padding-right: 5pt;text-indent: 10pt;text-align: left;">DATE PREPARED</p></td><td style="width:40pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p class="s15" style="padding-top: 2pt;padding-left: 3pt;text-indent: 0pt;line-height: 8pt;text-align: left;">RECEIVED</p></td><td style="width:14pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p class="s16" style="padding-top: 2pt;padding-left: 1pt;text-indent: 0pt;line-height: 8pt;text-align: left;">BY</p></td><td style="width:172pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:10pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:30pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:35pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:3pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:23pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:5pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:61pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s17" style="padding-left: 2pt;padding-right: 1pt;text-indent: 5pt;text-align: left;">OMPA OR<br><br>CONTRACT NO.</p></td><td style="width:62pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s19" style="text-indent: 0pt;line-height: 8pt;text-align: left;">ORDER NO.</p></td><td style="width:35pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s19" style="padding-top: 1pt;padding-left: 2pt;text-indent: 0pt;text-align: left;">SHIPPING</p><p class="s19" style="padding-left: 2pt;text-indent: 0pt;text-align: left;">INSTR NO.</p></td><td style="width:34pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt" rowspan="2"><p class="s19" style="padding-top: 1pt;padding-left: 2pt;text-indent: 0pt;text-align: left;">RECEIVING</p><p class="s19" style="padding-left: 2pt;text-indent: 0pt;text-align: left;">REPORT NO.</p></td></tr><tr style="height:10pt"><td style="width:42pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt;background-color:#D3D3D3;" colspan="2"><p class="s24" style="padding-left: 2pt;text-indent: 0pt;text-align: left;background-color:#D3D3D3;">STOREHOUSE</p></td><td style="width:290pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="7"><p class="s15" style="padding-left: 3pt;text-indent: 0pt;line-height: 8pt;text-align: left;">AGENCY AND UNIT</p></td></tr><tr style="height:26pt"><td style="width:50pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:42pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;background-color:#D3D3D3" colspan="2"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:290pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="7"><p class="s25" style="padding-left: 3pt;text-indent: 0pt;text-align: left;">ADDRESS<span class="s26">DSNY IT 357 Pearl St 19th fl</span></p></td><td style="width:61pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s27" style="padding-top: 5pt;padding-left: 2pt;text-indent: 0pt;text-align: left;">Credit Card</p></td><td style="width:62pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:35pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:34pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td></tr><tr style="height:55pt"><td style="width:250pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="4"><p class="s15" style="padding-top: 1pt;text-indent: 0pt;text-align: left;">RECEIVED FROM: NAME OF SELLER (VENDOR)</p><p><div id="nameOfSeller"></div></p></td><td style="width:78pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="4"><p class="s15" style="padding-left: 11pt;text-indent: 0pt;text-align: left;">BILL OF LADING /<br><br>DEL. TICKET NO.</p></td><td style="width:246pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt" colspan="6"><table style="width:100%"><tbody><tr><td valign="top" colspan="2" style="width:100%"><span class="s15" style="padding-left: 11pt;text-indent: 0pt;text-align: left;">CHECK ONE:</span></td></tr><tr><td colspan="1" style="width:10%"><span class="s32" style="padding-top: 3pt;padding-left: 2pt;padding-right: 1pt;line-height: 39%;text-align: left;"><span class="s31">□</span></span></td><td colspan="1" style="width:90%;text-align: left;"><span class="s32" style="padding-left: 2pt;padding-right: 1pt;text-align: left;"><span style=" color: #131313;">THIS IS A PARTIAL DELIVERY</span><br><br><span style=" color: #4F4F4F;">(MORE DELIVERIS DUE ON SAME ORDER)</span></span></td></tr><tr><td valign="top" colspan="1" style="width:10%"><span class="s32" style="padding-left: 2pt;padding-right: 1pt;line-height: 39%;text-align: left;"><span class="s31">□</span></span></td><td valign="top" colspan="1" style="width:90%;text-align: left;"><span class="s32" style="padding-left: 2pt;padding-right: 1pt;text-align: left;"><span style=" color: #131313;">FINAL DELIVERY</span><br><br></span></td></tr></tbody></table></tr></tbody></table>';
+
+htmlBottomSaved = 
+'<div><table class="header avoid-break rrtable"  cellspacing="0" border="1"><thead><tr><th class="rrcolall rrcol01">ITEM NO</th><th style="width: 44pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 2pt;background-color:#D3D3D3;text-align: center;" colspan="2">STOREHOUSE<br/>COMMODITY<br/>CODE</th><th style="width: 230pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 2pt;text-align: center" colspan="3">Description</th><th style="width: 38pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 2pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;background-color:#D3D3D3;" colspan="2">Quantity</th><th style="width: 23pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;text-align: center;background-color:#D3D3D3;">Unit</th><th style="width: 40pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 2pt;text-align: center;background-color:#D3D3D3;" colspan="2">Unit<br/>Price</th><th style="width: 41pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 2pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;">Quantity</th><th style="width: 22pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;text-align: center;">Unit</th><th style="width: 42pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;text-align: center;">Unit<br/>Price</th><th style="width: 47pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt;">Total Cost</th></tr></thead></table>';
+
 
 htmlBottom = 
-'<div><table class="header avoid-break rrtable"  cellspacing="0" border="1"><thead><tr><th class="rrcolall rrcol01">ITEM NO</th><th style="width: 44pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 2pt;background-color:#D3D3D3;text-align: center;" colspan="2">STOREHOUSE<br/>COMMODITY<br/>CODE</th><th style="width: 230pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 2pt;text-align: center" colspan="3">Description</th><th style="width: 38pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 2pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;background-color:#D3D3D3;" colspan="2">Quantity</th><th style="width: 23pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;text-align: center;background-color:#D3D3D3;">Unit</th><th style="width: 40pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 2pt;text-align: center;background-color:#D3D3D3;" colspan="2">Unit<br/>Price</th><th style="width: 41pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 2pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;">Quantity</th><th style="width: 22pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;text-align: center;">Unit</th><th style="width: 42pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt;text-align: center;">Unit<br/>Price</th><th style="width: 47pt; border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt;">Total Cost</th></tr></thead></table>';
+'<div><table class="header avoid-break rrtable"  cellspacing="0" border="1"><thead><tr><th class="rrcolall rrcol01">ITEM NO</th><th class="rrcolall rrcol02a">STOREHOUSE<br/>COMMODITY<br/>CODE</th><th class="rrcolall rrcol02b" >Description</th><th class="rrcolall rrcol03" >Quantity</th><th class="rrcolall rrcol04">Unit</th><th class="rrcolall rrcol05" >Unit<br/>Price</th><th class="rrcolall rrcol06">Quantity</th><th class="rrcolall rrcol07">Unit</th><th class="rrcolall rrcol08">Unit<br/>Price</th><th class="rrcolall rrcol09">Total Cost</th></tr></thead><tbody>';
 
 /*
 var frame = '<div><table><tbody><tr><td>'+ htmlHeader + '</td></tr><tr><td>'+ htmlTop + '</td></tr><tr><td>'+ htmlBottom;
@@ -196,7 +200,8 @@ var saved2 = '<tr><td style="width: 22pt;"><div id="' + formattedRow +'Cell01">'
 // Last row with TOTAL
 			currRowEmpty = currRowEmpty == 0 ? currRow+1 : currRowEmpty +=1;
 			formattedRow = currRowEmpty < 10 ? 'Row0' + currRowEmpty : 'Row' + currRowEmpty;
-			html +=  '<tr ><td class="rrcolall rrcol01"><div id="' + formattedRow +'Cell01">' + '&nbsp;' + '</div></td><td class="rrcolall rrcol02"><div id="' + formattedRow +'Cell02">' + 'TOTAL' + '<br/>' + '&nbsp;' + '</div></td><td class="rrcolall rrcol03"><div id="' + formattedRow +'Cell03">' +  '&nbsp;' + '</div></td><td class="rrcolall rrcol04"><div id="' + formattedRow +'Cell04">' +  '&nbsp;' + '</div></td><td class="rrcolall rrcol05"><div id="' + formattedRow +'Cell05">' +  '&nbsp;' + '</div><td class="rrcolall rrcol06"><div id="' + formattedRow +'Cell06">' + '&nbsp;' + '</div></td><td class="rrcolall rrcol07"><div id="' + formattedRow +'Cell07">' +  '&nbsp;' + '</div><td class="rrcolall rrcol08"><div id="' + formattedRow +'Cell08">' + '&nbsp;' + '</div></td><td class="rrcolall rrcol09"><div id="' + formattedRow +'Cell09">' +  lastRowTotalCost.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) + '</div></td></tr>';			
+			html +=  '<tr ><td class="rrcolall rrcol01"><div id="' + formattedRow +'Cell01">' + '&nbsp;' + '</div></td><td class="rrcolall rrcol02"><div id="' + formattedRow +'Cell02">' + 'TOTAL' + '<br/>' + '&nbsp;' + '</div></td><td class="rrcolall rrcol03"><div id="' + formattedRow +'Cell03">' +  '&nbsp;' + '</div></td><td class="rrcolall rrcol04"><div id="' + formattedRow +'Cell04">' +  '&nbsp;' + '</div></td><td class="rrcolall rrcol05"><div id="' + formattedRow +'Cell05">' +  '&nbsp;' + '</div><td class="rrcolall rrcol06"><div id="' + formattedRow +'Cell06">' + '&nbsp;' + '</div></td><td class="rrcolall rrcol07"><div id="' + formattedRow +'Cell07">' +  '&nbsp;' + '</div><td class="rrcolall rrcol08"><div id="' + formattedRow +'Cell08">' + '&nbsp;' + '</div></td><td class="rrcolall rrcol09"><div id="' + formattedRow +'Cell09">' +  lastRowTotalCost.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) + '</div></td></tr>';		
+			html +=  '</tbody></table>';
 		} else {
 			step = 6;
 			alert(step + '. answer catch: ' + error.toString());
@@ -513,7 +518,7 @@ function getDesiredRRMonth() {
 ]]></client_script>
         <description>Retrieve rows from x_dosny_bit_procur_bit_procurement_credit_card_line_items and present those in a nicely formatted HTML table. This script will use a specified rr_year and rr_month from the x_dosny_bit_procur_bit_procurement_receiving_report reference table.</description>
         <direct>false</direct>
-        <endpoint>x_dosny_vendorrepo_ReceivingReportTable.do</endpoint>
+        <endpoint>x_dosny_vendorrepo_ReceivingReportWithBootstrap.do</endpoint>
         <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
 <j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
 <html>
@@ -1013,10 +1018,15 @@ function getDesiredRRMonth() {
 		table {
 	        page-break-inside: auto; /* Allow tables to break across pages */
 		}
+		tbody {
+			position: fixed;
+		}
 		thead {
+			position: fixed;
 			display: table-header-group; /* Repeat the header on each page */
 		}
 		tfoot {
+			position: fixed;
 			display: table-footer-group; /* Repeat the footer on each page */
 		}
 
@@ -1034,8 +1044,9 @@ function getDesiredRRMonth() {
 	.rrtable {
 		border-collapse:collapse;
 		margin-left:5.23954pt;
+		overflow: visible;
 		width: 768px; /* Set the table width as needed */
-		table-layout: fixed; /* Use fixed table layout */
+		/* table-layout: fixed; Use fixed table layout */
 	}
 	.rrcolall {
 		border-top-style: solid; 
@@ -1049,13 +1060,25 @@ function getDesiredRRMonth() {
 		}
 	.rrcol01 {
 		text-align: center;
-		width: 62pt;	
+		width: 83pt;	
 		}
 	.rrcol02 {
 		word-wrap: break-word; /* Wrap content within cells if needed */
 		text-align: left;
-		width: 269pt;
+		width: 258pt;
 			}
+	.rrcol02a {
+		word-wrap: break-word; /* Wrap content within cells if needed */
+		text-align: left;
+		background-color:#D3D3D3;
+		text-align: center;
+		width: 44pt;
+			}
+	.rrcol02b {
+		word-wrap: break-word; /* Wrap content within cells if needed */
+		text-align: left;
+		width: 214pt;
+			}			
 	.rrcol03 {
 		background-color:#D3D3D3;
 		width: 38pt;	
@@ -1096,53 +1119,67 @@ function getDesiredRRMonth() {
 	<!-- src="https://code.jquery.com/jquery-3.7.1.min.js">  -->
 	</head>
 	<body>
-		<div>
-			<div class="inline-block element-to-hide" id='render_buttonPrint'>Place for Button</div>
-			<div class="inline-block element-to-hide"  id='rrTitle'>Receiving Report Month and Year Choices</div>
+		<div  class="container">
+			<div class="col-md-2 inline-block element-to-hide" id='render_buttonPrint'>Place for Button</div>
+			<div class="col-md-10 inline-block element-to-hide"  id='rrTitle'>Receiving Report Month and Year Choices</div>
 		</div>
-		<form id='frmReceivingReport' onSubmit='javascript:alert("submitted")'>
-			<div>
-				<table>
-					<tr>
-						<td>
-				<div class="inline-block element-to-hide" id='render_yearSelect'>Default year select</div>
-				<div class="inline-block element-to-hide" id='render_monthSelect'>Default month select</div>
-				<div class="inline-block element-to-hide" id='render_vendorSelect'>Default vendor select</div>
-						</td></tr></table>
-				<table>
-					<thead class="avoid-break-after" >
-						<tr>
-						<th>
-							<div id='render_header'>
-								<img style="visibility: visible; display: block;" id='render_header_jpg' src="https://nycdsdev1.service-now.com/ac4fb16a1b59b9106c1036ef034bcb46.iix" class="resize-image"/>
-							</div>
-							<div id='render_header_second' style="margin-top: 0px; margin-bottom: 0px;"></div>
-							<div id='render_header_third' style="margin-top: 0px"></div>
-						</th>
-						</tr>
-					</thead>
-					<tbody class="avoid-break-before break-after-two-inches">
-<!-- 						<table class="avoid-break rrtable" cellspacing="0" border="1"> -->
-							<div id='render_table'></div>
-<!-- 						</table> -->
-					</tbody>
-					<tfoot class="footer avoid-break-before page-break-after" >
-						<td>
-						<div id='render_footer'>
-								<img style="margin-top: 5px;visibility: visible; display: block;" id='render_footer_jpg' src="https://nycdsdev1.service-now.com/537cf5a71b51fd106c1036ef034bcbcf.iix" class="resize-image"/>
-								<!--
-								  In order to force the image to appear on the browser print preview and 
-								  in the actual print page, should have this style inside the <img> tag:
-								  style="visibility: visible; display: block;"
-
-								  jQuery below assures there are two JPGs loaded before the print button will
-								  open the print dialogue. -->
-						</div>		
-						</td>
-					</tfoot>
-				</table>
+		<form id="frmReceivingReport" onSubmit="javascript:alert('submitted')">
+		  <div class="container" style="overflow: visible;">
+			<!-- Year, Month, and Vendor Selects -->
+			<div class="row">
+			  <div class="col-md-4">
+				<div class="element-to-hide" id="render_yearSelect">Default year select</div>
+			  </div>
+			  <div class="col-md-4">
+				<div class="element-to-hide" id="render_monthSelect">Default month select</div>
+			  </div>
+			  <div class="col-md-4">
+				<div class="element-to-hide" id="render_vendorSelect">Default vendor select</div>
+			  </div>
 			</div>
+
+			<!-- Table Header -->
+			<div class="row">
+			  <div class="avoid-break-after" >
+				<div class="col-md-12 avoid-break-after" id="render_header">
+				  <img
+					style="visibility: visible; display: block;"
+					id="render_header_jpg"
+					src="https://nycdsdev1.service-now.com/ac4fb16a1b59b9106c1036ef034bcb46.iix"
+					class="resize-image"
+				  />
+				</div>
+
+			  </div>
+			</div>
+
+			<!-- Table Body -->
+			<div class="row">
+			  <div class="avoid-break-before">
+				<div id="render_header_second" class="col-md-12 avoid-break-after"></div>
+				<div class="col-md-12" id="render_header_third"></div>
+				<div class="col-md-12  break-after-two-inches" id="render_table"></div>
+			  </div>
+			  <div class="footer avoid-break-before page-break-after">
+				<div class="col-md-12" id="render_footer">
+				  <img
+					style="visibility: visible; display: block;"
+					id="render_footer_jpg"
+					src="https://nycdsdev1.service-now.com/537cf5a71b51fd106c1036ef034bcbcf.iix"
+					class="resize-image"
+				  />
+				  <!-- In order to force the image to appear on the browser print preview and 
+					in the actual print page, should have this style inside the <img> tag:
+					style="visibility: visible; display: block;"
+
+					jQuery below assures there are two JPGs loaded before the print button will
+					open the print dialogue. -->
+				</div>
+			  </div>
+			</div>
+		  </div>
 		</form>
+
 		<script>
 			$j(document).ready(function() {
 			// Counter to keep track of loaded images
@@ -1171,19 +1208,19 @@ function getDesiredRRMonth() {
 	</body>
 	</html>
 </j:jelly>]]></html>
-        <name>ReceivingReportTable</name>
-        <processing_script><![CDATA[// ]]></processing_script>
+        <name>ReceivingReportWithBootstrap</name>
+        <processing_script/>
         <sys_class_name>sys_ui_page</sys_class_name>
         <sys_created_by>sfarkas</sys_created_by>
-        <sys_created_on>2023-09-12 20:30:51</sys_created_on>
-        <sys_id>f1fc44f81b5d3510baac766e034bcb6a</sys_id>
-        <sys_mod_count>506</sys_mod_count>
-        <sys_name>ReceivingReportTable</sys_name>
+        <sys_created_on>2023-09-26 20:29:09</sys_created_on>
+        <sys_id>c1931c511be5b5506c1036ef034bcbfc</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>ReceivingReportWithBootstrap</sys_name>
         <sys_package display_value="ReceivingReport" source="x_dosny_vendorrepo">bbcb77921bcdf110baac766e034bcb72</sys_package>
         <sys_policy/>
         <sys_scope display_value="ReceivingReport">bbcb77921bcdf110baac766e034bcb72</sys_scope>
-        <sys_update_name>sys_ui_page_f1fc44f81b5d3510baac766e034bcb6a</sys_update_name>
+        <sys_update_name>sys_ui_page_c1931c511be5b5506c1036ef034bcbfc</sys_update_name>
         <sys_updated_by>sfarkas</sys_updated_by>
-        <sys_updated_on>2023-09-26 16:08:34</sys_updated_on>
+        <sys_updated_on>2023-09-26 20:30:55</sys_updated_on>
     </sys_ui_page>
 </record_update>

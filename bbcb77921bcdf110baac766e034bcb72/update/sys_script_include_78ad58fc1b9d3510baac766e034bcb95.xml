@@ -13,7 +13,13 @@ Active: Ensure that the "Active" checkbox is checked to make the script include 
 &#13;
 Script: In the script field, write the JavaScript code that will be executed when your GlideAjax script is called. This code should handle the logic for your GlideAjax request.</description>
         <name>ReceivingReportAjaxCall</name>
-        <script><![CDATA[var ReceivingReportAjaxCall = Class.create();
+        <script><![CDATA[/* 
+https://github.com/thisnameissoclever/ServiceNow-EfficientGlideRecord/blob/main/Script%20Includes/ClientGlideRecordAJAX.js
+
+Client-side EfficientGlideRecord class with a few modifications, added features, and DRASTICALLY improved performance as compared with ServiceNow's out-of-box client-side GlideRecord API class.
+*/
+
+var ReceivingReportAjaxCall = Class.create();
 ReceivingReportAjaxCall.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 
 	canIconnect: function() {
@@ -243,7 +249,7 @@ ReceivingReportAjaxCall.prototype = Object.extendsObject(global.AbstractAjaxProc
 				record.quantity = gr.getValue('quantity');
 				record.unit_price = gr.getValue('unit_price');
 				record.subject = gr.getValue('short_description'); // gr.getValue('subject'); // 
-				lclSysId = gr.getElement('receiving_report.sys_id');
+				lclSysId = gr.getElement('receiving_report'); // never dot-walk to the sys_id     .sys_id');
 				record.receiving_report_sysid = lclSysId.toString();
 				response.push(record);
 			}	
@@ -256,11 +262,14 @@ ReceivingReportAjaxCall.prototype = Object.extendsObject(global.AbstractAjaxProc
 					if(typeof sysparm_rr_vendor === 'string' && sysparm_rr_vendor.trim() !== '' ){
 						elserecordOuter.vendor = sysparm_rr_vendor;
 					}
+					else {
+						elserecordOuter.vendor = 'strange sysparm_rr_vendor';
+					}
 				}
 				else {
 					elserecordOuter.vendor = '';
 				}
-				elserecordOuter.vendor = '';
+				// elserecordOuter.vendor = '';
 				elserecordOuter.quantity = '';
 				elserecordOuter.unit_price = '';
 				elserecordOuter.subject = '';
@@ -294,13 +303,13 @@ ReceivingReportAjaxCall.prototype = Object.extendsObject(global.AbstractAjaxProc
         <sys_created_by>sfarkas</sys_created_by>
         <sys_created_on>2023-09-12 21:46:45</sys_created_on>
         <sys_id>78ad58fc1b9d3510baac766e034bcb95</sys_id>
-        <sys_mod_count>74</sys_mod_count>
+        <sys_mod_count>76</sys_mod_count>
         <sys_name>ReceivingReportAjaxCall</sys_name>
         <sys_package display_value="ReceivingReport" source="x_dosny_vendorrepo">bbcb77921bcdf110baac766e034bcb72</sys_package>
         <sys_policy/>
         <sys_scope display_value="ReceivingReport">bbcb77921bcdf110baac766e034bcb72</sys_scope>
         <sys_update_name>sys_script_include_78ad58fc1b9d3510baac766e034bcb95</sys_update_name>
         <sys_updated_by>sfarkas</sys_updated_by>
-        <sys_updated_on>2023-09-21 15:18:49</sys_updated_on>
+        <sys_updated_on>2023-09-21 18:24:23</sys_updated_on>
     </sys_script_include>
 </record_update>
