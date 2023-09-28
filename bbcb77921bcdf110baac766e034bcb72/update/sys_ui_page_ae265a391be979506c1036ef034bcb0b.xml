@@ -110,6 +110,7 @@ function getRecordsJSON(response) {
 			var formattedRow = '';
 			var currRowEmpty = 0;
 			var lastRowTotalCost = 0;
+			var rowsOnPage = 13;
 			data.forEach(function(record) {
 				var recVendName = ''; //'vendor not entered for ' + record.number;
 				
@@ -141,38 +142,21 @@ function getRecordsJSON(response) {
 				html += '<tr><td class="rrcolall rrcol01"><div id="' + formattedRow +'Cell01">' + record.quantity + '</div></td><td class="rrcolall rrcol02" colspan="2"><div id="' + formattedRow +'Cell02"><div><a href="https://nycdsdev1.service-now.com/nav_to.do?uri=x_dosny_bit_procur_bit_procurement_credit_card_line_items.do?sys_id=' + lclSysId + '">' + record.number + '</a>' + '&nbsp;' + recVendName + '<br/>' + record.subject + '</div></td><td class="rrcolall rrcol03"><div id="' + formattedRow +'Cell03">' +  '&nbsp;' + '</div></td><td class="rrcolall rrcol04"><div id="' + formattedRow +'Cell04">' +  '&nbsp;' + '</div></td><td class="rrcolall rrcol05"><div id="' + formattedRow +'Cell05">' +  '&nbsp;' + '</div></td><td class="rrcolall rrcol06"><div id="' + formattedRow +'Cell06">' +  record.quantity + '</div></td><td class="rrcolall rrcol07"><div id="' + formattedRow +'Cell07">' + unitEach + '</div></td><td class="rrcolall rrcol08"><div id="' + formattedRow +'Cell08">' +  unitPrice + '</div></td><td class="rrcolall rrcol09"><div id="' + formattedRow +'Cell09">' + (record.quantity * record.unit_price).toFixed(2) + '</div></td></tr>';			
 				currRow += 1;
 				lastRowTotalCost += (record.quantity * record.unit_price);
-				var pageBreakTest = currRow % 9;
-				if (pageBreakTest < 1){
-					currRowEmpty = currRowEmpty == 0 ? currRow+1 : currRowEmpty +=1;
-					formattedRow = currRowEmpty < 10 ? 'Row0' + currRowEmpty : 'Row' + currRowEmpty;
-					
-					html += '<tr class="rrcol10"><td><img style="visibility: visible; display: block;" id="'+ formattedRow +'_footer_jpg" src="https://nycdsdev1.service-now.com/537cf5a71b51fd106c1036ef034bcbcf.iix" class="resize-image bottom-image"></td></tr>';
-					currRowEmpty = currRowEmpty == 0 ? currRow+1 : currRowEmpty +=1;
-					formattedRow = currRowEmpty < 10 ? 'Row0' + currRowEmpty : 'Row' + currRowEmpty;
-					html +=  '<tr class="rrcol10"><td class="rrcolall rrcol01"><div id="' + formattedRow +'Cell01">' + '&nbsp;' + '</div></td><td class="rrcolall rrcol02" colspan="2"><div id="' + formattedRow +'Cell02">' + 'TOTAL' + '<br/>' + '&nbsp;' + '</div></td><td class="rrcolall rrcol03"><div id="' + formattedRow +'Cell03">' +  '&nbsp;' + '</div></td><td class="rrcolall rrcol04"><div id="' + formattedRow +'Cell04">' +  '&nbsp;' + '</div></td><td class="rrcolall rrcol05"><div id="' + formattedRow +'Cell05">' +  '&nbsp;' + '</div><td class="rrcolall rrcol06"><div id="' + formattedRow +'Cell06">' + '&nbsp;' + '</div></td><td class="rrcolall rrcol07"><div id="' + formattedRow +'Cell07">' +  '&nbsp;' + '</div><td class="rrcolall rrcol08"><div id="' + formattedRow +'Cell08">' + '&nbsp;' + '</div></td><td class="rrcolall rrcol09"><div id="' + formattedRow +'Cell09">' +  lastRowTotalCost.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) + '</div></td></tr>';					
-				}				
 			});
-			if(currRow < 11){
+			if(currRow % rowsOnPage !== 0){
 				// alert('make empty rows');
-				var testAgainstThis = currRow + 16 - (currRow % 16) - 1;
+				var testAgainstThis = currRow + (currRow % rowsOnPage) - 1;
+				if( currRow < rowsOnPage) {
+					testAgainstThis = currRow + rowsOnPage - (rowsOnPage % currRow);
+				}
+				else {
+					testAgainstThis = 0;
+				}
 				//  if currRow is 27, the value of the expression currRow + 10 - (currRow % 10) is 30.
-				// alert("testAgainstThis is " + testAgainstThis);
+				alert("testAgainstThis is " + testAgainstThis);
 				for (currRowEmpty = currRow; currRowEmpty <= testAgainstThis; currRowEmpty++) {
 				formattedRow = currRowEmpty < 10 ? 'Row0' + currRowEmpty : 'Row' + currRowEmpty;
 				html += '<tr><td class="rrcolall rrcol01"><div id="' + formattedRow +'Cell01">' + '&nbsp;' + '</div></td><td class="rrcolall rrcol02" colspan="2" ><div id="' + formattedRow +'Cell02">' + '&nbsp;' + '&nbsp;' + '&nbsp;' + '<br/>' + '&nbsp;' + '</div></td><td class="rrcolall rrcol03"><div id="' + formattedRow +'Cell03">' +  '&nbsp;' + '</div></td><td class="rrcolall rrcol04"><div id="' + formattedRow +'Cell04">' +  '&nbsp;' + '</div></td><td class="rrcolall rrcol05"><div id="' + formattedRow +'Cell05">' +  '&nbsp;' + '</div><td class="rrcolall rrcol06"><div id="' + formattedRow +'Cell06">' + '&nbsp;' + '</div></td><td class="rrcolall rrcol07"><div id="' + formattedRow +'Cell07">' +  '&nbsp;' + '</div><td class="rrcolall rrcol08"><div id="' + formattedRow +'Cell08">' + '&nbsp;' + '</div></td><td class="rrcolall rrcol09"><div id="' + formattedRow +'Cell09">' + '&nbsp;' + '</div></td></tr>';
-				var pageBreakTestBlank = currRow % 9;
-				if (pageBreakTestBlank < 1){
-					currRowEmpty = currRowEmpty == 0 ? currRow+1 : currRowEmpty +=1;
-					formattedRow = currRowEmpty < 10 ? 'Row0' + currRowEmpty : 'Row' + currRowEmpty;
-					
-					html += '<tr class="rrcol10"><td><img style="visibility: visible; display: block;" id="'+ formattedRow +'_footer_jpg" src="https://nycdsdev1.service-now.com/537cf5a71b51fd106c1036ef034bcbcf.iix" class="resize-image bottom-image"></td></tr>';
-					currRowEmpty = currRowEmpty == 0 ? currRow+1 : currRowEmpty +=1;
-					formattedRow = currRowEmpty < 10 ? 'Row0' + currRowEmpty : 'Row' + currRowEmpty;
-					html +=  '<tr class="rrcol10"><td class="rrcolall rrcol01"><div id="' + formattedRow +'Cell01">' + '&nbsp;' + '</div></td><td class="rrcolall rrcol02" colspan="2"><div id="' + formattedRow +'Cell02">' + 'TOTAL' + '<br/>' + '&nbsp;' + '</div></td><td class="rrcolall rrcol03"><div id="' + formattedRow +'Cell03">' +  '&nbsp;' + '</div></td><td class="rrcolall rrcol04"><div id="' + formattedRow +'Cell04">' +  '&nbsp;' + '</div></td><td class="rrcolall rrcol05"><div id="' + formattedRow +'Cell05">' +  '&nbsp;' + '</div><td class="rrcolall rrcol06"><div id="' + formattedRow +'Cell06">' + '&nbsp;' + '</div></td><td class="rrcolall rrcol07"><div id="' + formattedRow +'Cell07">' +  '&nbsp;' + '</div><td class="rrcolall rrcol08"><div id="' + formattedRow +'Cell08">' + '&nbsp;' + '</div></td><td class="rrcolall rrcol09"><div id="' + formattedRow +'Cell09">' +  lastRowTotalCost.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) + '</div></td></tr>';					
-				}
-				else {
-						alert("pageBreakTestBlank is " + pageBreakTestBlank);
-				}/* end of if */
 				} /* end of for */
 			}
 // Last row with TOTAL
@@ -481,7 +465,7 @@ function getDesiredRRMonth() {
 ]]></client_script>
         <description>Retrieve rows from x_dosny_bit_procur_bit_procurement_credit_card_line_items and present those in a nicely formatted HTML table. This script will use a specified rr_year and rr_month from the x_dosny_bit_procur_bit_procurement_receiving_report reference table.</description>
         <direct>false</direct>
-        <endpoint>x_dosny_vendorrepo_ReceivingReportWithBootstrapV02.do</endpoint>
+        <endpoint>x_dosny_vendorrepo_ReceivingReportWithBootstrapV03.do</endpoint>
         <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
 <j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
 <html>
@@ -665,22 +649,22 @@ function getDesiredRRMonth() {
 			display: table-row;
 		}
 		/* Force page break before the table row reaches over two inches from the bottom of the printed page */
-		tr.break-after-two-inches {
-			break-inside: avoid-page; /* complete content of tr tag or go to next page */
-			page-break-after: auto;
-	        margin-bottom: 2in; /* Adjust the margin to 2 inches */
+		.break-after-two-inches {
+	        page-break-before: auto;
+			page-break-inside: always;
+			margin-bottom: 2in; /* Adjust the margin to 2 inches */
 		}
-		tr:nth-child(10n) {
-		  break-inside: auto;
-		  page-break-after: always;
+		/* To ensure that the header row (th tags) of an HTML table repeats on each printed page, you can use the thead and display CSS properties.  */
+		thead {
+			display: table-header-group; /* Repeat the header on each page */
 		}
-		td {
-			break-inside:avoid-page; 
-			page-break-after:auto
+		tfoot {
+			display: table-footer-group; /* Repeat the footer on each page */
+			page-break-before: auto;
 		}
 		/* To ensure that the header row (th tags) of an HTML table repeats on each printed page, you can use the thead and display CSS properties.  */
 		table { /* affects htmlTop in print preview */
-	        page-break-inside: auto; /* Allow tables to break across pages */
+	        break-inside: avoid; /* Allow tables to break across pages */
 			table-layout: fixed; 
 			margin-top: 3pt;
 			margin-bottom: -5pt;
@@ -699,14 +683,15 @@ function getDesiredRRMonth() {
 			display: table-header-group; 
 			}
 		.prtable {
-			
+			margin-left: 10pt;
 			width: 798px; /* Set the table width as needed */
 			break-inside:auto;
-
+			display: block; 
 	        }
 		.tfoot {
 			position: fixed;
 			display: table-footer-group; /* Repeat the footer on each page */
+			page-break-after: always;
 		}
 		/* Define classes for the images */
 		.top-image {
@@ -738,7 +723,7 @@ function getDesiredRRMonth() {
 		margin-left:6pt;
 		margin-right: 6pt;
 		width: 768px; /* Set the table width as needed */
-		table-layout: fixed; /*  Use fixed table layout */
+		/* table-layout: fixed; Use fixed table layout */
 	}
 	.rrcolall {
 		border-top-style: solid; 
@@ -853,7 +838,7 @@ function getDesiredRRMonth() {
 			</div>
 
 			<!-- Table Body -->
-			<div id="tableContainerMain" class="row rrtable">
+			<div id="tableContainerMain" class="row rrtable avoid-break-before break-after-two-inches">
 				<div >
 <!-- 				<div class="col-md-12" id="render_header_third"></div> -->
 					<div class="col-md-12" id="render_table"></div>
@@ -865,7 +850,7 @@ function getDesiredRRMonth() {
 			  <div class="footer avoid-break-before page-break-after row">
 				<div class="col-md-12" id="render_footer">
 				  <img
-					style="visibility: visible; display: block;"
+					style="visibility: visible; display: inline-block;"
 					id="render_footer_jpg"
 					src="https://nycdsdev1.service-now.com/537cf5a71b51fd106c1036ef034bcbcf.iix"
 					class="resize-image bottom-image"
@@ -910,19 +895,19 @@ function getDesiredRRMonth() {
 	</body>
 	</html>
 </j:jelly>]]></html>
-        <name>ReceivingReportWithBootstrapV02</name>
+        <name>ReceivingReportWithBootstrapV03</name>
         <processing_script/>
         <sys_class_name>sys_ui_page</sys_class_name>
         <sys_created_by>sfarkas</sys_created_by>
-        <sys_created_on>2023-09-27 17:54:09</sys_created_on>
-        <sys_id>f9a638e91badf5506c1036ef034bcb83</sys_id>
-        <sys_mod_count>204</sys_mod_count>
-        <sys_name>ReceivingReportWithBootstrapV02</sys_name>
+        <sys_created_on>2023-09-28 19:16:45</sys_created_on>
+        <sys_id>ae265a391be979506c1036ef034bcb0b</sys_id>
+        <sys_mod_count>25</sys_mod_count>
+        <sys_name>ReceivingReportWithBootstrapV03</sys_name>
         <sys_package display_value="ReceivingReport" source="x_dosny_vendorrepo">bbcb77921bcdf110baac766e034bcb72</sys_package>
         <sys_policy/>
         <sys_scope display_value="ReceivingReport">bbcb77921bcdf110baac766e034bcb72</sys_scope>
-        <sys_update_name>sys_ui_page_f9a638e91badf5506c1036ef034bcb83</sys_update_name>
+        <sys_update_name>sys_ui_page_ae265a391be979506c1036ef034bcb0b</sys_update_name>
         <sys_updated_by>sfarkas</sys_updated_by>
-        <sys_updated_on>2023-09-28 19:15:07</sys_updated_on>
+        <sys_updated_on>2023-09-28 20:39:10</sys_updated_on>
     </sys_ui_page>
 </record_update>
