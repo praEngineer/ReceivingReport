@@ -2,15 +2,20 @@
     <sys_ui_page action="INSERT_OR_UPDATE">
         <category>cms</category>
         <client_script><![CDATA[function getHtmlTop() {
-var htmlTop = '<table class="avoid-break-before tstatic"  cellspacing="0"><tbody><tr style="height:11pt"><td style="width:50pt;border-top-style:solid;border-top-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s15" style="padding-left: 5pt;padding-right: 5pt;text-indent: 10pt;text-align: left;">DATE PREPARED</p></td><td style="width:40pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p class="s15" style="padding-top: 2pt;padding-left: 3pt;text-indent: 0pt;line-height: 8pt;text-align: left;">RECEIVED</p></td><td style="width:14pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p class="s16" style="padding-top: 2pt;padding-left: 1pt;text-indent: 0pt;line-height: 8pt;text-align: left;">BY</p></td><td style="width:172pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:10pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:30pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:35pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:3pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:23pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:5pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:61pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s17" style="padding-left: 2pt;padding-right: 1pt;text-indent: 5pt;text-align: left;">OMPA OR<br><br>CONTRACT NO.</p></td><td style="width:62pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s19" style="text-indent: 0pt;line-height: 8pt;text-align: left;">ORDER NO.</p></td><td style="width:35pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s19" style="padding-top: 1pt;padding-left: 2pt;text-indent: 0pt;text-align: left;">SHIPPING</p><p class="s19" style="padding-left: 2pt;text-indent: 0pt;text-align: left;">INSTR NO.</p></td><td style="width:34pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt" rowspan="2"><p class="s19" style="padding-top: 1pt;padding-left: 2pt;text-indent: 0pt;text-align: left;">RECEIVING</p><p class="s19" style="padding-left: 2pt;text-indent: 0pt;text-align: left;">REPORT NO.</p></td></tr><tr style="height:10pt"><td style="width:42pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt;background-color:#D3D3D3;" colspan="2"><p class="s24" style="padding-left: 2pt;text-indent: 0pt;text-align: left;background-color:#D3D3D3;">STOREHOUSE</p></td><td style="width:290pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="7"><p class="s15" style="padding-left: 3pt;text-indent: 0pt;line-height: 8pt;text-align: left;">AGENCY AND UNIT</p></td></tr><tr style="height:26pt"><td style="width:50pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:42pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;background-color:#D3D3D3" colspan="2"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:290pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="7"><p class="s25" style="padding-left: 3pt;text-indent: 0pt;text-align: left;">ADDRESS<span class="s26">DSNY IT 357 Pearl St 19th fl</span></p></td><td style="width:61pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s27" style="padding-top: 5pt;padding-left: 2pt;text-indent: 0pt;text-align: left;">Credit Card</p></td><td style="width:62pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:35pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td><td style="width:34pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br><br></p></td></tr><tr style="height:55pt"><td style="width:250pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="4"><p class="s15" style="padding-top: 1pt;text-indent: 0pt;text-align: left;">RECEIVED FROM: NAME OF SELLER (VENDOR)</p><p><div id="nameOfSeller"></div></p></td><td style="width:78pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="4"><p class="s15" style="padding-left: 11pt;text-indent: 0pt;text-align: left;">BILL OF LADING /<br><br>DEL. TICKET NO.</p></td><td style="width:246pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt" colspan="6"><table style="width:100%"><tbody><tr><td valign="top" colspan="2" style="width:100%"><span class="s15" style="padding-left: 11pt;text-indent: 0pt;text-align: left;">CHECK ONE:</span></td></tr><tr><td colspan="1" style="width:10%"><span class="s32" style="padding-top: 3pt;padding-left: 2pt;padding-right: 1pt;line-height: 39%;text-align: top;"><span class="s31">□</span></span></td><td colspan="1" style="width:90%;text-align: left;"><span class="s32" style="padding-left: 2pt;padding-right: 1pt;text-align: left;"><span style=" color: #131313;">THIS IS A PARTIAL DELIVERY</span><br><br><span style=" color: #4F4F4F;">(MORE DELIVERIS DUE ON SAME ORDER)</span></span></td></tr><tr><td valign="top" colspan="1" style="width:10%"><span class="s32" style="padding-left: 2pt;padding-right: 1pt;line-height: 39%;text-align: left;"><span class="s31">□</span></span></td><td valign="top" colspan="1" style="width:90%;text-align: left;"><span class="s32" style="padding-left: 2pt;padding-right: 1pt;text-align: left;"><span style=" color: #131313;">FINAL DELIVERY</span><br><br></span></td></tr></tbody></table></tr></tbody></table>';
-		
+var htmlTop = '<thead><tr><th><div class="avoid-break-before" ><div class="col-md-12" id="render_header"><img style="visibility: visible; display: block;"id="render_header_jpg" src="https://nycdsdev1.service-now.com/ac4fb16a1b59b9106c1036ef034bcb46.iix" class="resize-image top-image"/></div></th></tr><tr><th><div>';
+
+htmlTop += '<table class="avoid-break-before tstatic"  cellspacing="0"><tbody><tr style="height:11pt"><td style="width:50pt;border-top-style:solid;border-top-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s15" style="padding-left: 5pt;padding-right: 5pt;text-indent: 10pt;text-align: left;">DATE PREPARED</p></td><td style="width:40pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p class="s15" style="padding-top: 2pt;padding-left: 3pt;text-indent: 0pt;line-height: 8pt;text-align: left;">RECEIVED</p></td><td style="width:14pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p class="s16" style="padding-top: 2pt;padding-left: 1pt;text-indent: 0pt;line-height: 8pt;text-align: left;">BY</p></td><td style="width:172pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:10pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:30pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:35pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:3pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:23pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:5pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:61pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s17" style="padding-left: 2pt;padding-right: 1pt;text-indent: 5pt;text-align: left;">OMPA OR<br/><br/>CONTRACT NO.</p></td><td style="width:62pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s19" style="text-indent: 0pt;line-height: 8pt;text-align: left;">ORDER NO.</p></td><td style="width:35pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s19" style="padding-top: 1pt;padding-left: 2pt;text-indent: 0pt;text-align: left;">SHIPPING</p><p class="s19" style="padding-left: 2pt;text-indent: 0pt;text-align: left;">INSTR NO.</p></td><td style="width:34pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt" rowspan="2"><p class="s19" style="padding-top: 1pt;padding-left: 2pt;text-indent: 0pt;text-align: left;">RECEIVING</p><p class="s19" style="padding-left: 2pt;text-indent: 0pt;text-align: left;">REPORT NO.</p></td></tr><tr style="height:10pt"><td style="width:42pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt;background-color:#D3D3D3;" colspan="2"><p class="s24" style="padding-left: 2pt;text-indent: 0pt;text-align: left;background-color:#D3D3D3;">STOREHOUSE</p></td><td style="width:290pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="7"><p class="s15" style="padding-left: 3pt;text-indent: 0pt;line-height: 8pt;text-align: left;">AGENCY AND UNIT</p></td></tr><tr style="height:26pt"><td style="width:50pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:42pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;background-color:#D3D3D3" colspan="2"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:290pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="7"><p class="s25" style="padding-left: 3pt;text-indent: 0pt;text-align: left;">ADDRESS<span class="s26">DSNY IT 357 Pearl St 19th fl</span></p></td><td style="width:61pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s27" style="padding-top: 5pt;padding-left: 2pt;text-indent: 0pt;text-align: left;">Credit Card</p></td><td style="width:62pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:35pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:34pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td></tr><tr style="height:55pt"><td style="width:250pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="4"><p class="s15" style="padding-top: 1pt;text-indent: 0pt;text-align: left;">RECEIVED FROM: NAME OF SELLER (VENDOR)</p><p><div id="nameOfSeller"></div></p></td><td style="width:78pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="4"><p class="s15" style="padding-left: 11pt;text-indent: 0pt;text-align: left;">BILL OF LADING /<br/><br/>DEL. TICKET NO.</p></td><td style="width:246pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt" colspan="6"><table style="width:100%"><tbody><tr><td valign="top" colspan="2" style="width:100%"><span class="s15" style="padding-left: 11pt;text-indent: 0pt;text-align: left;">CHECK ONE:</span></td></tr><tr><td colspan="1" style="width:10%"><span class="s32" style="padding-top: 3pt;padding-left: 2pt;padding-right: 1pt;line-height: 39%;text-align: top;"><span class="s31">□</span></span></td><td colspan="1" style="width:90%;text-align: left;"><span class="s32" style="padding-left: 2pt;padding-right: 1pt;text-align: left;"><span style=" color: #131313;">THIS IS A PARTIAL DELIVERY</span><br/><br/><span style=" color: #4F4F4F;">(MORE DELIVERIS DUE ON SAME ORDER)</span></span></td></tr><tr><td valign="top" colspan="1" style="width:10%"><span class="s32" style="padding-left: 2pt;padding-right: 1pt;line-height: 39%;text-align: left;"><span class="s31">□</span></span></td><td valign="top" colspan="1" style="width:90%;text-align: left;"><span class="s32" style="padding-left: 2pt;padding-right: 1pt;text-align: left;"><span style=" color: #131313;">FINAL DELIVERY</span><br/><br/></span></td></tr></tbody></table></tr></tbody></table></div>';
+
+	htmlTop += '</th></tr></thead>';
+
 	return htmlTop;
 }
 
-function getHtmlBottom() {
-var htmlBottom = 
-'<div><table class="prtable" cellspacing="0" border="1"><thead class="tthead"><tr><th class="rrcolall rrcol01">ITEM NO</th><th class="rrcolall rrcol02a">STOREHOUSE<br/>COMMODITY<br/>CODE</th><th class="rrcolall rrcol02b" >Description</th><th class="rrcolall rrcol03" >Quantity</th><th class="rrcolall rrcol04 text-center">Unit</th><th class="rrcolall rrcol05 text-center" >Unit<br/>Price</th><th class="rrcolall rrcol06">Quantity</th><th class="rrcolall rrcol07">Unit</th><th class="rrcolall rrcol08">Unit<br/>Price</th><th class="rrcolall rrcol09header">Total Cost</th></tr></thead>';
-	return htmlBottom;
+function getHtmlDynamicTableHeader() {
+
+	var lclhtml = '<tbody><tr class="break-after-two-inches"><td><div><table class="prtable rrtable" cellspacing="0" border="1"><thead class="tthead"><tr><th class="rrcolall rrcol01">ITEM NO</th><th class="rrcolall rrcol02a">STOREHOUSE<br/>COMMODITY<br/>CODE</th><th class="rrcolall rrcol02b" >Description</th><th class="rrcolall rrcol03" >Quantity</th><th class="rrcolall rrcol04 text-center">Unit</th><th class="rrcolall rrcol05 text-center" >Unit<br/>Price</th><th class="rrcolall rrcol06">Quantity</th><th class="rrcolall rrcol07">Unit</th><th class="rrcolall rrcol08">Unit<br/>Price</th><th class="rrcolall rrcol09header">Total Cost</th></tr>';
+
+	return lclhtml;
 }
 
 // Specify the desired rr_year and rr_month values
@@ -140,7 +145,7 @@ function getRecordsJSON(response) {
 				if (record.unit_price !== null) {
 					unitPrice = parseFloat(record.unit_price).toFixed(2);
 				}
-				html += '<tr><td class="rrcolall rrcol01"><div id="' + formattedRow +'Cell01">' + record.quantity + '</div></td><td class="rrcolall rrcol02" colspan="2"><div id="' + formattedRow +'Cell02"><div><a href="https://nycdsdev1.service-now.com/nav_to.do?uri=x_dosny_bit_procur_bit_procurement_credit_card_line_items.do?sys_id=' + lclSysId + '">' + record.number + '</a>' + '&nbsp;' + recVendName + '<br/>' + record.subject + '</div></td><td class="rrcolall rrcol03"><div id="' + formattedRow +'Cell03">' +  '&nbsp;' + '</div></td><td class="rrcolall rrcol04"><div id="' + formattedRow +'Cell04">' +  '&nbsp;' + '</div></td><td class="rrcolall rrcol05"><div id="' + formattedRow +'Cell05">' +  '&nbsp;' + '</div></td><td class="rrcolall rrcol06"><div id="' + formattedRow +'Cell06">' +  record.quantity + '</div></td><td class="rrcolall rrcol07"><div id="' + formattedRow +'Cell07">' + unitEach + '</div></td><td class="rrcolall rrcol08"><div id="' + formattedRow +'Cell08">' +  unitPrice + '</div></td><td class="rrcolall rrcol09"><div id="' + formattedRow +'Cell09">' + (record.quantity * record.unit_price).toFixed(2) + '</div></td></tr>';			
+				html += '<tr class="break-after-two-inches"><td class="rrcolall rrcol01"><div id="' + formattedRow +'Cell01">' + record.quantity + '</div></td><td class="rrcolall rrcol02" colspan="2"><div id="' + formattedRow +'Cell02"><div><a href="https://nycdsdev1.service-now.com/nav_to.do?uri=x_dosny_bit_procur_bit_procurement_credit_card_line_items.do?sys_id=' + lclSysId + '">' + record.number + '</a>' + '&nbsp;' + recVendName + '<br/>' + record.subject + '</div></td><td class="rrcolall rrcol03"><div id="' + formattedRow +'Cell03">' +  '&nbsp;' + '</div></td><td class="rrcolall rrcol04"><div id="' + formattedRow +'Cell04">' +  '&nbsp;' + '</div></td><td class="rrcolall rrcol05"><div id="' + formattedRow +'Cell05">' +  '&nbsp;' + '</div></td><td class="rrcolall rrcol06"><div id="' + formattedRow +'Cell06">' +  record.quantity + '</div></td><td class="rrcolall rrcol07"><div id="' + formattedRow +'Cell07">' + unitEach + '</div></td><td class="rrcolall rrcol08"><div id="' + formattedRow +'Cell08">' +  unitPrice + '</div></td><td class="rrcolall rrcol09"><div id="' + formattedRow +'Cell09">' + (record.quantity * record.unit_price).toFixed(2) + '</div></td></tr>';			
 				currRow += 1;
 				lastRowTotalCost += (record.quantity * record.unit_price);
 				/* if((currRow % rowsOnPage == 0 && currRow > rowsOnPage) || currRow % rowsOnPrintedPage ==0){
@@ -153,12 +158,12 @@ function getRecordsJSON(response) {
 			});
 			if(currRow % rowsOnPage !== 0){
 				// alert('make empty rows');
-				var testAgainstThis = currRow + (currRow % rowsOnPage) - 1;
+				var testAgainstThis = 0;
 				if( currRow < rowsOnPage) {
 					testAgainstThis = currRow + rowsOnPage - (rowsOnPage % currRow);
 				}
 				else {
-					testAgainstThis = 0;
+					testAgainstThis = currRow + (currRow % rowsOnPage) - 1;
 				}
 				//  if currRow is 27, the value of the expression currRow + 10 - (currRow % 10) is 30.
 				// alert("testAgainstThis is " + testAgainstThis);
@@ -170,7 +175,7 @@ function getRecordsJSON(response) {
 // Last row with TOTAL
 			currRowEmpty = currRowEmpty == 0 ? currRow+1 : currRowEmpty +=1;
 			formattedRow = currRowEmpty < 10 ? 'Row0' + currRowEmpty : 'Row' + currRowEmpty;
-			html +=  '<tr><td class="rrcolall rrcol01"><div id="' + formattedRow +'Cell01">' + '&nbsp;' + '</div></td><td class="rrcolall rrcol02" colspan="2"><div id="' + formattedRow +'Cell02">' + 'TOTAL' + '<br/>' + '&nbsp;' + '</div></td><td class="rrcolall rrcol03"><div id="' + formattedRow +'Cell03">' +  '&nbsp;' + '</div></td><td class="rrcolall rrcol04"><div id="' + formattedRow +'Cell04">' +  '&nbsp;' + '</div></td><td class="rrcolall rrcol05"><div id="' + formattedRow +'Cell05">' +  '&nbsp;' + '</div><td class="rrcolall rrcol06"><div id="' + formattedRow +'Cell06">' + '&nbsp;' + '</div></td><td class="rrcolall rrcol07"><div id="' + formattedRow +'Cell07">' +  '&nbsp;' + '</div><td class="rrcolall rrcol08"><div id="' + formattedRow +'Cell08">' + '&nbsp;' + '</div></td><td class="rrcolall rrcol09"><div id="' + formattedRow +'Cell09">' +  lastRowTotalCost.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) + '</div></td></tr>';		
+			html +=  '<tr class="avoid-break"><td class="rrcolall rrcol01"><div id="' + formattedRow +'Cell01">' + '&nbsp;' + '</div></td><td class="rrcolall rrcol02" colspan="2"><div id="' + formattedRow +'Cell02">' + 'TOTAL' + '<br/>' + '&nbsp;' + '</div></td><td class="rrcolall rrcol03"><div id="' + formattedRow +'Cell03">' +  '&nbsp;' + '</div></td><td class="rrcolall rrcol04"><div id="' + formattedRow +'Cell04">' +  '&nbsp;' + '</div></td><td class="rrcolall rrcol05"><div id="' + formattedRow +'Cell05">' +  '&nbsp;' + '</div><td class="rrcolall rrcol06"><div id="' + formattedRow +'Cell06">' + '&nbsp;' + '</div></td><td class="rrcolall rrcol07"><div id="' + formattedRow +'Cell07">' +  '&nbsp;' + '</div><td class="rrcolall rrcol08"><div id="' + formattedRow +'Cell08">' + '&nbsp;' + '</div></td><td class="rrcolall rrcol09"><div id="' + formattedRow +'Cell09">' +  lastRowTotalCost.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) + '</div></td></tr>';		
 			
 		} else {
 			step = 6;
@@ -271,8 +276,24 @@ function renderMonthDropDown(defMonth) {
 }
 
 function renderTheTable(parmHTML, sentby){
-	// alert('renderTheTable sent by ' + sentby);
-	document.getElementById('render_table').innerHTML = getHtmlBottom() + '<tbody>' + parmHTML +  '</tbody></table>';
+	try {
+		var beforeFooter = getHtmlDynamicTableHeader() + parmHTML + '</table></div></td></tr></tbody>';
+		var footerImage = '<tfoot class="ttfoot"><img style="visibility: visible; display: inline-block;" id="render_footer_jpg" src="https://nycdsdev1.service-now.com/537cf5a71b51fd106c1036ef034bcbcf.iix" class="resize-image bottom-image" /></tfoot>';
+		document.getElementById('render_table').innerHTML = beforeFooter + footerImage;
+/*
+				<tfoot class="ttfoot">
+				<img
+					 style="visibility: visible; display: inline-block;"
+					 id="render_footer_jpg"
+					 src="https://nycdsdev1.service-now.com/537cf5a71b51fd106c1036ef034bcbcf.iix"
+					 class="resize-image bottom-image"
+					 />
+				</tfoot>
+*/
+	} 
+	catch (error) {
+		document.getElementById('render_table').innerHTML = error.toString();
+	}
 }
 function renderTheVendorCombo(defVendor) {
     // Initialize a GlideAjax instance for making server calls
@@ -313,7 +334,7 @@ function refreshTbl() {
 			}
 		}
 		document.getElementById('render_header_second').innerHTML = getHtmlTop() ;
-		//document.getElementById('render_header_third').innerHTML = getHtmlBottom() ;
+		// document.getElementById('render_header_third').innerHTML = getHtmlBottom() ;
 		
 		step = 71;
 		html = ''; //frame;
@@ -321,8 +342,8 @@ function refreshTbl() {
 		ga.getXML(getRecordsJSON);	// retrieves the credit card charges
 		step = 73;
 	
-		renderTheTable(html, 'refreshTbl');
-		step = 74;
+		// renderTheTable(html, 'refreshTbl');
+		// step = 74;
 
 		renderYearDropDown(lclYear);
 		step = 75;
@@ -473,15 +494,17 @@ function getDesiredRRMonth() {
 ]]></client_script>
         <description>Retrieve rows from x_dosny_bit_procur_bit_procurement_credit_card_line_items and present those in a nicely formatted HTML table. This script will use a specified rr_year and rr_month from the x_dosny_bit_procur_bit_procurement_receiving_report reference table.&#13;
 &#13;
-This version can handle up to 13 cc items on a printed page.  This version will show a continuous table in the browser.  Cannot figure out proper CSS to page-break the dynamic table when there are more than what will fit on the first printed page.</description>
+This version will show a continuous table in the browser.  It will page-break the dynamic table when there are more than what will fit on the first printed page.</description>
         <direct>false</direct>
-        <endpoint>x_dosny_vendorrepo_ReceivingReportWithBootstrapV03.do</endpoint>
+        <endpoint>x_dosny_vendorrepo_ReceivingReportWithBootstrapV04.do</endpoint>
         <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
 <j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
-<html>
-	<head>
-		<style type="text/css">
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Receiving Report</title>
+    <style>
     p {
       color: #131313;
       font-family: Arial, sans-serif;
@@ -598,171 +621,13 @@ This version can handle up to 13 cc items on a printed page.  This version will 
 		margin-top: 5px;
 		margin-bottom: 5px;
 	}		
-	#pgbreak {
-		display: none;
-	}
-	@media print {
-		#pgbreak {
-			display: table-row;
-			width: 100%;
-			height: 62pt;
-			text-align: center;
-			break-inside: always;
-			/*  margin-bottom: 2in; Adjust the margin to 2 inches */
-		}
-		a::after {
-            content: " (" attr(href) ")"; /* Display the href attribute after the link text */
-            display: none; /* Hide the actual anchor tag */
-		}
-		/* Hide the HTML tag in print preview */
-		.element-to-hide {
-			display: none;
-		}
-		/* Ensure mandatory footer image is displayed at the bottom of each page */
-		footer {
-			position: fixed;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			height: 20mm; /* Adjust as needed */
-		}	
-		/* Always break before the element */
-		.break-before {
-			page-break-before: always;
-		}
-		/* Avoid page break before the element */
-		.avoid-break {
-			page-break-before: avoid;
-		}
-		/* Always break after the element */
-		.break-after {
-			page-break-after: always;
-		}
-		/* Avoid page break after the element */
-		.avoid-break-after {
-			page-break-after: avoid;
-		}
-		#tableContainerOuter {
-			height: 100%;
-			width: 100%;
-			display: table;
-			}
-		#tableContainerHeader {
-			vertical-align: top;
-			}
-		#tableContainerMain {
-			position: fixed;
-			margin-top: 3.3in;
-			margin-left:-20pt;
-			margin-bottom: 2in;
-			break-inside: avoid;
-			page-break-before: auto;
-			page-break-after: auto;
-			display:block;
-			}
-		#tableContainerMain table {
-			width: 100%;
-			}
-		
-		.table-container {
-			page-break-before: auto;
-			page-break-after: auto;
-			page-break-inside: avoid;
-		  }
 
-		#tableContainerFooter{
-			vertical-align: bottom;
-			page-break-after: always;
-			display: table; 
-			}
-			
-		/* setting the display property to table-row ensures tr tag behaves like table rows even when dynamically generated.*/
-		tr {
-			display: table-row;
-		}
-		td {
-			display: table-cell;
-		}
-		/* Force page break before the table row reaches over two inches from the bottom of the printed page */
-		.break-after-two-inches {
-	        page-break-before: auto;
-			page-break-inside: always;
-			margin-bottom: 2in; /* Adjust the margin to 2 inches */
-		}
-		/* To ensure that the header row (th tags) of an HTML table repeats on each printed page, you can use the thead and display CSS properties.  */
-		thead {
-			display: table-header-group; /* Repeat the header on each page */
-		}
-		tfoot {
-			display: table-footer-group; /* Repeat the footer on each page */
-			page-break-before: auto;
-		}
-		/* To ensure that the header row (th tags) of an HTML table repeats on each printed page, you can use the thead and display CSS properties.  */
-		table { /* affects htmlTop in print preview */
-	        break-inside: avoid; /* Allow tables to break across pages */
-			table-layout: fixed; 
-			margin-top: 3pt;
-			margin-bottom: -5pt;
-		}
-		.tthead {
-			break-inside: avoid;
-			}
-		th {
-			break-inside:avoid; 
-			page-break-after:auto
-		}		
-		.tstatic {
-			position: fixed;
-			top: 1.3in;
-			margin-bottom: 0;
-			display: table-header-group; 
-			width: 100%;
-			}
-		.prtable {
-			margin-left: 10pt;
-			width: 798px; /* Set the table width as needed */
-			table-layout: fixed; /* Use fixed layout for the table */
-			width: 100%; /* Ensure the table spans the full width of the page */
-			page-break-inside: auto; /* Avoid breaking inside the table rows */
-	        }
-		.tfoot {
-			position: fixed;
-			display: table-footer-group; /* Repeat the footer on each page */
-			page-break-after: always;
-			width: 100%;
-		}
-		/* Define classes for the images */
-		.top-image {
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: auto;
-		}
-		.bottom-image {
-			position: fixed;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			height: auto;
-		}
-		.rrcol10 {
-			width: 100%;
-			display: none;
-			}
-	}
 	/* Define page size and margins */
     @media page {
         size: letter;
         margin: 20mm;
     }
-	.rrtable {
-		border-collapse:collapse;
-		margin-left:6pt;
-		margin-right: 6pt;
-		width: 768px; /* Set the table width as needed */
-		/* table-layout: fixed; Use fixed table layout */
-	}
+
 	.rrcolall {
 		border-top-style: solid; 
 		border-top-width: 1pt; 
@@ -828,124 +693,170 @@ This version can handle up to 13 cc items on a printed page.  This version will 
 	.rrcol10 {
 		display: none;
 		}
-	
-	</style>
-	<!-- 
-		In most web browsers, when you print a webpage, the default behavior is to include the 
-		anchor (<a>) tag around the text of a link. If you want to customize how links are 
-		displayed when printing, you can use CSS to style the print output.
+	.rrtable {
+		border-collapse:collapse;
+		margin-left:6pt;
+		margin-right: 6pt;
+		width: 768px; /* Set the table width as needed */
+		/* table-layout: fixed; Use fixed table layout */
+	}			
+        @media print {
+            /* Apply print-specific styles */
+            .prtable {
+                table-layout: fixed; /* Use fixed layout for the table */
+				margin-top: 3.75in;
+				
+                width: 768pt; /* Ensure the table spans the full width of the page */
+                page-break-inside: auto; /* Avoid breaking inside the table rows */
+				page-break-before: avoid;
+            }
+			.prtable tr:nth-child(15n) {
+				page-break-after: always;
+			}
+			/* Avoid page break before the element */
+			.avoid-break {
+				page-break-before: avoid;
+			}
+			a::after {
+				content: " (" attr(href) ")"; /* Display the href attribute after the link text */
+				display: none; /* Hide the actual anchor tag */
+			}
+			/* Hide the HTML tag in print preview */
+			.element-to-hide {
+				display: none;
+			}
+			/* Force page break before the table row reaches over two inches from the bottom of the printed page */
+			.break-after-two-inches {
+				page-break-before: auto;
+				page-break-after: auto;
+				margin-bottom: 2in; /* Adjust the margin to 2 inches */
+			}
+			.tstatic {
+				position: fixed;
+				top: 1.75in;
+				margin-bottom: 0;
+				display: table-header-group; 
+				width: 100%;
+			}		
+			/* Define classes for the images */
+			.top-image {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: auto;
+			}
+			.bottom-image {
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: auto;
+			}
+		/*
+			.tthead {
+				display: table-header-group; 
+				break-inside:avoid; 
+				page-break-after:auto;
+				page-break-before: auto;
+			}	
+		*/
+			.ttfoot {
+				position: fixed;
+				display: table-footer-group; /* Repeat the footer on each page */
+				page-break-after: always;
+				width: 100%;
+			}
 
-		To hide the anchor tag and only display the text of the link when printing, you can 
-		use CSS to set the content property of the ::after pseudo-element for the anchor tag. 
-	-->
-	<!-- src="https://code.jquery.com/jquery-3.7.1.min.js">  -->
-	</head>
-	<body>
-		<div  >
+        }
+    </style>
+</head>
+<body>
+    	<div>
 			<div class="col-md-2 inline-block element-to-hide" id='render_buttonPrint'>Place for Button</div>
 			<div class="col-md-10 inline-block element-to-hide"  id='rrTitle'>Receiving Report Month and Year Choices</div>
 		</div>
-		<form id="frmReceivingReport" onSubmit="javascript:alert('submitted')">
-		  <div id="tableContainerOuter">
+	<form id="frmReceivingReport" onSubmit="javascript:alert('submitted')">
+		<div id="tableContainerOuter">
 			<!-- Year, Month, and Vendor Selects -->
 			<div class="row thead" style="width: 650pt">
-			  <div class="col-md-2">
-				<div class="element-to-hide" id="render_yearSelect">Default year select</div>
-			  </div>
-			  <div class="col-md-3">
-				<div class="element-to-hide" id="render_monthSelect">Default month select</div>
-			  </div>
-			  <div class="col-md-7 text-right">
-				<div class="element-to-hide" id="render_vendorSelect">Default vendor select</div>
-			  </div>
-			</div>
-
-			<!-- Table Header -->
-			<div id="tableContainerHeader" class="row">
-				<div class="avoid-break-before" >
-					<div class="col-md-12" id="render_header">
-					  <img
-						style="visibility: visible; display: block;"
-						id="render_header_jpg"
-						src="https://nycdsdev1.service-now.com/ac4fb16a1b59b9106c1036ef034bcb46.iix"
-						class="resize-image top-image"
-					  />
-					</div>
-					<div class="col-md-12" id="render_header_second"></div>
+				<div class="col-md-2">
+					<div class="element-to-hide" id="render_yearSelect">Default year select</div>
+				</div>
+				<div class="col-md-3">
+					<div class="element-to-hide" id="render_monthSelect">Default month select</div>
+				</div>
+				<div class="col-md-7 text-right">
+					<div class="element-to-hide" id="render_vendorSelect">Default vendor select</div>
 				</div>
 			</div>
+		</div>
+	
+		<!-- render_table includes thead th and td and tbody tags -->
+		<table id="tableContainerMain" cellspacing="0" border="1">
+			<div class="col-md-12" id="render_header_second"></div>
+			<div class="col-md-12" id="render_table"></div>
+			<!-- <div class="col-md-12" id="render_footer">
+				<tfoot class="ttfoot">
+				<img
+					 style="visibility: visible; display: inline-block;"
+					 id="render_footer_jpg"
+					 src="https://nycdsdev1.service-now.com/537cf5a71b51fd106c1036ef034bcbcf.iix"
+					 class="resize-image bottom-image"
+					 />
+				</tfoot>
+				In order to force the image to appear on the browser print preview and 
+				 in the actual print page, should have this style inside the <img> tag:
+				 style="visibility: visible; display: block;"
 
-			<!-- Table Body -->
-			<div id="tableContainerMain" class="row rrtable">
-				<div >
-<!-- 				<div class="col-md-12" id="render_header_third"></div> -->
-					<div class="col-md-12" id="render_table"></div>
-				</div> 
-			</div>
-			  
-			  
-			<div id="tableContainerFooter" class="row tfoot">
-			  <div class="footer avoid-break-before page-break-after row">
-				<div class="col-md-12" id="render_footer">
-				  <img
-					style="visibility: visible; display: inline-block;"
-					id="render_footer_jpg"
-					src="https://nycdsdev1.service-now.com/537cf5a71b51fd106c1036ef034bcbcf.iix"
-					class="resize-image bottom-image"
-				  />
-				  <!-- In order to force the image to appear on the browser print preview and 
-					in the actual print page, should have this style inside the <img> tag:
-					style="visibility: visible; display: block;"
+				 jQuery below assures there are two JPGs loaded before the print button will
+				 open the print dialogue.
+			</div> -->
+		</table> 
 
-					jQuery below assures there are two JPGs loaded before the print button will
-					open the print dialogue. -->
-				</div>
-			  </div>
-			</div>			  
-		  </div>
-		</form>
+	</form>
+	<script>
+		$j(document).ready(function() {
+		// Counter to keep track of loaded images
+		var loadedImages = 0;
 
-		<script>
-			$j(document).ready(function() {
-			// Counter to keep track of loaded images
-			var loadedImages = 0;
+		// Function to check if all images are loaded
+		function checkImagesLoaded() {
+		loadedImages++;
+		if (loadedImages === 2) { // Adjust the count if you have more images
+		// All images are loaded, enable the print button
+		$j('#printButton').prop('disabled', false);
+		}
+		}
 
-			// Function to check if all images are loaded
-			function checkImagesLoaded() {
-			loadedImages++;
-			if (loadedImages === 2) { // Adjust the count if you have more images
-			// All images are loaded, enable the print button
-			$j('#printButton').prop('disabled', false);
-			}
-			}
+		// Bind the onload event to both images
+		$j('#render_header_jpg').on('load', checkImagesLoaded);
+		$j('#render_footer_jpg').on('load', checkImagesLoaded);
 
-			// Bind the onload event to both images
-			$j('#render_header_jpg').on('load', checkImagesLoaded);
-			$j('#render_footer_jpg').on('load', checkImagesLoaded);
+		// Bind click event to the print button
+		$j('#printButton').click(function() {
+		// Trigger the print dialog when the button is clicked
+		window.print();
+		});
+		});
+	</script>	
+</body>
 
-			// Bind click event to the print button
-			$j('#printButton').click(function() {
-			// Trigger the print dialog when the button is clicked
-			window.print();
-			});
-			});
-		</script>
-	</body>
-	</html>
+</html>
 </j:jelly>]]></html>
-        <name>ReceivingReportWithBootstrapV03</name>
+        <name>ReceivingReportWithBootstrapV04</name>
         <processing_script/>
         <sys_class_name>sys_ui_page</sys_class_name>
         <sys_created_by>sfarkas</sys_created_by>
-        <sys_created_on>2023-09-28 19:16:45</sys_created_on>
-        <sys_id>ae265a391be979506c1036ef034bcb0b</sys_id>
-        <sys_mod_count>86</sys_mod_count>
-        <sys_name>ReceivingReportWithBootstrapV03</sys_name>
+        <sys_created_on>2023-09-29 15:25:07</sys_created_on>
+        <sys_id>1ce8ee821ba1f9506c1036ef034bcb78</sys_id>
+        <sys_mod_count>64</sys_mod_count>
+        <sys_name>ReceivingReportWithBootstrapV04</sys_name>
         <sys_package display_value="ReceivingReport" source="x_dosny_vendorrepo">bbcb77921bcdf110baac766e034bcb72</sys_package>
         <sys_policy/>
         <sys_scope display_value="ReceivingReport">bbcb77921bcdf110baac766e034bcb72</sys_scope>
-        <sys_update_name>sys_ui_page_ae265a391be979506c1036ef034bcb0b</sys_update_name>
+        <sys_update_name>sys_ui_page_1ce8ee821ba1f9506c1036ef034bcb78</sys_update_name>
         <sys_updated_by>sfarkas</sys_updated_by>
-        <sys_updated_on>2023-09-29 15:14:05</sys_updated_on>
+        <sys_updated_on>2023-09-29 20:09:12</sys_updated_on>
     </sys_ui_page>
 </record_update>
