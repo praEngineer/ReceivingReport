@@ -796,7 +796,7 @@ This version will show a continuous table in the browser.  It will page-break th
 				display: none;
 			}
 			/* Define classes for the images */
-			prTopImage {
+			.prTopImage {
 				position: fixed;
 				top: 0;
 				max-width: 768px;
@@ -907,13 +907,13 @@ This version will show a continuous table in the browser.  It will page-break th
         <sys_created_by>sfarkas</sys_created_by>
         <sys_created_on>2023-09-29 15:25:07</sys_created_on>
         <sys_id>1ce8ee821ba1f9506c1036ef034bcb78</sys_id>
-        <sys_mod_count>183</sys_mod_count>
+        <sys_mod_count>184</sys_mod_count>
         <sys_name>ReceivingReportWithBootstrapV04</sys_name>
         <sys_package display_value="ReceivingReport" source="x_dosny_vendorrepo">bbcb77921bcdf110baac766e034bcb72</sys_package>
         <sys_policy/>
         <sys_scope display_value="ReceivingReport">bbcb77921bcdf110baac766e034bcb72</sys_scope>
         <sys_update_name>sys_ui_page_1ce8ee821ba1f9506c1036ef034bcb78</sys_update_name>
         <sys_updated_by>sfarkas</sys_updated_by>
-        <sys_updated_on>2023-10-02 21:23:07</sys_updated_on>
+        <sys_updated_on>2023-10-03 15:24:10</sys_updated_on>
     </sys_ui_page>
 </record_update>
