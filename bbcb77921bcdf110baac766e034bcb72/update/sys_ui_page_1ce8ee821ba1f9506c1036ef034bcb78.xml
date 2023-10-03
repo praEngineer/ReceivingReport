@@ -4,9 +4,9 @@
         <client_script><![CDATA[function getHtmlTop() {
 var htmlTop = '';
 
-htmlTop += '<tr><th><div id="staticHtml" class="prstaticHtml"><table class="avoid-break-before tstatic"  cellspacing="0"><tbody><tr style="height:11pt"><td style="width:50pt;border-top-style:solid;border-top-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s15" style="padding-left: 5pt;padding-right: 5pt;text-indent: 10pt;text-align: left;">DATE PREPARED</p></td><td style="width:40pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p class="s15" style="padding-top: 2pt;padding-left: 3pt;text-indent: 0pt;line-height: 8pt;text-align: left;">RECEIVED</p></td><td style="width:14pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p class="s16" style="padding-top: 2pt;padding-left: 1pt;text-indent: 0pt;line-height: 8pt;text-align: left;">BY</p></td><td style="width:172pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:10pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:30pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:35pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:3pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:23pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:5pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:61pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s17" style="padding-left: 2pt;padding-right: 1pt;text-indent: 5pt;text-align: left;">OMPA OR<br/><br/>CONTRACT NO.</p></td><td style="width:62pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s19" style="text-indent: 0pt;line-height: 8pt;text-align: left;">ORDER NO.</p></td><td style="width:35pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s19" style="padding-top: 1pt;padding-left: 2pt;text-indent: 0pt;text-align: left;">SHIPPING</p><p class="s19" style="padding-left: 2pt;text-indent: 0pt;text-align: left;">INSTR NO.</p></td><td style="width:34pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt" rowspan="2"><p class="s19" style="padding-top: 1pt;padding-left: 2pt;text-indent: 0pt;text-align: left;">RECEIVING</p><p class="s19" style="padding-left: 2pt;text-indent: 0pt;text-align: left;">REPORT NO.</p></td></tr><tr style="height:10pt"><td style="width:42pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt;background-color:#D3D3D3;" colspan="2"><p class="s24" style="padding-left: 2pt;text-indent: 0pt;text-align: left;background-color:#D3D3D3;">STOREHOUSE</p></td><td style="width:290pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="7"><p class="s15" style="padding-left: 3pt;text-indent: 0pt;line-height: 8pt;text-align: left;">AGENCY AND UNIT</p></td></tr><tr style="height:26pt"><td style="width:50pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:42pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;background-color:#D3D3D3" colspan="2"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:290pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="7"><p class="s25" style="padding-left: 3pt;text-indent: 0pt;text-align: left;">ADDRESS<span class="s26">DSNY IT 357 Pearl St 19th fl</span></p></td><td style="width:61pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s27" style="padding-top: 5pt;padding-left: 2pt;text-indent: 0pt;text-align: left;">Credit Card</p></td><td style="width:62pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:35pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:34pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td></tr><tr style="height:55pt"><td style="width:250pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="4"><p class="s15" style="padding-top: 1pt;text-indent: 0pt;text-align: left;">RECEIVED FROM: NAME OF SELLER (VENDOR)</p><p><div id="nameOfSeller"></div></p></td><td style="width:78pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="4"><p class="s15" style="padding-left: 11pt;text-indent: 0pt;text-align: left;">BILL OF LADING /<br/><br/>DEL. TICKET NO.</p></td><td style="width:246pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt" colspan="6"><table style="width:100%"><tbody><tr><td valign="top" colspan="2" style="width:100%"><span class="s15" style="padding-left: 11pt;text-indent: 0pt;text-align: left;">CHECK ONE:</span></td></tr><tr><td colspan="1" style="width:10%"><span class="s32" style="padding-top: 3pt;padding-left: 2pt;padding-right: 1pt;line-height: 39%;text-align: top;"><span class="s31">□</span></span></td><td colspan="1" style="width:90%;text-align: left;"><span class="s32" style="padding-left: 2pt;padding-right: 1pt;text-align: left;"><span style=" color: #131313;">THIS IS A PARTIAL DELIVERY</span><br/><br/><span style=" color: #4F4F4F;">(MORE DELIVERIS DUE ON SAME ORDER)</span></span></td></tr><tr><td valign="top" colspan="1" style="width:10%"><span class="s32" style="padding-left: 2pt;padding-right: 1pt;line-height: 39%;text-align: left;"><span class="s31">□</span></span></td><td valign="top" colspan="1" style="width:90%;text-align: left;"><span class="s32" style="padding-left: 2pt;padding-right: 1pt;text-align: left;"><span style=" color: #131313;">FINAL DELIVERY</span><br/><br/></span></td></tr></tbody></table></tr></tbody></table></div></div>';
+htmlTop += '<tr><th><div id="staticHtml"><table class="avoid-break-before tstatic"  cellspacing="0"><tbody><tr style="height:11pt"><td style="width:50pt;border-top-style:solid;border-top-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s15" style="padding-left: 5pt;padding-right: 5pt;text-indent: 10pt;text-align: left;">DATE PREPARED</p></td><td style="width:40pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p class="s15" style="padding-top: 2pt;padding-left: 3pt;text-indent: 0pt;line-height: 8pt;text-align: left;">RECEIVED</p></td><td style="width:14pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p class="s16" style="padding-top: 2pt;padding-left: 1pt;text-indent: 0pt;line-height: 8pt;text-align: left;">BY</p></td><td style="width:172pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:10pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:30pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:35pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:3pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:23pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:5pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:61pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s17" style="padding-left: 2pt;padding-right: 1pt;text-indent: 5pt;text-align: left;">OMPA OR<br/><br/>CONTRACT NO.</p></td><td style="width:62pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s19" style="text-indent: 0pt;line-height: 8pt;text-align: left;">ORDER NO.</p></td><td style="width:35pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s19" style="padding-top: 1pt;padding-left: 2pt;text-indent: 0pt;text-align: left;">SHIPPING</p><p class="s19" style="padding-left: 2pt;text-indent: 0pt;text-align: left;">INSTR NO.</p></td><td style="width:34pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt" rowspan="2"><p class="s19" style="padding-top: 1pt;padding-left: 2pt;text-indent: 0pt;text-align: left;">RECEIVING</p><p class="s19" style="padding-left: 2pt;text-indent: 0pt;text-align: left;">REPORT NO.</p></td></tr><tr style="height:10pt"><td style="width:42pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt;background-color:#D3D3D3;" colspan="2"><p class="s24" style="padding-left: 2pt;text-indent: 0pt;text-align: left;background-color:#D3D3D3;">STOREHOUSE</p></td><td style="width:290pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="7"><p class="s15" style="padding-left: 3pt;text-indent: 0pt;line-height: 8pt;text-align: left;">AGENCY AND UNIT</p></td></tr><tr style="height:26pt"><td style="width:50pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:42pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;background-color:#D3D3D3" colspan="2"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:290pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="7"><p class="s25" style="padding-left: 3pt;text-indent: 0pt;text-align: left;">ADDRESS<span class="s26">DSNY IT 357 Pearl St 19th fl</span></p></td><td style="width:61pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s27" style="padding-top: 5pt;padding-left: 2pt;text-indent: 0pt;text-align: left;">Credit Card</p></td><td style="width:62pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:35pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:34pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td></tr><tr style="height:55pt"><td style="width:250pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="4"><p class="s15" style="padding-top: 1pt;text-indent: 0pt;text-align: left;">RECEIVED FROM: NAME OF SELLER (VENDOR)</p><p><div id="nameOfSeller"></div></p></td><td style="width:78pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="4"><p class="s15" style="padding-left: 11pt;text-indent: 0pt;text-align: left;">BILL OF LADING /<br/><br/>DEL. TICKET NO.</p></td><td style="width:246pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt" colspan="6"><table style="width:100%"><tbody><tr><td valign="top" colspan="2" style="width:100%"><span class="s15" style="padding-left: 11pt;text-indent: 0pt;text-align: left;">CHECK ONE:</span></td></tr><tr><td colspan="1" style="width:10%"><span class="s32" style="padding-top: 3pt;padding-left: 2pt;padding-right: 1pt;line-height: 39%;text-align: top;"><span class="s31">□</span></span></td><td colspan="1" style="width:90%;text-align: left;"><span class="s32" style="padding-left: 2pt;padding-right: 1pt;text-align: left;"><span style=" color: #131313;">THIS IS A PARTIAL DELIVERY</span><br/><br/><span style=" color: #4F4F4F;">(MORE DELIVERIS DUE ON SAME ORDER)</span></span></td></tr><tr><td valign="top" colspan="1" style="width:10%"><span class="s32" style="padding-left: 2pt;padding-right: 1pt;line-height: 39%;text-align: left;"><span class="s31">□</span></span></td><td valign="top" colspan="1" style="width:90%;text-align: left;"><span class="s32" style="padding-left: 2pt;padding-right: 1pt;text-align: left;"><span style=" color: #131313;">FINAL DELIVERY</span><br/><br/></span></td></tr></tbody></table></tr></tbody></table></div></div>';
 
-	htmlTop += '</th></tr></thead>';
+	htmlTop += '</th></tr>';
 
 	return htmlTop;
 }
@@ -115,7 +115,7 @@ function getRecordsJSON(response) {
 			var formattedRow = '';
 			var currRowEmpty = 0;
 			var lastRowTotalCost = 0;
-			var rowsOnPage = 8;
+			var rowsOnPage = 10;
 			// var rowsOnPrintedPage = 15;
 			html = '';
 			data.forEach(function(record) {
@@ -278,13 +278,17 @@ function renderMonthDropDown(defMonth) {
 
 function renderTheTable(parmHTML, sentby){
 	try {
-		// parmHTML // class="break-after-two-inches"
-		// getHtmlDynamicTableHeader() +
-		var staticHeader = getHtmlTop() + '</table></div></td></th></thead>';
-		var dynamicHtml = '<tbody><tr  class="break-after-two-inches"><table id="dynamicHtml" class="prtable rrtable"><thead class="tthead">' + getHtmlDynamicTableHeader() + '</thead><tbody>' + parmHTML + '</tbody></table></tr></tbody>';
-		var footerImage = '<tfoot class="ttfoot"><img style="visibility: visible; display: inline-block;" id="bottomImage" src="https://nycdsdev1.service-now.com/537cf5a71b51fd106c1036ef034bcbcf.iix" class="resize-image bottom-image" /></tfoot><table>';
-		document.getElementById('render_table').innerHTML = staticHeader + dynamicHtml + footerImage;
-/*
+		var staticHeader = '<thead>' + getHtmlTop() + '</thead>';
+		var dynamicHtml = '<tbody><tr><td><table id="dynamicHtml"><thead id="dynamichead">' + getHtmlDynamicTableHeader() + '</thead><tbody>' + parmHTML;
+		var footerForBwsr = '<tr><td colspan="10">&nbsp;<img id="bottomImageBwsr" src="https://nycdsdev1.service-now.com/537cf5a71b51fd106c1036ef034bcbcf.iix"/></td></tr>';
+		var endDynamicRows ='</tbody></table></td></tr></tbody>';
+
+		var footerForPrt = '<tfoot>&nbsp;<img id="bottomImagePrt" src="https://nycdsdev1.service-now.com/537cf5a71b51fd106c1036ef034bcbcf.iix"/></tfoot>';
+
+		document.getElementById('render_table').innerHTML = 
+			// staticHeader + dynamicHtml + footerForBwsr +endDynamicRows + footerForPrt + '</table>';
+			staticHeader + '<body><tr><td><div><table id="dynamicHtml"><tbody><tr><td>anything</td></tr></body>'+ footerForPrt + '</table></div></td></tr></tbody>';
+		/*
 				<tfoot class="ttfoot">
 				<img
 					 style="visibility: visible; display: inline-block;"
@@ -613,12 +617,6 @@ This version will show a continuous table in the browser.  It will page-break th
       text-decoration: none;
       font-size: 6pt;
     }
-
-	/* .resize-image {
-		max-width: 768px;
-		max-height: 320px;
-		object-fit: cover;
-	} */
 	.inline-block {
 		display: inline-block;
 		margin-right: 10px; /* Add some spacing between them if needed */
@@ -644,59 +642,68 @@ This version will show a continuous table in the browser.  It will page-break th
 		}
 	.rrcol01 {
 		text-align: center;
-		width: 55pt;	
+		min-width: 55pt;
+		max-width: 55pt;	
 		}
 	.rrcol02 {
 		word-wrap: break-word; /* Wrap content within cells if needed */
 		text-align: left;
-		width: 258pt;
+		min-width: 258pt;
+		max-width: 258pt;
 		overflow:hidden;
 		max-height: 93pt;
 		}
 	.rrcol02a {
 		background-color:#D3D3D3;
 		text-align: center;
-		width: 64pt;
+		min-width: 64pt;
+		max-width: 64pt;
 			}
 	.rrcol02b {
 		text-align: center;
-		width: 194pt;
+		min-width: 194pt;
+		max-width: 194pt;
 			}			
 	.rrcol03 {
 		background-color:#D3D3D3;
-		width: 38pt;	
+		min-width: 38pt;
+		max-width: 38pt;	
 			}
 	.rrcol04 {
 		background-color:#D3D3D3;
-		width: 23pt;	
+		min-width: 23pt;
+		max-width: 23pt;	
 			}
 	.rrcol05 {
 		background-color:#D3D3D3;
-		width: 40pt;	
+		min-width: 40pt;
+		max-width: 40pt;	
 			}
 	.rrcol06 {
 		text-align: center;
-		width: 41pt;	
+		min-width: 41pt;
+		max-width: 41pt;	
 		}
 	.rrcol07 {
 		text-align: center;
-		width: 22pt;	
+		min-width: 22pt;
+		max-width: 22pt;	
 		}
 	.rrcol08 {
 		text-align: center;
-		width: 42pt;	
+		min-width: 42pt;
+		max-width: 42pt;	
 		}
 	.rrcol09header {
 		text-align: center;
-		width: 77pt;	
+		min-width: 77pt;
+		max-width: 77pt;	
 		}	
 	.rrcol09 {
 		text-align: right;
-		width: 77pt;	
+		min-width: 69pt;
+		max-width: 69pt;	
 		}			
-	.rrcol10 {
-		display: none;
-		}
 	#tableContainerOuter {
 		position: fixed;
 		top: 0.25in;
@@ -706,157 +713,168 @@ This version will show a continuous table in the browser.  It will page-break th
 		width: 765px;
 		position: fixed;
 		top: 0;		
+		
+		@media print {
+			display: none;			
+			}
 		}
 	#rptCtrl {
 		display: inline-block;
 		width: 765px;
 		position: fixed;
 		top: 0.35in;
+		
+		@media print {
+			display: none;			
+			}
 		}
-	.prTopImage {
+	#broswerTopImage {
 		position: fixed;
 		top: 0.65in;
+		margin-left: 0;
+		visibility: visible; 
+		display: block;
 		max-width: 768px;
 		max-height: 320px;
 		object-fit: cover;
+		
+		@media print {
+			position: fixed;
+			top: 0in;
+			max-width: 720px;
+			max-height: 300px;
+			object-fit: cover;
+			}
 		}
 	#staticHtml {
 		position: fixed;
-		top: 1.95in;
+		top: 2.15in;
+		
+		@media print {
+			position: fixed;
+			top: 1.25in;
+			margin-bottom: 0.25in;
+			display: table-header-group;  /* Repeat the footer on each page */
+			width: 100%;
+			}
 		}
+	#dynamichead {
+		position: fixed;
+		top: 4.15in;
+		display: inline-block; /* this is necessary for the scroll bar to appear */
+		
+		border-collapse:collapse;
+		margin-left:0pt;
+		margin-right: 6pt;
+		max-width: 800px; /* Set the table width as needed */
+		min-width: 800px; /* Set the table width as needed */
+		}
+		
+		@media print {
+			position: fixed;
+			top: 3.45in;
+			left: 10px;			
+			max-width: 800px; /* Set the table width as needed */
+			min-width: 800px; /* Set the table width as needed */
+			}
 	#dynamicHtml {
 		position: fixed;
-		top: 3.95in;
-		max-height: calc(100vh - 2in); /* Set the max height to 2 inches less than the viewport height */
+		top: 4.75in;
+		display: inline-block; /* this is necessary for the scroll bar to appear */
+		max-height: 60%; /* calc(100vh - 2in);  Set the max height to 2 inches less than the viewport height */
 		overflow-y: auto; /* Automatically show the scrollbar when content overflows */
-		}
-	/* Force page break before the table row reaches over two inches from the bottom of the printed page */
-	#dynamicHtml tr.break-after-two-inches {
-		page-break-before: auto;
-		page-break-inside: always;
-		margin-bottom: 2in; /* Adjust the margin to 2 inches */
-		}
-	#bottomImage {
-		position: fixed;
-		top: 9in;
-		}
-	.rrtable {
+		
 		border-collapse:collapse;
 		margin-left:6pt;
-		margin-right: 6pt;
-		width: 768px; /* Set the table width as needed */
-		/* table-layout: fixed; Use fixed table layout */
-	}			
-	.rrtable tr:nth-child(9n) {
-		page-break-after: auto;
-		margin-top: 4.25in;
-		margin-bottom: 2in; /* Adjust the margin to 2 inches */
-	} 
-        @media print {
-            /* Apply print-specific styles */
-            .prtable {
-                table-layout: fixed; /* Use fixed layout for the table */
-				margin-top: 3.75in;
-				
-                width: 768pt; /* Ensure the table spans the full width of the page */
-                page-break-inside: auto; /* Avoid breaking inside the table rows */
-				page-break-before: avoid;
-            }
-			.prtable tr:nth-child(15n) {
-				page-break-before: avoid;
-				page-break-after: always;
+		margin-right:0;
+		max-width: 800px; /* Set the table width as needed */
+		min-width: 800px; /* Set the table width as needed */
+		
+		@ media print {
+			display: none;
 			}
-			/* Avoid page break before the element */
-			.avoid-break {
-				page-break-before: avoid;
-			}
-			a::after {
-				content: " (" attr(href) ")"; /* Display the href attribute after the link text */
-				display: none; /* Hide the actual anchor tag */
-			}
-			/* Hide the HTML tag in print preview */
-			.element-to-hide {
-				display: none;
-			}
-		/* Force page break before the table row reaches over two inches from the bottom of the printed page */
-			/* .prtableinner::before {
+	}	
+	/* Force page break before the table row reaches over two inches from the bottom of the printed page */
+		#dynamicHtml tr {
+			@media print {
+				position: fixed;
+				top: 4.05in;
+				left: 10px;
+				max-width: 800px; /* Set the table width as needed */
+				min-width: 800px; /* Set the table width as needed */
+				margin-bottom: 1.5in;
 				page-break-before: auto;
-				page-break-after: auto;
-				margin-bottom: 2in; /* Adjust the margin to 2 inches */
-				margin-top: 3.75in;
-			} break-after-two-inches */
-			.tstatic {
-				position: fixed;
-				top: 1.75in;
-				margin-bottom: 3.75in;
-				display: table-header-group; 
-				width: 100%;
-			}		
-			.prRptCtrl {
-				display: none;
-			}
-			/* Define classes for the images */
-			.prTopImage {
-				position: fixed;
-				top: 0;
-				max-width: 768px;
-				max-height: 320px;
-				object-fit: cover;
-				}
-			.prstaticHtml {
-				position: fixed;
-				top: 1.6in;
-				margin-bottom: 2in;
-				display: table-header-group; 
-				width: 100%;
-				}
-			.bottom-image {
-				position: fixed;
-				bottom: 0;
-				left: 0;
-				width: 100%;
-				height: auto;
-			}
-			.tthead {
-				/* display: table-header-group; 
-				break-inside:avoid; 
+				break-inside: always;
 				page-break-after:auto;
-				page-break-before: auto; */
-				margin-top: 3.75in;
-			}	
-			.ttfoot {
-				position: fixed;
-				display: table-footer-group; /* Repeat the footer on each page */
-				page-break-after: always;
-				width: 100%;
+				overflow-x: hidden;
+				overflow-y: hidden;
+				}	
+		}
+	#bottomImageBwsr {
+		max-width: 768px;
+		max-height: 320px;
+		object-fit: cover;
+		visibility: visible; 
+		display: inline-block;
+		position: fixed;
+		bottom: 0;
+		
+		@media print {
+			display: none;
 			}
+		}
+	#bottomImagePrt {
+		display: none;
+		
+		@media print {
+			display: table-footer-group; /* Repeat the footer on each page */
+			page-break-after: always;
+			max-width: 768px;
+			max-height: 320px;
+			object-fit: cover;
+			visibility: visible; 
+			display: inline-block;
+			position: fixed;
+			bottom: 0;
+			}		
+		}
+    @media print {
+    /* Apply print-specific styles */
 
-        }
+		a::after {
+            content: " (" attr(href) ")"; /* Display the href attribute after the link text */
+            display: none; /* Hide the actual anchor tag */
+		}
+	}
     </style>
 </head>
 <body>
-	<form id="frmReceivingReport">
+	<form id="frmReceivingReport"  onSubmit="javascript:refreshTbl();">
+		<div class="container">
+		  <div id="rptTitle" class="row prctrlhide">
+			<div class="col-md-3" id='render_buttonPrint'>Place for Button</div>
+			<div class="col-md-9"  id='rrTitle'>Receiving Report Month and Year Choices</div>
+		  </div>			
+		  <!-- Year, Month, and Vendor Selects -->
+		  <div id="rptCtrl" class="row" style="width: 650pt">
+			<div class="col-md-2">
+					<div id="render_yearSelect">Default year select</div>
+			</div>
+			<div class="col-md-3">
+					<div id="render_monthSelect">Default month select</div>
+			</div>
+			<div class="col-md-7 text-right">
+					<div id="render_vendorSelect">Default vendor select</div>
+			</div>
+		  </div>
+		</div>
+
 
 		<div id="tableContainerOuter" class="container">
-			<div id="rptTitle" class="row prctrlhide">
-				<div class="col-md-3 element-to-hide" id='render_buttonPrint'>Place for Button</div>
-				<div class="col-md-9 element-to-hide"  id='rrTitle'>Receiving Report Month and Year Choices</div>
-			</div>			
-			<!-- Year, Month, and Vendor Selects -->
-			<div id="rptCtrl" class="row prRptCtrl" style="width: 650pt">
-				<div class="col-md-2">
-					<div class="element-to-hide" id="render_yearSelect">Default year select</div>
-				</div>
-				<div class="col-md-3">
-					<div class="element-to-hide" id="render_monthSelect">Default month select</div>
-				</div>
-				<div class="col-md-7 text-right">
-					<div class="element-to-hide" id="render_vendorSelect">Default vendor select</div>
-				</div>
-			</div>
+
 			<div class="row" style="width: 650pt;">
 				<div class="col-md-12">
-					<img style="visibility: visible; display: block;" src="https://nycdsdev1.service-now.com/ac4fb16a1b59b9106c1036ef034bcb46.iix" class="prTopImage resize-image"></img>
+					<img id="broswerTopImage" src="https://nycdsdev1.service-now.com/ac4fb16a1b59b9106c1036ef034bcb46.iix"></img>
 				</div>
 			</div>
 			<div class="row" style="width: 650pt;">
@@ -874,27 +892,29 @@ This version will show a continuous table in the browser.  It will page-break th
 	</form>
 	<script>
 		$j(document).ready(function() {
-		// Counter to keep track of loaded images
-		var loadedImages = 0;
+			// Counter to keep track of loaded images
+			var loadedImages = 0;
 
-		// Function to check if all images are loaded
-		function checkImagesLoaded() {
-		loadedImages++;
-		if (loadedImages === 2) { // Adjust the count if you have more images
-		// All images are loaded, enable the print button
-		$j('#printButton').prop('disabled', false);
-		}
-		}
+			// Function to check if all images are loaded
+			function checkImagesLoaded() {
+				loadedImages++;
+				if (loadedImages === 3) { // Adjust the count if you have more images
+				// All images are loaded, enable the print button
+					$j('#render_buttonPrint').prop('disabled', false);
+				}
+			}
 
-		// Bind the onload event to both images
-		$j('#render_header_jpg').on('load', checkImagesLoaded);
-		$j('#render_footer_jpg').on('load', checkImagesLoaded);
+			// Bind the onload event to both images
+			$j('#broswerTopImage').on('load', checkImagesLoaded);
+			$j('#bottomImageBwsr').on('load', checkImagesLoaded);
+			$j('#bottomImagePrt').on('load', checkImagesLoaded);
 
-		// Bind click event to the print button
-		$j('#printButton').click(function() {
-		// Trigger the print dialog when the button is clicked
-		window.print();
-		});
+			// Bind click event to the print button
+			$j('#render_buttonPrint').click(function() {
+				// Trigger the print dialog when the button is clicked
+				window.print();
+			});
+	
 		});
 	</script>	
 </body>
@@ -907,13 +927,13 @@ This version will show a continuous table in the browser.  It will page-break th
         <sys_created_by>sfarkas</sys_created_by>
         <sys_created_on>2023-09-29 15:25:07</sys_created_on>
         <sys_id>1ce8ee821ba1f9506c1036ef034bcb78</sys_id>
-        <sys_mod_count>184</sys_mod_count>
+        <sys_mod_count>301</sys_mod_count>
         <sys_name>ReceivingReportWithBootstrapV04</sys_name>
         <sys_package display_value="ReceivingReport" source="x_dosny_vendorrepo">bbcb77921bcdf110baac766e034bcb72</sys_package>
         <sys_policy/>
         <sys_scope display_value="ReceivingReport">bbcb77921bcdf110baac766e034bcb72</sys_scope>
         <sys_update_name>sys_ui_page_1ce8ee821ba1f9506c1036ef034bcb78</sys_update_name>
         <sys_updated_by>sfarkas</sys_updated_by>
-        <sys_updated_on>2023-10-03 15:24:10</sys_updated_on>
+        <sys_updated_on>2023-10-03 22:16:40</sys_updated_on>
     </sys_ui_page>
 </record_update>
