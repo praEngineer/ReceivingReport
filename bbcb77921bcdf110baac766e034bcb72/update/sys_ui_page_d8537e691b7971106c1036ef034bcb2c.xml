@@ -125,7 +125,52 @@ function getVendorsJSON(response) {
 	}
 
 }
-
+function getRightTrimmedLength(inputString) {
+  
+	var length = 0;
+	if(inputString !== null){
+		var trimmedString = inputString.replace(/\s*$/, ''); // Use regular expression to remove trailing spaces and tabs
+		// Calculate the length of the trimmed string
+		length = trimmedString.length;
+	}
+	return length;
+}
+function removeLineBreaks(inputString) {
+  // Use a regular expression to match '<br />' globally and replace with an empty string
+  return inputString.replace(/<br \/>/g, '');
+}
+function howMany50s(str) {
+	var divisions = 0;
+	if(str !== null) {
+		str = removeLineBreaks(str);
+		var strLength = getRightTrimmedLength(str);
+		for(cnt = 50; cnt < strLength; cnt += 50 ) {
+			if (strLength - cnt > 0) {
+				divisions += 1;
+			}
+		}
+		divisions += 1; // for strings with an uneven number of 50s
+		return divisions;
+	}
+	else {return 1;}
+}
+function insertLineBreaks(text, charactersPerLine) {
+  var result = '';
+  if(text !== null)
+	{
+		var lclStr = text;
+		for (var i = 0; i < text.length; i += charactersPerLine) {
+			result += text.slice(i, i + charactersPerLine);
+			if (i + charactersPerLine < text.length) {
+				result += '<br />';
+			}
+		}		  
+	}
+	else {
+		result = '<br />';
+	}
+  return result;
+}
 
 function getRecordsJSON(response) {
 	var answer = "";
@@ -149,13 +194,14 @@ function getRecordsJSON(response) {
 			}
 			step = 4;
 			// Iterate through the results and add rows to the HTML table
-			var currRow=2; // default top image and static html in renderTheTable
-			var tblRow = 0; 
+			var currRow=0; // currRow = 1 when the first row of the dynamic table is set; count data rows only
+			var tblRow = 0;  // increments by two for each data row plus an extra for a three line description
 			var formattedRow = '';
 			var currRowEmpty = 0;
 			var lastRowTotalCost = 0;
-			var rowsOnPage = 18;
-			var maxTblRows = 28;
+			var rowsOnPage = 15; // maximum rows above the (SUB) TOTAL row
+			var maxTblRows = 35; // accounts for more than two lines in a description
+			var pageCount = 1;
 			// var rowsOnPrintedPage = 15;
 			html = '';
 			data.forEach(function(record) {
@@ -185,88 +231,96 @@ function getRecordsJSON(response) {
 				var unitPrice = '';
 				var strSubject = '&nbsp;'; 
 				if(record.subject !== null ) {
-					strSubject = record.subject.substring(0,50);
+					strSubject = insertLineBreaks(record.subject,50);
 				}
 				if (record.unit_price !== null) {
 					unitPrice = parseFloat(record.unit_price).toFixed(2);
 				}
-				html += '<tr id="Row"'+formattedRow +'"><td class="rrcolall rrcol01" id="' + formattedRow +'Cell01">' + record.quantity + '</td><td class="rrcolall rrcol02" colspan="2" style="max-width: 258pt; min-width: 258pt" id="' + formattedRow +'Cell02"><a href="https://nycdsdev1.service-now.com/nav_to.do?uri=x_dosny_bit_procur_bit_procurement_credit_card_line_items.do?sys_id=' + lclSysId + '">' + record.number + '</a>' + '&nbsp;' + recVendName + '<br/>' + strSubject + '</td><td class="rrcolall rrcol03" id="' + formattedRow +'Cell03">' +  '&nbsp;' + '</td><td class="rrcolall rrcol04" id="' + formattedRow +'Cell04">' +  '&nbsp;' + '</td><td class="rrcolall rrcol05" id="' + formattedRow +'Cell05">' +  '&nbsp;' + '</td><td class="rrcolall rrcol06" id="' + formattedRow +'Cell06">' +  record.quantity + '</td><td class="rrcolall rrcol07" id="' + formattedRow +'Cell07">' + unitEach + '</td><td class="rrcolall rrcol08" id="' + formattedRow +'Cell08">' +  unitPrice + '</td><td class="rrcolall rrcol09" id="' + formattedRow +'Cell09">' + (record.quantity * record.unit_price).toFixed(2) + '</td></tr>';			
+				tblRow += howMany50s(strSubject); // account for multiple row descriptions
+				tblRow += 1; // and account for recVendName 
+				html += '<tr id="Row"'+formattedRow +'"><td class="rrcolall rrcol01" id="' + formattedRow +'Cell01">' + record.quantity + '</td><td class="rrcolall rrcol02" colspan="2" style="max-width: 258pt; min-width: 258pt" id="' + formattedRow +'Cell02"><a href="https://nycdsdev1.service-now.com/nav_to.do?uri=x_dosny_bit_procur_bit_procurement_credit_card_line_items.do?sys_id=' + lclSysId + '">' + record.number + '</a>' + '&nbsp;' + recVendName 
+		+ ' (currRow=' + (currRow+1)
+		+ ' tblRow=' + (tblRow) +')'
+			
+		// + ' (tblRow is '+ tblRow // +' Math.floor(...) is '
+		// + (Math.floor(strSubject.length / 50))
+		// + ' (50s in '+ getRightTrimmedLength(strSubject) + ' is ' + howMany50s(strSubject) +')'
+					+'<br/>' + strSubject + '</td><td class="rrcolall rrcol03" id="' + formattedRow +'Cell03">' +  '&nbsp;' + '</td><td class="rrcolall rrcol04" id="' + formattedRow +'Cell04">' +  '&nbsp;' + '</td><td class="rrcolall rrcol05" id="' + formattedRow +'Cell05">' +  '&nbsp;' + '</td><td class="rrcolall rrcol06" id="' + formattedRow +'Cell06">' +  record.quantity + '</td><td class="rrcolall rrcol07" id="' + formattedRow +'Cell07">' + unitEach + '</td><td class="rrcolall rrcol08" id="' + formattedRow +'Cell08">' +  unitPrice + '</td><td class="rrcolall rrcol09" id="' + formattedRow +'Cell09">' + (record.quantity * record.unit_price).toFixed(2) + '</td></tr>';			
 				currRow += 1;
-				tblRow += 2;
+
 				lastRowTotalCost += (record.quantity * record.unit_price);
 
-				if ((currRow % rowsOnPage === 2 && currRow > rowsOnPage) || tblRow > maxTblRows) {
-
+				if(tblRow > maxTblRows || (currRow % rowsOnPage === 0 )) {
 					formattedRow = currRow < 10 ? 'Row0' + currRow : 'Row' + currRow;
+					// alert('tblRow = ' + tblRow + ' thisPage = ' + thisPage);
+					html +=  '<tr id="Row"'+formattedRow +'" class="avoid-break"><td class="rrcolall rrcol01" id="' + formattedRow +'Cell01">' + '&nbsp;' + '</td><td class="rrcolall rrcol02Total" colspan="2" id="' + formattedRow +'Cell02">' + 'TOTAL of Page ' + pageCount 
+						// + ' currRow is '+ currRow +' tblRow is '+tblRow
+						+'<br/>' + '&nbsp;' + '</td><td class="rrcolall rrcol03 id="' + formattedRow +'Cell03">' +  '&nbsp;' + '</td><td class="rrcolall rrcol04" id="' + formattedRow +'Cell04">' +  '&nbsp;' + '</td><td class="rrcolall rrcol05" id="' + formattedRow +'Cell05">' +  '&nbsp;' + '<td class="rrcolall rrcol06" id="' + formattedRow +'Cell06">' + '&nbsp;' + '</td><td class="rrcolall rrcol07" id="' + formattedRow +'Cell07">' +  '&nbsp;' + '<td class="rrcolall rrcol08" id="' + formattedRow +'Cell08">' + '&nbsp;' + '</td><td class="rrcolall rrcol09" id="' + formattedRow +'Cell09">' +  lastRowTotalCost.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) + '</td></tr>';		
 
-					html +=  '<tr id="Row"'+formattedRow +'" class="avoid-break"><td class="rrcolall rrcol01" id="' + formattedRow +'Cell01">' + '&nbsp;' + '</td><td class="rrcolall rrcol02" colspan="2" id="' + formattedRow +'Cell02">' + 'TOTAL' + '<br/>' + '&nbsp;' + '</td><td class="rrcolall rrcol03 id="' + formattedRow +'Cell03">' +  '&nbsp;' + '</td><td class="rrcolall rrcol04" id="' + formattedRow +'Cell04">' +  '&nbsp;' + '</td><td class="rrcolall rrcol05" id="' + formattedRow +'Cell05">' +  '&nbsp;' + '<td class="rrcolall rrcol06" id="' + formattedRow +'Cell06">' + '&nbsp;' + '</td><td class="rrcolall rrcol07" id="' + formattedRow +'Cell07">' +  '&nbsp;' + '<td class="rrcolall rrcol08" id="' + formattedRow +'Cell08">' + '&nbsp;' + '</td><td class="rrcolall rrcol09" id="' + formattedRow +'Cell09">' +  lastRowTotalCost.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) + '</td></tr>';		
-					currRow += 1;			
 					html += '<tr class="avoid-break"><td colspan="10" style="border-style: none;">';
 						html += '<div id="browserBottomImageDiv">';
 							html += '<img id="browserBottomImageImg" src="https://nycdsdev1.service-now.com/537cf5a71b51fd106c1036ef034bcbcf.iix" onload="checkImagesLoaded()"/>';
 						html += '</div>';
 					html += '</td></tr>';					
-					currRow += 1;
-					// alert('html intermediate table rows and footer: ' + currRow);
+
 					html += '<div style="clear: both; page-break-before: always;"></div>';
 					html += '<tr class="break-before"><td colspan="10" style="border-style: none;">';
 						html += '<div id="browserTopImageDiv">';
 							html += '<img id="browserTopImageImg" src="https://nycdsdev1.service-now.com/ac4fb16a1b59b9106c1036ef034bcb46.iix" onload="checkImagesLoaded()" />';
 						html += '</div>';
 					html += '</td></tr>';	
-					currRow += 1;
+					// currRow += 1;
 					html += '<tr class="avoid-break avoid-break-after"><td colspan="10" style="border-style: none;">';
 						html += '<div style="max-width: 768px; position:sticky; ">'+ getHtmlTop() + '</div>';
 					html += '</td></tr>';
-					currRow += 1;
+					// currRow += 1;
 					html += '<tr class="avoid-break avoid-break-after">' + getHtmlDynamicTableHeader();
-					currRow += 1;
+					// currRow += 1;
 					lastRowTotalCost = 0;
-					tblRow = 0;
+					
+					currRow = 0; // catch up when long descriptions cause early page break
+					
+					tblRow = 0; // restart description counter for the next page
+					
+					pageCount += 1;
 				}
-			});
-			// alert('html table non-trivial rows: ' + currRow);
-			if (((currRow-1) % rowsOnPage !== 0 && currRow > rowsOnPage) || currRow < rowsOnPage ) {
+			}); // no more data remains
+
+			if (data.length < rowsOnPage || tblRow < maxTblRows || currRow % rowsOnPage !== 0 ) {
 				//alert('make empty rows');
-				tblRow = (currRow % rowsOnPage) * 2;
-				alert('tblRow is ' + tblRow + ' and currRow % rowsOnPage is ' + currRow % rowsOnPage);
-				var testAgainstThis = 0;
-				if( currRow < rowsOnPage) {
-					testAgainstThis = rowsOnPage -1;
-				}
-				else {
-					testAgainstThis = rowsOnPage - 1;
-				}
-				// if currRow is 27, the value of the expression currRow + 10 - (currRow % 10) is 30.
-				// alert('currRow is ' + currRow + ' testAgainstThis is ' + testAgainstThis);
-				for (currRowEmpty = 0; currRowEmpty <= testAgainstThis; currRowEmpty++) {
-				formattedRow = currRowEmpty < 10 ? 'Row0' + currRowEmpty : 'Row' + currRowEmpty;
-				html += '<tr id="Row"'+formattedRow +'" class="avoid-break"><td class="rrcolall rrcol01" id="' + formattedRow +'Cell01">' + '&nbsp;' + '</td><td class="rrcolall rrcol02" colspan="2"  id="' + formattedRow +'Cell02">' + '&nbsp;' + '&nbsp;' + '&nbsp;' + '<br/>' + '&nbsp;' + '</td><td class="rrcolall rrcol03" id="' + formattedRow +'Cell03">' +  '&nbsp;' + '</td><td class="rrcolall rrcol04" id="' + formattedRow +'Cell04">' +  '&nbsp;' + '</td><td class="rrcolall rrcol05" id="' + formattedRow +'Cell05">' +  '&nbsp;' + '<td class="rrcolall rrcol06" id="' + formattedRow +'Cell06">' + '&nbsp;' + '</td><td class="rrcolall rrcol07" id="' + formattedRow +'Cell07">' +  '&nbsp;' + '<td class="rrcolall rrcol08" id="' + formattedRow +'Cell08">' + '&nbsp;' + '</td><td class="rrcolall rrcol09" id="' + formattedRow +'Cell09">' + '&nbsp;' + '</td></tr>';
-				currRow += 1;
-				tblRow += 2;
+// 				var rowsAlreadyDisplayed = 0;
+// 				// if (tblRow < maxTblRows) {rowsAlreadyDisplayed = (maxTblRows % tblRow);}
+// 				if (currRow < rowsOnPage) {rowsAlreadyDisplayed = (currRow);}
+// 				if (data.length < rowsOnPage) {rowsAlreadyDisplayed = data.length;}
+				//alert('currRow = ' + currRow 
+					// + ' rowsAlreadyDisplayed = ' + rowsAlreadyDisplayed 
+					//+ ' current tblRow = ' + tblRow);
+				for (currRowEmpty = currRow; currRowEmpty < rowsOnPage; currRowEmpty++) {
+					formattedRow = currRowEmpty < 10 ? 'Row0' + currRowEmpty : 'Row' + currRowEmpty;
+					html += '<tr id="Row"'+formattedRow +'" class="avoid-break"><td class="rrcolall rrcol01" id="' + formattedRow +'Cell01">' + '&nbsp;' + '</td><td class="rrcolall rrcol02" colspan="2"  id="' + formattedRow +'Cell02">' + '&nbsp;' + '&nbsp;' + '&nbsp;' + '<br/>' + '&nbsp;' + '</td><td class="rrcolall rrcol03" id="' + formattedRow +'Cell03">' +  '&nbsp;' + '</td><td class="rrcolall rrcol04" id="' + formattedRow +'Cell04">' +  '&nbsp;' + '</td><td class="rrcolall rrcol05" id="' + formattedRow +'Cell05">' +  '&nbsp;' + '<td class="rrcolall rrcol06" id="' + formattedRow +'Cell06">' + '&nbsp;' + '</td><td class="rrcolall rrcol07" id="' + formattedRow +'Cell07">' +  '&nbsp;' + '<td class="rrcolall rrcol08" id="' + formattedRow +'Cell08">' + '&nbsp;' + '</td><td class="rrcolall rrcol09" id="' + formattedRow +'Cell09">' + '&nbsp;' + '</td></tr>';
+					currRow += 1; // blank row is considered a data row on the table
+					tblRow += 2; // assumes two rows for each description
 					if(tblRow > maxTblRows){
-						alert('table content exceeded tblRow (' + tblRow + ') is larger than ' + maxTblRows);
-						alert('currRow % rowsOnPage is ' + currRow % rowsOnPage);
-						tblRow = 0;
 						break;
 					}
-				} /* end of for */
-				// alert('after adding html table empty rows, currRow is: ' + currRow);
+				} /* end of empty row building for-loop */
 			}
-			alert('currRowEmpty < testAgainstThis is ' + currRowEmpty + '<' + testAgainstThis);
-// Last row with TOTAL
+
+			// Last row with TOTAL
 			currRowEmpty = currRowEmpty == 0 ? currRow+1 : currRowEmpty +=1;
 			formattedRow = currRowEmpty < 10 ? 'Row0' + currRowEmpty : 'Row' + currRowEmpty;
-			html +=  '<tr id="Row"'+formattedRow +'" class="avoid-break"><td class="rrcolall rrcol01" id="' + formattedRow +'Cell01">' + '&nbsp;' + '</td><td class="rrcolall rrcol02" colspan="2" id="' + formattedRow +'Cell02">' + 'TOTAL' + '<br/>' + '&nbsp;' + '</td><td class="rrcolall rrcol03" id="' + formattedRow +'Cell03">' +  '&nbsp;' + '</td><td class="rrcolall rrcol04" id="' + formattedRow +'Cell04">' +  '&nbsp;' + '</td><td class="rrcolall rrcol05" id="' + formattedRow +'Cell05">' +  '&nbsp;' + '<td class="rrcolall rrcol06" id="' + formattedRow +'Cell06">' + '&nbsp;' + '</td><td class="rrcolall rrcol07" id="' + formattedRow +'Cell07">' +  '&nbsp;' + '<td class="rrcolall rrcol08" id="' + formattedRow +'Cell08">' + '&nbsp;' + '</td><td class="rrcolall rrcol09" id="' + formattedRow +'Cell09">' +  lastRowTotalCost.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) + '</td></tr>';
-			currRow += 1;
+			var lastPage = 0;
+			if(data.length < rowsOnPage) {lastPage = 1;}
+			else {lastPage = pageCount;}
+			html +=  '<tr id="Row"'+formattedRow +'" class="avoid-break"><td class="rrcolall rrcol01" id="' + formattedRow +'Cell01">' + '&nbsp;' + '</td><td class="rrcolall rrcol02Total" colspan="2" id="' + formattedRow +'Cell02">' + 'TOTAL of Page ' + lastPage + ' (last page)' 
+				+ ' currRowEmpty =' + currRowEmpty + ' currRow is '+ currRow +' tblRow is '+tblRow
+				+'<br/>' + '&nbsp;' + '</td><td class="rrcolall rrcol03" id="' + formattedRow +'Cell03">' +  '&nbsp;' + '</td><td class="rrcolall rrcol04" id="' + formattedRow +'Cell04">' +  '&nbsp;' + '</td><td class="rrcolall rrcol05" id="' + formattedRow +'Cell05">' +  '&nbsp;' + '<td class="rrcolall rrcol06" id="' + formattedRow +'Cell06">' + '&nbsp;' + '</td><td class="rrcolall rrcol07" id="' + formattedRow +'Cell07">' +  '&nbsp;' + '<td class="rrcolall rrcol08" id="' + formattedRow +'Cell08">' + '&nbsp;' + '</td><td class="rrcolall rrcol09" id="' + formattedRow +'Cell09">' +  lastRowTotalCost.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) + '</td></tr>';
+
 			html += '<tr><td colspan="10" style="border-style: none;">';
 				html += '<div id="browserBottomImageDivLast">';
 					html += '<img id="browserBottomImageImg" src="https://nycdsdev1.service-now.com/537cf5a71b51fd106c1036ef034bcbcf.iix" onload="checkImagesLoaded()"/>';
 				html += '</div>';
 			html += '</td></tr>';
-			currRow += 1;
-			// alert('after adding html table empty rows and footer, currRow is: ' + currRow);
-			
 		} else {
 			step = 6;
 			alert(step + '. currRow % rowsOnPage unexpected else');
@@ -579,7 +633,7 @@ function renderTheTable(parmHTML, sentby){
 				html += '<tr class="avoid-break avoid-break-after">' + getHtmlDynamicTableHeader();
 			html += '</thead>';
 			html += '<tbody>';
-				html += parmHTML;
+				html += parmHTML; // has tr, th, and td tags
 			html += '</tbody>';
 		html += '</table>';
 
@@ -781,6 +835,8 @@ This version will show a continuous table in the browser.  It will page-break th
 		max-width: 260pt;
 		overflow:hidden;
 		max-height: 93pt;
+		font-family: "Courier New", monospace;
+		font-size: 10px;
 		}
 	.rrcol02a {
 		background-color:#D3D3D3;
@@ -792,7 +848,15 @@ This version will show a continuous table in the browser.  It will page-break th
 		text-align: center;
 		min-width: 198pt; /* the col 2a and 2b overlap so 198 + 64 > 262 */
 		max-width: 198pt;
-			}						
+			}	
+	.rrcol02Total {
+		word-wrap: break-word; /* Wrap content within cells if needed */
+		text-align: left;
+		min-width: 260pt; /* the col 2a and 2b overlap so 200 + 64 > 258 plus two for boarder widths in the header */
+		max-width: 260pt;
+		overflow:hidden;
+		max-height: 93pt;
+		}
 	.rrcol03 {
 		background-color:#D3D3D3;
 		min-width: 38pt;
@@ -957,6 +1021,13 @@ This version will show a continuous table in the browser.  It will page-break th
 			top: 0;
 			}
 		}
+	#render_table {
+		max-width: 800px; /* Set the table width as needed */
+		min-width: 800px; /* Set the table width as needed */
+		margin-left:0;
+		margin-right:10pt;
+		left 30px;
+		}
 	#dynamicHtml {
 		position: relative;
 		top: 0;
@@ -1072,13 +1143,13 @@ This version will show a continuous table in the browser.  It will page-break th
         <sys_created_by>sfarkas</sys_created_by>
         <sys_created_on>2023-10-10 13:03:41</sys_created_on>
         <sys_id>d8537e691b7971106c1036ef034bcb2c</sys_id>
-        <sys_mod_count>113</sys_mod_count>
+        <sys_mod_count>208</sys_mod_count>
         <sys_name>ReceivingReportWithBootstrapV07</sys_name>
         <sys_package display_value="ReceivingReport" source="x_dosny_vendorrepo">bbcb77921bcdf110baac766e034bcb72</sys_package>
         <sys_policy/>
         <sys_scope display_value="ReceivingReport">bbcb77921bcdf110baac766e034bcb72</sys_scope>
         <sys_update_name>sys_ui_page_d8537e691b7971106c1036ef034bcb2c</sys_update_name>
         <sys_updated_by>sfarkas</sys_updated_by>
-        <sys_updated_on>2023-10-10 21:11:57</sys_updated_on>
+        <sys_updated_on>2023-10-11 19:37:14</sys_updated_on>
     </sys_ui_page>
 </record_update>
