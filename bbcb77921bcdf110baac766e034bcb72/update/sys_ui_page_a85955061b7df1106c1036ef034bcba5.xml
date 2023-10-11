@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
     <sys_ui_page action="INSERT_OR_UPDATE">
-        <category>general</category>
+        <category>cms</category>
         <client_script><![CDATA[// Specify the desired rr_year and rr_month values
 var defDate = new Date();
 defDate.setMonth(defDate.getMonth()-1);
@@ -38,6 +38,10 @@ refreshTbl();
 
 // Bind click event to the print button
 $j('#render_buttonPrint').click(function() {
+// 	var w = window.open();
+// 	w.document.write(document.getElementById('tableContainerMain').innerHTML);  
+//     w.print();
+//     w.close();
 	window.print();
 /*
 if (loadedImages > 1) {
@@ -200,11 +204,27 @@ function getRecordsJSON(response) {
 			var currRowEmpty = 0;
 			var lastRowTotalCost = 0;
 			var rowsOnPage = 15; // maximum rows above the (SUB) TOTAL row
-			var maxTblRows = 35; // accounts for more than two lines in a description
+			var maxTblRows = 34; // accounts for more than two lines in a description
 			var pageCount = 1;
 			// var rowsOnPrintedPage = 15;
 			html = '';
 			data.forEach(function(record) {
+				
+				if(currRow === 0 ){
+					html += '<tr class="break-before"><td colspan="10" style="border-style: none;">';
+						html += '<div id="browserTopImageDivIntermediate">';
+							html += '<img id="browserTopImageImg" src="https://nycdsdev1.service-now.com/ac4fb16a1b59b9106c1036ef034bcb46.iix" onload="checkImagesLoaded()" />';
+						html += '</div>';
+					html += '</td></tr>';	
+
+					html += '<tr class="avoid-break avoid-break-after"><td colspan="10" style="border-style: none;">';
+						html += '<div style="max-width: 768px; position:sticky; ">'+ getHtmlTop() + '</div>';
+					html += '</td></tr>';
+
+					html += '<tr class="avoid-break avoid-break-after">' + getHtmlDynamicTableHeader();
+				}
+
+				
 				var recVendName = ''; //'vendor not entered for ' + record.number;
 				
 				if(record.vendor !== null){
@@ -249,8 +269,8 @@ function getRecordsJSON(response) {
 				currRow += 1;
 
 				lastRowTotalCost += (record.quantity * record.unit_price);
-
-				if(tblRow > maxTblRows || (currRow % rowsOnPage === 0 )) {
+				
+			if(data.length !== rowsOnPage && (tblRow > maxTblRows) || (tblRow > maxTblRows && (currRow > rowsOnPage )) || (tblRow + (3)) > maxTblRows ) {
 					formattedRow = currRow < 10 ? 'Row0' + currRow : 'Row' + currRow;
 					// alert('tblRow = ' + tblRow + ' thisPage = ' + thisPage);
 					html +=  '<tr id="Row"'+formattedRow +'" class="avoid-break"><td class="rrcolall rrcol01" id="' + formattedRow +'Cell01">' + '&nbsp;' + '</td><td class="rrcolall rrcol02Total" colspan="2" id="' + formattedRow +'Cell02">' + 'TOTAL of Page ' + pageCount 
@@ -264,18 +284,7 @@ function getRecordsJSON(response) {
 					html += '</td></tr>';					
 
 					html += '<div style="clear: both; page-break-before: always;"></div>';
-					html += '<tr class="break-before"><td colspan="10" style="border-style: none;">';
-						html += '<div id="browserTopImageDiv">';
-							html += '<img id="browserTopImageImg" src="https://nycdsdev1.service-now.com/ac4fb16a1b59b9106c1036ef034bcb46.iix" onload="checkImagesLoaded()" />';
-						html += '</div>';
-					html += '</td></tr>';	
-					// currRow += 1;
-					html += '<tr class="avoid-break avoid-break-after"><td colspan="10" style="border-style: none;">';
-						html += '<div style="max-width: 768px; position:sticky; ">'+ getHtmlTop() + '</div>';
-					html += '</td></tr>';
-					// currRow += 1;
-					html += '<tr class="avoid-break avoid-break-after">' + getHtmlDynamicTableHeader();
-					// currRow += 1;
+
 					lastRowTotalCost = 0;
 					
 					currRow = 0; // catch up when long descriptions cause early page break
@@ -286,7 +295,7 @@ function getRecordsJSON(response) {
 				}
 			}); // no more data remains
 
-			if (data.length < rowsOnPage || tblRow < maxTblRows || currRow % rowsOnPage !== 0 ) {
+		if (currRow > 0 && ( data.length < rowsOnPage || tblRow < maxTblRows ) ) {
 				//alert('make empty rows');
 // 				var rowsAlreadyDisplayed = 0;
 // 				// if (tblRow < maxTblRows) {rowsAlreadyDisplayed = (maxTblRows % tblRow);}
@@ -295,32 +304,42 @@ function getRecordsJSON(response) {
 				//alert('currRow = ' + currRow 
 					// + ' rowsAlreadyDisplayed = ' + rowsAlreadyDisplayed 
 					//+ ' current tblRow = ' + tblRow);
-				for (currRowEmpty = currRow; currRowEmpty < rowsOnPage; currRowEmpty++) {
+				for (currRowEmpty = currRow; currRowEmpty < rowsOnPage && tblRow < maxTblRows; currRowEmpty++) {
 					formattedRow = currRowEmpty < 10 ? 'Row0' + currRowEmpty : 'Row' + currRowEmpty;
 					html += '<tr id="Row"'+formattedRow +'" class="avoid-break"><td class="rrcolall rrcol01" id="' + formattedRow +'Cell01">' + '&nbsp;' + '</td><td class="rrcolall rrcol02" colspan="2"  id="' + formattedRow +'Cell02">' + '&nbsp;' + '&nbsp;' + '&nbsp;' + '<br/>' + '&nbsp;' + '</td><td class="rrcolall rrcol03" id="' + formattedRow +'Cell03">' +  '&nbsp;' + '</td><td class="rrcolall rrcol04" id="' + formattedRow +'Cell04">' +  '&nbsp;' + '</td><td class="rrcolall rrcol05" id="' + formattedRow +'Cell05">' +  '&nbsp;' + '<td class="rrcolall rrcol06" id="' + formattedRow +'Cell06">' + '&nbsp;' + '</td><td class="rrcolall rrcol07" id="' + formattedRow +'Cell07">' +  '&nbsp;' + '<td class="rrcolall rrcol08" id="' + formattedRow +'Cell08">' + '&nbsp;' + '</td><td class="rrcolall rrcol09" id="' + formattedRow +'Cell09">' + '&nbsp;' + '</td></tr>';
 					currRow += 1; // blank row is considered a data row on the table
 					tblRow += 2; // assumes two rows for each description
-					if(tblRow > maxTblRows){
-						break;
+					
+					if(!(data.length < currRow)){
+						if(tblRow > maxTblRows-2){
+							break;
+						}						
+	
 					}
+
 				} /* end of empty row building for-loop */
 			}
 
-			// Last row with TOTAL
-			currRowEmpty = currRowEmpty == 0 ? currRow+1 : currRowEmpty +=1;
-			formattedRow = currRowEmpty < 10 ? 'Row0' + currRowEmpty : 'Row' + currRowEmpty;
-			var lastPage = 0;
-			if(data.length < rowsOnPage) {lastPage = 1;}
-			else {lastPage = pageCount;}
-			html +=  '<tr id="Row"'+formattedRow +'" class="avoid-break"><td class="rrcolall rrcol01" id="' + formattedRow +'Cell01">' + '&nbsp;' + '</td><td class="rrcolall rrcol02Total" colspan="2" id="' + formattedRow +'Cell02">' + 'TOTAL of Page ' + lastPage + ' (last page)' 
-				+ ' currRowEmpty =' + currRowEmpty + ' currRow is '+ currRow +' tblRow is '+tblRow
-				+'<br/>' + '&nbsp;' + '</td><td class="rrcolall rrcol03" id="' + formattedRow +'Cell03">' +  '&nbsp;' + '</td><td class="rrcolall rrcol04" id="' + formattedRow +'Cell04">' +  '&nbsp;' + '</td><td class="rrcolall rrcol05" id="' + formattedRow +'Cell05">' +  '&nbsp;' + '<td class="rrcolall rrcol06" id="' + formattedRow +'Cell06">' + '&nbsp;' + '</td><td class="rrcolall rrcol07" id="' + formattedRow +'Cell07">' +  '&nbsp;' + '<td class="rrcolall rrcol08" id="' + formattedRow +'Cell08">' + '&nbsp;' + '</td><td class="rrcolall rrcol09" id="' + formattedRow +'Cell09">' +  lastRowTotalCost.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) + '</td></tr>';
+			if(currRow > 0 ) {
 
-			html += '<tr><td colspan="10" style="border-style: none;">';
-				html += '<div id="browserBottomImageDivLast">';
-					html += '<img id="browserBottomImageImg" src="https://nycdsdev1.service-now.com/537cf5a71b51fd106c1036ef034bcbcf.iix" onload="checkImagesLoaded()"/>';
-				html += '</div>';
-			html += '</td></tr>';
+				// Last row with TOTAL
+				currRowEmpty = currRowEmpty == 0 ? currRow+1 : currRowEmpty +=1;
+				formattedRow = currRowEmpty < 10 ? 'Row0' + currRowEmpty : 'Row' + currRowEmpty;
+				var lastPage = 0;
+				if(data.length < rowsOnPage) {lastPage = 1;}
+				else {lastPage = pageCount;}
+				html +=  '<tr id="Row"'+formattedRow +'" class="avoid-break"><td class="rrcolall rrcol01" id="' + formattedRow +'Cell01">' + '&nbsp;' + '</td><td class="rrcolall rrcol02Total" colspan="2" id="' + formattedRow +'Cell02">' + 'TOTAL of Page ' + lastPage + ' (last page)' 
+					// + ' currRowEmpty =' + currRowEmpty + ' currRow is '+ currRow +' tblRow is '+tblRow
+					+'<br/>' + '&nbsp;' + '</td><td class="rrcolall rrcol03" id="' + formattedRow +'Cell03">' +  '&nbsp;' + '</td><td class="rrcolall rrcol04" id="' + formattedRow +'Cell04">' +  '&nbsp;' + '</td><td class="rrcolall rrcol05" id="' + formattedRow +'Cell05">' +  '&nbsp;' + '<td class="rrcolall rrcol06" id="' + formattedRow +'Cell06">' + '&nbsp;' + '</td><td class="rrcolall rrcol07" id="' + formattedRow +'Cell07">' +  '&nbsp;' + '<td class="rrcolall rrcol08" id="' + formattedRow +'Cell08">' + '&nbsp;' + '</td><td class="rrcolall rrcol09" id="' + formattedRow +'Cell09">' +  lastRowTotalCost.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) + '</td></tr>';
+
+				html += '<tr><td colspan="10" style="border-style: none;">';
+					html += '<div id="browserBottomImageDivLast">';
+						html += '<img id="browserBottomImageImg" src="https://nycdsdev1.service-now.com/537cf5a71b51fd106c1036ef034bcbcf.iix" onload="checkImagesLoaded()"/>';
+					html += '</div>';
+				html += '</td></tr>';
+				
+				
+			}
 		} else {
 			step = 6;
 			alert(step + '. currRow % rowsOnPage unexpected else');
@@ -622,16 +641,16 @@ function getDesiredRRMonth() {
 function renderTheTable(parmHTML, sentby){
 	try {
 		html = '<table id="dynamicHtml" >';
-			html += '<thead id="dynamichead"><tr><th colspan="10" style="border-style: none;">';
-				html += '<div id="browserTopImageDiv">';
-					html += '<img id="browserTopImageImg" src="https://nycdsdev1.service-now.com/ac4fb16a1b59b9106c1036ef034bcb46.iix"></img>';
-				html += '</div>';
-				html += '</th></tr>';	
-				html += '<tr class="avoid-break avoid-break-after"><th colspan="10" style="border-style: none;">';
-					html += '<div style="max-width: 768px; position:sticky; ">'+ getHtmlTop() + '</div>';
-				html += '</th></tr>';
-				html += '<tr class="avoid-break avoid-break-after">' + getHtmlDynamicTableHeader();
-			html += '</thead>';
+// 			html += '<thead id="dynamichead"><tr><th colspan="10" style="border-style: none;">';
+// 				html += '<div id="browserTopImageDiv">';
+// 					html += '<img id="browserTopImageImg" src="https://nycdsdev1.service-now.com/ac4fb16a1b59b9106c1036ef034bcb46.iix"></img>';
+// 				html += '</div>';
+// 				html += '</th></tr>';	
+// 				html += '<tr class="avoid-break avoid-break-after"><th colspan="10" style="border-style: none;">';
+// 					html += '<div style="max-width: 768px; position:sticky; ">'+ getHtmlTop() + '</div>';
+// 				html += '</th></tr>';
+// 				html += '<tr class="avoid-break avoid-break-after">' + getHtmlDynamicTableHeader();
+// 			html += '</thead>';
 			html += '<tbody>';
 				html += parmHTML; // has tr, th, and td tags
 			html += '</tbody>';
@@ -651,7 +670,7 @@ function renderTheTable(parmHTML, sentby){
 This version will show a continuous table in the browser.  It will page-break the dynamic table when there are more than what will fit on the first printed page.&#13;
 Extra page break at the first when multiple pages are needed (print mode)</description>
         <direct>false</direct>
-        <endpoint>x_dosny_vendorrepo_ReceivingReportWithBootstrapV07.do</endpoint>
+        <endpoint>x_dosny_vendorrepo_ReceivingReportWithBootstrapV08.do</endpoint>
         <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
 <j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
 <html lang="en">
@@ -666,6 +685,12 @@ Extra page break at the first when multiple pages are needed (print mode)</descr
             content: " (" attr(href) ")"; /* Display the href attribute after the link text */
             display: none; /* Hide the actual anchor tag */
 			}
+		@page { /* Define page size and margins */
+			size:8.5in 11in;  /* width height */
+			margin: 5px 5px;
+			margin-right 1.75in;	
+			}
+
 	}
 	/* setting the display property to table-row ensures tr tag behaves like table rows even when dynamically generated. */
 	tr {
@@ -807,13 +832,6 @@ Extra page break at the first when multiple pages are needed (print mode)</descr
 		margin-top: 5px;
 		margin-bottom: 5px;
 	}		
-
-	/* Define page size and margins */
-    @page {
-        size:8.5in 11in;  /* width height */
-        margin-right 1.75in;
-    }
-
 	.rrcolall {
 		border-top-style: solid; 
 		border-top-width: 1pt; 
@@ -909,7 +927,7 @@ Extra page break at the first when multiple pages are needed (print mode)</descr
 		margin-right: 0;
 		padding-left:15px;
 		padding-right:0;
-		height: 11in;
+		height: 10in;
 		width: 800px;
 		
 		@media print {
@@ -937,8 +955,7 @@ Extra page break at the first when multiple pages are needed (print mode)</descr
 		top: 0;		
 		
 		@media print {
-			display: none;			
-			height: 0;
+			display: none !important;			
 			}
 		}
 	#rptCtrl {
@@ -949,8 +966,7 @@ Extra page break at the first when multiple pages are needed (print mode)</descr
 		border-bottom: solid;
 		
 		@media print {
-			display: none;		
-			height: 0;
+			display: none !important;		
 			}
 		}
 	#tableContainerMain {
@@ -975,7 +991,7 @@ Extra page break at the first when multiple pages are needed (print mode)</descr
 
 		@media print {
 			position: relative; 
-			top: 0;
+			top: 1px;
 			margin-left: 0;
 			max-width: 768px;
 			max-height: 340px;		
@@ -1001,8 +1017,8 @@ Extra page break at the first when multiple pages are needed (print mode)</descr
 		margin: 0 auto; /* Center the image horizontally if necessary */
 		
 		@media print {
-			max-width: 99%; /* Ensure the image doesn't exceed the div's width */
-			max-height: 99%; /* Ensure the image doesn't exceed the div's height */
+			max-width: 95%; /* Ensure the image doesn't exceed the div's width */
+			max-height: 95%; /* Ensure the image doesn't exceed the div's height */
 			display: block; /* Remove any extra spacing below the image */
 			margin: 0 auto; /* Center the image horizontally if necessary */
 			visibility: visible; /* vital to the Chrome print preview */
@@ -1081,7 +1097,7 @@ Extra page break at the first when multiple pages are needed (print mode)</descr
 		
 		@media print {
 			position: relative; /* vital to print preview in Chrome */
-			margin-bottom: 0.5in !important;
+			margin-bottom: 0.8in !important;
 			}			
 		}
 	#browserBottomImageImg {
@@ -1099,6 +1115,7 @@ Extra page break at the first when multiple pages are needed (print mode)</descr
 			display: block; /* Remove any extra spacing below the image */
 			margin: 0 auto; /* Center the image horizontally if necessary */
 			visibility: visible; /* vital to the Chrome print preview */
+			border-bottom-style: none; 
 			}
 		}
 
@@ -1126,7 +1143,7 @@ Extra page break at the first when multiple pages are needed (print mode)</descr
 			
 			<div id="tableContainerMain" class="row tableContainerRow">
 				<div class="col-md-12">
-					<!-- render_table includes thead th and td tbody and tfoot tags -->
+					<!-- render_table includes table thead th and td tbody and tfoot tags -->
 						<div id="render_table"></div>
 				</div>
 			</div>			
@@ -1138,19 +1155,19 @@ Extra page break at the first when multiple pages are needed (print mode)</descr
 
 </html>
 </j:jelly>]]></html>
-        <name>ReceivingReportWithBootstrapV07</name>
+        <name>ReceivingReportWithBootstrapV08</name>
         <processing_script/>
         <sys_class_name>sys_ui_page</sys_class_name>
         <sys_created_by>sfarkas</sys_created_by>
-        <sys_created_on>2023-10-10 13:03:41</sys_created_on>
-        <sys_id>d8537e691b7971106c1036ef034bcb2c</sys_id>
-        <sys_mod_count>209</sys_mod_count>
-        <sys_name>ReceivingReportWithBootstrapV07</sys_name>
+        <sys_created_on>2023-10-11 19:47:36</sys_created_on>
+        <sys_id>a85955061b7df1106c1036ef034bcba5</sys_id>
+        <sys_mod_count>72</sys_mod_count>
+        <sys_name>ReceivingReportWithBootstrapV08</sys_name>
         <sys_package display_value="ReceivingReport" source="x_dosny_vendorrepo">bbcb77921bcdf110baac766e034bcb72</sys_package>
         <sys_policy/>
         <sys_scope display_value="ReceivingReport">bbcb77921bcdf110baac766e034bcb72</sys_scope>
-        <sys_update_name>sys_ui_page_d8537e691b7971106c1036ef034bcb2c</sys_update_name>
+        <sys_update_name>sys_ui_page_a85955061b7df1106c1036ef034bcba5</sys_update_name>
         <sys_updated_by>sfarkas</sys_updated_by>
-        <sys_updated_on>2023-10-11 19:45:31</sys_updated_on>
+        <sys_updated_on>2023-10-11 23:27:03</sys_updated_on>
     </sys_ui_page>
 </record_update>
