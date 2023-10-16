@@ -32,7 +32,7 @@
         <order>100</order>
         <script><![CDATA[function openRpt(){
 	
-var url = 'https://nycdsdev1.service-now.com/x_dosny_vendorrepo_ReceivingReportTable.do?';
+var url = 'https://nycdsdev1.service-now.com/x_dosny_vendorrepo_ReceivingReportWithBootstrapV08.do';
 	
 g_navigation.openPopup(url);
 }]]></script>
@@ -46,15 +46,15 @@ g_navigation.openPopup(url);
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>9993f5e31b15b150baac766e034bcb8b</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Print Receving Report</sys_name>
         <sys_overrides/>
         <sys_package display_value="ReceivingReport" source="x_dosny_vendorrepo">bbcb77921bcdf110baac766e034bcb72</sys_package>
         <sys_policy/>
         <sys_scope display_value="ReceivingReport">bbcb77921bcdf110baac766e034bcb72</sys_scope>
         <sys_update_name>sys_ui_action_9993f5e31b15b150baac766e034bcb8b</sys_update_name>
-        <sys_updated_by>clombardi</sys_updated_by>
-        <sys_updated_on>2023-09-21 17:00:34</sys_updated_on>
+        <sys_updated_by>sfarkas</sys_updated_by>
+        <sys_updated_on>2023-10-12 18:18:38</sys_updated_on>
         <table/>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
