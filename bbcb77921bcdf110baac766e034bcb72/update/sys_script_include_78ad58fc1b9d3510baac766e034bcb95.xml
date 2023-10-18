@@ -249,6 +249,7 @@ ReceivingReportAjaxCall.prototype = Object.extendsObject(global.AbstractAjaxProc
 				record.quantity = gr.getValue('quantity');
 				record.unit_price = gr.getValue('unit_price');
 				record.subject = gr.getValue('short_description'); // gr.getValue('subject'); // 
+				record.sales_tax = gr.getValue('sales_tax'); // added by Farkas 18Oct2023 // 
 				lclSysId = gr.getElement('receiving_report'); // never dot-walk to the sys_id     .sys_id');
 				record.receiving_report_sysid = lclSysId.toString();
 				response.push(record);
@@ -274,6 +275,7 @@ ReceivingReportAjaxCall.prototype = Object.extendsObject(global.AbstractAjaxProc
 				elserecordOuter.unit_price = '';
 				elserecordOuter.subject = '';
 				elserecordOuter.receiving_report_sysid = '';
+				elserecordOuter.sales_tax = 0;
 				response.push(elserecordOuter);				
 		}
 
@@ -290,6 +292,7 @@ ReceivingReportAjaxCall.prototype = Object.extendsObject(global.AbstractAjaxProc
 				recordCatch.unit_price = '';
 				recordCatch.subject = '';
 				recordCatch.receiving_report_sysid = '';
+				recordCatch.sales_tax = 0;
 				response.push(recordCatch);	
 			return JSON.stringify(response);
 		}
@@ -303,13 +306,13 @@ ReceivingReportAjaxCall.prototype = Object.extendsObject(global.AbstractAjaxProc
         <sys_created_by>sfarkas</sys_created_by>
         <sys_created_on>2023-09-12 21:46:45</sys_created_on>
         <sys_id>78ad58fc1b9d3510baac766e034bcb95</sys_id>
-        <sys_mod_count>76</sys_mod_count>
+        <sys_mod_count>77</sys_mod_count>
         <sys_name>ReceivingReportAjaxCall</sys_name>
         <sys_package display_value="ReceivingReport" source="x_dosny_vendorrepo">bbcb77921bcdf110baac766e034bcb72</sys_package>
         <sys_policy/>
         <sys_scope display_value="ReceivingReport">bbcb77921bcdf110baac766e034bcb72</sys_scope>
         <sys_update_name>sys_script_include_78ad58fc1b9d3510baac766e034bcb95</sys_update_name>
         <sys_updated_by>sfarkas</sys_updated_by>
-        <sys_updated_on>2023-09-21 18:24:23</sys_updated_on>
+        <sys_updated_on>2023-10-18 14:06:25</sys_updated_on>
     </sys_script_include>
 </record_update>

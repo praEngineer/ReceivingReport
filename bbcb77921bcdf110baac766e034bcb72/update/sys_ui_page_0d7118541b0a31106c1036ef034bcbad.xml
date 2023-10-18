@@ -1,0 +1,1186 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>cms</category>
+        <client_script><![CDATA[// Specify the desired rr_year and rr_month values
+var defDate = new Date();
+defDate.setMonth(defDate.getMonth()-1);
+setDesiredRRYear(defDate.getFullYear()); // Replace with your desired year
+setDesiredRRMonth(defDate.getMonth()+1);   // Replace with your desired month, a digit from 1 to 12
+var htmlButtonEnabled = '<button id="printButton">Print Page</button>';
+var htmlButtonDisabled = '<button id="printButton" disabled>Print Page</button>';
+
+var html = ''; // initialize id="render_table"
+
+var loadedImages = 0;
+document.getElementById('render_buttonPrint').innerHTML = htmlButtonDisabled;
+// Function to check if all images are loaded
+function checkImagesLoaded() {
+	loadedImages++;
+	// alert("loaded image #" + loadedImages);
+	if (loadedImages > 0) { // Adjust the count if you have more images
+		// alert('All images are loaded, enable the print button');
+		document.getElementById('render_buttonPrint').innerHTML = htmlButtonEnabled;
+	}
+}
+
+$j('#broswerTopImageImg').on('load', function() {
+	// alert('Top image loaded.');
+	// Pause for half a second (500 milliseconds)
+	setTimeout(function () { checkImagesLoaded();}, 500);
+});
+
+$j('#browserBottomImageImg').on('load', function() {
+	// alert('Bottom image loaded.');
+	setTimeout(function () { checkImagesLoaded();}, 500);
+});
+
+
+refreshTbl();
+
+// Bind click event to the print button
+$j('#render_buttonPrint').click(function() {
+// 	var w = window.open();
+// 	w.document.write(document.getElementById('tableContainerMain').innerHTML);  
+//     w.print();
+//     w.close();
+	window.print();
+/*
+if (loadedImages > 1) {
+		window.print();
+	} else {
+		alert('Images are still loading. Please wait and try again.');
+	}
+*/
+});
+function getHtmlDynamicTableHeader() {
+
+	var lclhtml = '<th class="rrcolall rrcol01">ITEM NO</th><th class="rrcolall  rrcol02a">STOREHOUSE<br/>COMMODITY<br/>CODE</th><th class="rrcolall rrcol02b" >Description</th><th class="rrcolall rrcol03" >Quantity</th><th class="rrcolall rrcol04 text-center">Unit</th><th class="rrcolall rrcol05 text-center" >Unit<br/>Price</th><th class="rrcolall rrcol06">Quantity</th><th class="rrcolall rrcol07">Unit</th><th class="rrcolall rrcol08">Unit<br/>Price</th><th class="rrcolall rrcol09header">Total Cost</th></tr>';
+
+	return lclhtml;
+}
+
+function getVendorsJSON(response) {
+	var answer = "";
+	var step = 1.19;
+
+	try {
+		answer = response.responseXML.querySelector('xml').getAttribute('answer');
+		// above line retrieves
+		// the response attribute for the 'getRecords' function you defined in your server script.
+		step = 29;
+		if (answer) {
+			step = 39;
+			// Process the response data (assuming the response is a JSON array)
+			var data = "";
+			try {
+				data = JSON.parse(answer);
+				//alert(step + '. data is: ' + data);
+			}
+			catch (error) {
+				alert(step + '. data catch: ' + error.toString());
+			}
+			step = 49;
+			// Iterate through the results and add rows to the HTML table
+			var currRow=1;
+			var formattedRow = '';
+			document.getElementById('render_vendorSelect').innerHTML = '';
+			var selHTML = '<label for="vendorSelect">Select Vendor:</label>';
+			selHTML += '<select id="vendorSelect" onChange="chgVendor()">';
+			selHTML += '<option value=""></option>';
+			var lclDesiredVendor = getDesiredRRVendor();
+			data.forEach(function(record) {
+				formattedRow = currRow < 10 ? 'Row0' + currRow : 'Row' + currRow;
+				// alert(formattedRow);
+				step = 59.07;
+				if (lclDesiredVendor !== record.vendor){
+					selHTML += '<option value="' + record.vendor + '"';				}
+				else {
+					selHTML += '<option selected value="' + record.vendor + '"';					
+				}
+				selHTML += '>' + record.vendor + '</option>';
+				currRow += 1;
+			});
+			
+			// Close the HTML table
+			selHTML += '</select></div>';
+			step = 59;
+			// alert(step + '. ');
+		} else {
+			step = 69;
+			selHTML = step + '. vendor answer is empty';
+		}		
+		document.getElementById('render_vendorSelect').innerHTML = selHTML;
+		step = 79;
+	}
+	catch (error){
+		alert('from client catch: ' + error.toString());
+		// html = step + '. from client catch: ' + error.toString() + '<br />' + answer;
+	}
+
+}
+function getRightTrimmedLength(inputString) {
+  
+	var length = 0;
+	if(inputString !== null){
+		var trimmedString = inputString.replace(/\s*$/, ''); // Use regular expression to remove trailing spaces and tabs
+		// Calculate the length of the trimmed string
+		length = trimmedString.length;
+	}
+	return length;
+}
+function removeLineBreaks(inputString) {
+  // Use a regular expression to match '<br />' globally and replace with an empty string
+  return inputString.replace(/<br \/>/g, '');
+}
+function howMany50s(str) {
+	var divisions = 0;
+	if(str !== null) {
+		str = removeLineBreaks(str);
+		var strLength = getRightTrimmedLength(str);
+		for(cnt = 50; cnt < strLength; cnt += 50 ) {
+			if (strLength - cnt > 0) {
+				divisions += 1;
+			}
+		}
+		divisions += 1; // for strings with an uneven number of 50s
+		return divisions;
+	}
+	else {return 1;}
+}
+function insertLineBreaks(text, charactersPerLine) {
+  var result = '';
+  if(text !== null)
+	{
+		var lclStr = text;
+		for (var i = 0; i < text.length; i += charactersPerLine) {
+			result += text.slice(i, i + charactersPerLine);
+			if (i + charactersPerLine < text.length) {
+				result += '<br />';
+			}
+		}		  
+	}
+	else {
+		result = '<br />';
+	}
+  return result;
+}
+
+function getRecordsJSON(response) {
+	var answer = "";
+	step = 1.1;
+	// alert('start getRecordsJSON');
+	try {
+		answer = response.responseXML.querySelector('xml').getAttribute('answer');
+		// above line retrieves
+		// the response attribute for the 'getRecords' function you defined in your server script.
+		step = 2;
+		if (answer) {
+			step = 3;
+			// Process the response data (assuming the response is a JSON array)
+			var data = "";
+			try {
+				data = JSON.parse(answer);
+				//alert(step + '. data is: ' + data);
+			}
+			catch (error) {
+				alert(step + '. data catch: ' + error.toString());
+			}
+			step = 4;
+			// Iterate through the results and add rows to the HTML table
+			var currRow=0; // currRow = 1 when the first row of the dynamic table is set; count data rows only
+			var tblRow = 0;  // increments by two for each data row plus an extra for a three line description
+			var formattedRow = '';
+			var currRowEmpty = 0;
+			var lastRowTotalCost = 0;
+			var rowsOnPage = 15; // maximum rows above the (SUB) TOTAL row
+			var maxTblRows = 34; // accounts for more than two lines in a description
+			var pageCount = 1;
+			var total_sales_tax = 0;
+			// var rowsOnPrintedPage = 15;
+			html = '';
+			data.forEach(function(record) {
+				
+				if(currRow === 0 ){
+					html += '<tr class="break-before"><td colspan="10" style="border-style: none;">';
+						html += '<div id="browserTopImageDivIntermediate">';
+							html += '<img id="browserTopImageImg" src="https://nycdsdev1.service-now.com/ac4fb16a1b59b9106c1036ef034bcb46.iix" onload="checkImagesLoaded()" />';
+						html += '</div>';
+					html += '</td></tr>';	
+
+					html += '<tr class="avoid-break avoid-break-after"><td colspan="10" style="border-style: none;">';
+						html += '<div style="max-width: 768px; position:sticky; ">'+ getHtmlTop() + '</div>';
+					html += '</td></tr>';
+
+					html += '<tr class="avoid-break avoid-break-after">' + getHtmlDynamicTableHeader();
+				}
+
+				
+				var recVendName = ''; //'vendor not entered for ' + record.number;
+				
+				if(record.vendor !== null){
+					recVendName = record.vendor.toString();
+					if(typeof record.vendor === 'string' && record.vendor.trim() !== ''){
+						recVendName = record.vendor;
+					}					
+				}
+
+				var lclSysId = 'initialized lclSysId';
+				// alert('record.sysid is ' + record.sysid);
+				if(record.sysid !== null){
+					if(typeof record.sysid === 'string' && record.sysid.trim() !== ''){
+						lclSysId = record.sysid;
+					}
+				}
+				else {
+					lclSysId =  'sysid not provided';
+				}
+				lclSysId = lclSysId.trim();
+				//alert('lclSysId is ' + lclSysId.length + ' with a value of ' + lclSysId);
+				formattedRow = currRow < 10 ? 'Row0' + currRow : 'Row' + currRow;
+				var unitEach = record.quantity > 1 ? 'Each' : '';
+				var unitPrice = '';
+				var strSubject = '&nbsp;'; 
+				if(record.subject !== null ) {
+					strSubject = insertLineBreaks(record.subject,50);
+				}
+				if (record.unit_price !== null) {
+					unitPrice = parseFloat(record.unit_price).toFixed(2);
+				}
+				
+				total_sales_tax += record.sales_tax;
+				
+				tblRow += howMany50s(strSubject); // account for multiple row descriptions
+				tblRow += 1; // and account for recVendName 
+				html += '<tr id="Row"'+formattedRow +'"><td class="rrcolall rrcol01" id="' + formattedRow +'Cell01">' + record.quantity + '</td><td class="rrcolall rrcol02" colspan="2" style="max-width: 258pt; min-width: 258pt" id="' + formattedRow +'Cell02"><a href="https://nycdsdev1.service-now.com/nav_to.do?uri=x_dosny_bit_procur_bit_procurement_credit_card_line_items.do?sys_id=' + lclSysId + '">' + record.number + '</a>' + '&nbsp;' + recVendName 
+		// + ' (currRow=' + (currRow+1)
+		// + ' tblRow=' + (tblRow) +')'
+					+'<br/>' + strSubject + '</td><td class="rrcolall rrcol03" id="' + formattedRow +'Cell03">' +  '&nbsp;' + '</td><td class="rrcolall rrcol04" id="' + formattedRow +'Cell04">' +  '&nbsp;' + '</td><td class="rrcolall rrcol05" id="' + formattedRow +'Cell05">' +  '&nbsp;' + '</td><td class="rrcolall rrcol06" id="' + formattedRow +'Cell06">' +  record.quantity + '</td><td class="rrcolall rrcol07" id="' + formattedRow +'Cell07">' + unitEach + '</td><td class="rrcolall rrcol08" id="' + formattedRow +'Cell08">' +  unitPrice + '</td><td class="rrcolall rrcol09" id="' + formattedRow +'Cell09">' + (record.quantity * record.unit_price).toFixed(2) + '</td></tr>';			
+				currRow += 1;
+
+				lastRowTotalCost += (record.quantity * record.unit_price);
+				
+			if(data.length !== rowsOnPage && (tblRow > maxTblRows) || (tblRow > maxTblRows && (currRow > rowsOnPage )) || (tblRow + (3)) > maxTblRows ) {			
+				formattedRow = currRow < 10 ? 'Row0' + currRow : 'Row' + currRow;
+					// alert('tblRow = ' + tblRow + ' thisPage = ' + thisPage);
+					html +=  '<tr id="Row"'+formattedRow +'" class="avoid-break"><td class="rrcolall rrcol01" id="' + formattedRow +'Cell01">' + '&nbsp;' + '</td><td class="rrcolall rrcol02Total" colspan="2" id="' + formattedRow +'Cell02">' + 'TOTAL of Page ' + pageCount 
+						// + ' currRow is '+ currRow +' tblRow is '+tblRow
+						+'<br/>' + '&nbsp;' + '</td><td class="rrcolall rrcol03 id="' + formattedRow +'Cell03">' +  '&nbsp;' + '</td><td class="rrcolall rrcol04" id="' + formattedRow +'Cell04">' +  '&nbsp;' + '</td><td class="rrcolall rrcol05" id="' + formattedRow +'Cell05">' +  '&nbsp;' + '<td class="rrcolall rrcol06" id="' + formattedRow +'Cell06">' + '&nbsp;' + '</td><td class="rrcolall rrcol07" id="' + formattedRow +'Cell07">' +  '&nbsp;' + '<td class="rrcolall rrcol08" id="' + formattedRow +'Cell08">' + '&nbsp;' + '</td><td class="rrcolall rrcol09" id="' + formattedRow +'Cell09">' +  lastRowTotalCost.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) + '</td></tr>';		
+
+					html += '<tr class="avoid-break"><td colspan="10" style="border-style: none;">';
+						html += '<div id="browserBottomImageDiv">';
+							html += '<img id="browserBottomImageImg" src="https://nycdsdev1.service-now.com/537cf5a71b51fd106c1036ef034bcbcf.iix" onload="checkImagesLoaded()"/>';
+						html += '</div>';
+					html += '</td></tr>';					
+
+					html += '<div style="clear: both; page-break-before: always;"></div>';
+
+					lastRowTotalCost = 0;
+					
+					currRow = 0; // catch up when long descriptions cause early page break
+					
+					tblRow = 0; // restart description counter for the next page
+				
+					pageCount += 1;
+				}
+			}); // no more data remains
+		var lclVendor = getDesiredRRVendor() + '';
+		if (total_sales_tax > 0 && lclVendor.length > 0 ) {
+			lclVendor = 'Sales Tax paid to ' + lclVendor.replace('*',''); // othersise interpreted as multiplication
+			formattedRow = currRow < 10 ? 'Row0' + currRow : 'Row' + currRow;
+					html += '<tr id="Row"'+formattedRow +'" class="avoid-break"><td class="rrcolall rrcol01" id="' + formattedRow +'Cell01">' + '&nbsp;' + '</td><td class="rrcolall rrcol02" colspan="2"  id="' + formattedRow +'Cell02">' + lclVendor + '<br/>' + '&nbsp;' + '</td><td class="rrcolall rrcol03" id="' + formattedRow +'Cell03">' +  '&nbsp;' + '</td><td class="rrcolall rrcol04" id="' + formattedRow +'Cell04">' +  '&nbsp;' + '</td><td class="rrcolall rrcol05" id="' + formattedRow +'Cell05">' +  '&nbsp;' + '<td class="rrcolall rrcol06" id="' + formattedRow +'Cell06">' + '&nbsp;' + '</td><td class="rrcolall rrcol07" id="' + formattedRow +'Cell07">' +  '&nbsp;' + '<td class="rrcolall rrcol08" id="' + formattedRow +'Cell08">' + Intl.NumberFormat().format(total_sales_tax) + '</td><td class="rrcolall rrcol09" id="' + formattedRow +'Cell09">' + '&nbsp;' + '</td></tr>';
+					currRow += 1; // blank row is considered a data row on the table
+					tblRow += 2; // assumes two rows for each description
+		}
+
+		if (currRow > 0 && ( data.length < rowsOnPage || tblRow < maxTblRows ) ) {
+				//alert('make empty rows');
+// 				var rowsAlreadyDisplayed = 0;
+// 				// if (tblRow < maxTblRows) {rowsAlreadyDisplayed = (maxTblRows % tblRow);}
+// 				if (currRow < rowsOnPage) {rowsAlreadyDisplayed = (currRow);}
+// 				if (data.length < rowsOnPage) {rowsAlreadyDisplayed = data.length;}
+				//alert('currRow = ' + currRow 
+					// + ' rowsAlreadyDisplayed = ' + rowsAlreadyDisplayed 
+					//+ ' current tblRow = ' + tblRow);
+			
+				pageCount += 1; // add it here because I know only a few rows of data on the last page that will be padded with empty rows
+			
+				for (currRowEmpty = currRow; currRowEmpty < rowsOnPage && tblRow < maxTblRows; currRowEmpty++) {
+					formattedRow = currRowEmpty < 10 ? 'Row0' + currRowEmpty : 'Row' + currRowEmpty;
+					html += '<tr id="Row"'+formattedRow +'" class="avoid-break"><td class="rrcolall rrcol01" id="' + formattedRow +'Cell01">' + '&nbsp;' + '</td><td class="rrcolall rrcol02" colspan="2"  id="' + formattedRow +'Cell02">' + '&nbsp;' + '&nbsp;' + '&nbsp;' + '<br/>' + '&nbsp;' + '</td><td class="rrcolall rrcol03" id="' + formattedRow +'Cell03">' +  '&nbsp;' + '</td><td class="rrcolall rrcol04" id="' + formattedRow +'Cell04">' +  '&nbsp;' + '</td><td class="rrcolall rrcol05" id="' + formattedRow +'Cell05">' +  '&nbsp;' + '<td class="rrcolall rrcol06" id="' + formattedRow +'Cell06">' + '&nbsp;' + '</td><td class="rrcolall rrcol07" id="' + formattedRow +'Cell07">' +  '&nbsp;' + '<td class="rrcolall rrcol08" id="' + formattedRow +'Cell08">' + '&nbsp;' + '</td><td class="rrcolall rrcol09" id="' + formattedRow +'Cell09">' + '&nbsp;' + '</td></tr>';
+					currRow += 1; // blank row is considered a data row on the table
+					tblRow += 2; // assumes two rows for each description
+					
+					if(!(data.length < currRow)){
+						if(tblRow > maxTblRows-2){
+							break;
+						}						
+	
+					}
+
+				} /* end of empty row building for-loop */
+			}
+
+			if(currRow > 0 ) {
+
+				// Last row with TOTAL
+				currRowEmpty = currRowEmpty == 0 ? currRow+1 : currRowEmpty +=1;
+				formattedRow = currRowEmpty < 10 ? 'Row0' + currRowEmpty : 'Row' + currRowEmpty;
+				var lastPage = 0;
+				if(data.length < rowsOnPage && pageCount === 1) {lastPage = 1;}
+				else {lastPage = pageCount-1;}
+				html +=  '<tr id="Row"'+formattedRow +'" class="avoid-break"><td class="rrcolall rrcol01" id="' + formattedRow +'Cell01">' + '&nbsp;' + '</td><td class="rrcolall rrcol02Total" colspan="2" id="' + formattedRow +'Cell02">' + 'TOTAL of Page ' + lastPage + ' (last page)' 
+					// + ' currRowEmpty =' + currRowEmpty + ' currRow is '+ currRow +' tblRow is '+tblRow
+					+'<br/>' + '&nbsp;' + '</td><td class="rrcolall rrcol03" id="' + formattedRow +'Cell03">' +  '&nbsp;' + '</td><td class="rrcolall rrcol04" id="' + formattedRow +'Cell04">' +  '&nbsp;' + '</td><td class="rrcolall rrcol05" id="' + formattedRow +'Cell05">' +  '&nbsp;' + '<td class="rrcolall rrcol06" id="' + formattedRow +'Cell06">' + '&nbsp;' + '</td><td class="rrcolall rrcol07" id="' + formattedRow +'Cell07">' +  '&nbsp;' + '<td class="rrcolall rrcol08" id="' + formattedRow +'Cell08">' + '&nbsp;' + '</td><td class="rrcolall rrcol09" id="' + formattedRow +'Cell09">' +  lastRowTotalCost.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) + '</td></tr>';
+
+				html += '<tr><td colspan="10" style="border-style: none;">';
+					html += '<div id="browserBottomImageDivLast">';
+						html += '<img id="browserBottomImageImg" src="https://nycdsdev1.service-now.com/537cf5a71b51fd106c1036ef034bcbcf.iix" onload="checkImagesLoaded()"/>';
+					html += '</div>';
+				html += '</td></tr>';
+				
+				
+			}
+		} else {
+			step = 6;
+			alert(step + '. currRow % rowsOnPage unexpected else');
+		}		
+		// document.getElementById('render_table').innerHTML = html;
+		renderTheTable(html, 'getRecordsJSON');
+		var currNameOfSeller = getDesiredRRVendor();
+		if (currNameOfSeller !== null) {
+			if(typeof currNameOfSeller === 'string' && currNameOfSeller.trim() !== ''){
+				document.getElementById('nameOfSeller').innerHTML = '<div>' + currNameOfSeller + '</div>';	
+			}
+		}
+		// alert('html table rows: ' + currRow);
+		step = 7;
+	}
+	catch (error){
+		alert('from getRecordsJSON: ' + error.toString());
+		// html = step + '. from client catch: ' + error.toString() + '<br />' + answer;
+	}
+
+}
+
+function renderYearDropDown(defYear) {
+	try {
+		var anotherOption = '';
+		step = 8;
+		var currentYear = new Date().getFullYear();
+		//alert(step + '. currentYear is ' + currentYear);
+		step = 9;
+		var yearChoices = [currentYear - 2, currentYear - 1, currentYear, currentYear + 1, currentYear + 2];
+		step = 10;
+		// Populate year options
+		var htmlSelectYear = ''
+		+ '<label for="yearSelect">Select Year:</label>'
+		+ '<select id="yearSelect" onChange="chgYear()">'
+		+ '<option value=""></option>';
+		step = 12;
+		var htmlSelectClose = ''
+		+'</select>';
+		step = 13;
+		// alert(step + '. htmlSelectYear is ' + htmlSelectYear);	
+
+		var intCurrentlySelectedYear = parseInt(defYear);
+		for (var i = 0; i < yearChoices.length; i++) {
+			anotherOption = '<option ';
+			if (yearChoices[i] === intCurrentlySelectedYear) {
+				anotherOption = anotherOption + ' selected '; // Set the default year as selected
+			}
+			anotherOption = anotherOption + 'value="' + yearChoices[i] + '">';
+
+			anotherOption = anotherOption +  yearChoices[i] + '</option>';
+
+			htmlSelectYear = htmlSelectYear + anotherOption;
+		}
+		step = 14;
+		htmlSelectYear = htmlSelectYear + htmlSelectClose;
+
+		document.getElementById('render_yearSelect').innerHTML = '<div>' + htmlSelectYear + '</div>';
+	}
+	catch (error){
+		document.getElementById('render_yearSelect').innerHTML = '<div>' + error.toString() + '</div>';
+	}
+}
+
+function getMonthName(monthNumber) { // param expected to be between 0 and 11
+    var months = [
+        'January', 'February', 'March', 'April',
+        'May', 'June', 'July', 'August',
+        'September', 'October', 'November', 'December'
+    ];
+	var intMonthNumber = parseInt(monthNumber);
+	var zeroBasedMonthNumber = intMonthNumber-1;
+	// alert ('getMonthName('+ zeroBasedMonthNumber.toString() +') is ' + months[intMonthNumber-1]);
+    return months[intMonthNumber-1]; // javascript arrays are zero-based
+}
+
+function renderMonthDropDown(defMonth) {
+		step = 15;
+		document.getElementById('render_monthSelect').innerHTML = '';
+		step = 16.06;
+		var selHTML = '<label for="monthSelect">Select Month:</label>';
+		selHTML += '<select id="monthSelect" class="selectpicker" onChange="chgMonth()">';
+		selHTML += '<option value=""></option>';
+		step = 16.07;
+		for (var month = 1; month <= 12; month++) {
+			selHTML += '<option value="' + month + '"';
+			if (month === defMonth) {
+				selHTML += ' selected';
+			}
+			selHTML += '>' + getMonthName(month) + '</option>'; // month-1 is between 0 and 11
+		}
+		step = 16.08;
+		selHTML += '</select>';
+		// alert(step + '. selHTML is ' + selHTML);
+		document.getElementById('render_monthSelect').innerHTML = '<div>' + selHTML + '</div>';
+		step = 16.09;
+}
+
+function repeatString(str, num) {
+    return num > 0 ? str.repeat(num) : '';
+}
+
+
+function renderTheVendorCombo(defVendor) {
+    // Initialize a GlideAjax instance for making server calls
+    var gaVendor = new GlideAjax('ReceivingReportAjaxCall'); // your GlideAjax script include class name
+
+    gaVendor.addParam('sysparm_name', 'getVendorsThisMonth');
+    // Replace with your (e.g., getRecords) GlideAjax function name within class declaration
+    var lclYearVendor = getDesiredRRYear();
+    var lclMonthVendor = getDesiredRRMonth();
+    // passing results of a function versus a pointer to the function
+    gaVendor.addParam('sysparm_rr_year', lclYearVendor);
+    gaVendor.addParam('sysparm_rr_month', lclMonthVendor);
+
+    // alert('get vendors for ' + lclYearVendor + ' ' + getMonthName(lclMonthVendor));
+    gaVendor.getXML(getVendorsJSON);
+
+    step = 663;
+}
+
+
+function refreshTbl() {
+		// alert('start refreshTbl');
+// Query the x_dosny_bit_procur_bit_procurement_credit_card_line_items table
+// Initialize a GlideAjax instance for making server calls
+		var ga = new GlideAjax('ReceivingReportAjaxCall'); // your GlideAjax script include class name
+
+		ga.addParam('sysparm_name', 'getRecords'); 
+			// Replace with your (e.g., getRecords) GlideAjax function name within class declaration
+		var lclYear = getDesiredRRYear();
+		var lclMonth = getDesiredRRMonth();
+		var lclVendor = getDesiredRRVendor();
+	// passing results of a function versus a pointer to the function
+		ga.addParam('sysparm_rr_year', lclYear);
+		ga.addParam('sysparm_rr_month', lclMonth);
+		if(lclVendor !== null) {
+			if (typeof lclVendor === 'string' && lclVendor.trim() !== '') {
+				ga.addParam('sysparm_rr_vendor', lclVendor);				
+			}
+		}
+		// document.getElementById('render_header_second').innerHTML = getHtmlTop() ;
+		// document.getElementById('render_header_third').innerHTML = getHtmlBottom() ;
+		
+		step = 71;
+		html = ''; //frame;
+
+		ga.getXML(getRecordsJSON);	// retrieves the credit card charges
+		step = 73;
+	
+		// renderTheTable(html, 'refreshTbl');
+		// step = 74;
+
+		renderYearDropDown(lclYear);
+		step = 75;
+		
+		renderMonthDropDown(lclMonth);
+		step = 76;
+
+		renderTheVendorCombo(lclVendor);
+		step = 76.5;
+	
+		if(lclVendor !== null && lclVendor !== undefined) {
+			step = 76.7;
+			document.getElementById('rrTitle').innerHTML = 'Receiving Report Month (' + lclMonth + ') and Year (' + lclYear + ') Choices for ' + lclVendor;			
+		}
+		else {
+			step = 76.8;
+			document.getElementById('rrTitle').innerHTML = 'Receiving Report Month (' + lclMonth + ') and Year (' + lclYear + ') Choices';			
+		}
+
+		step = 77;
+
+	// alert('refreshTbl made it to step ' + step);	
+}
+
+var desiredRRYear = '';
+var desiredRRMonth = 0; // expected values between 1 and 12
+var desiredRRVendor = '';
+
+function chgYear () {
+		// alert('chgYear event');
+		var ctrlYear = document.getElementById('yearSelect').value.toString();
+		var ctrlMonth = document.getElementById('monthSelect').value;
+		setDesiredRRMonth(ctrlMonth);
+		setDesiredRRVendor('');
+        setDesiredRRYear(ctrlYear);
+		refreshTbl();
+}
+
+function chgMonth() {
+		// alert('chgMonth event');
+		var ctrlYear = document.getElementById('yearSelect').value.toString();
+		var ctrlMonth = document.getElementById('monthSelect').value;
+        setDesiredRRYear(ctrlYear);
+		setDesiredRRVendor('');
+		setDesiredRRMonth(ctrlMonth);
+		refreshTbl();
+    }
+
+function chgVendor(){
+		// alert('chgVendor fired');
+		var ctrlVendor = document.getElementById('vendorSelect').value;
+		var ctrlMonth = document.getElementById('monthSelect').value;
+		var ctrlYear = document.getElementById('yearSelect').value.toString();
+		//alert('ctrlYear is ' + ctrlYear + ' and ctrlMonth is ' + ctrlMonth + ' and vendor is ' + ctrlVendor);
+		setDesiredRRYear(ctrlYear);
+		setDesiredRRMonth(ctrlMonth);
+        setDesiredRRVendor(ctrlVendor);
+		refreshTbl();	
+}
+
+// Getter function for desiredRRYear
+function getDesiredRRYear() {
+    var lclYear = desiredRRYear;
+    var lclDate = new Date();
+    if (lclYear !== null) {
+        if (typeof lclYear === 'string' && lclYear.trim() !== '') {
+            return lclYear;
+        } else {
+            setDesiredRRYear(lclDate.getFullYear());
+        }
+    } else {
+        setDesiredRRYear(lclDate.getFullYear());
+    }
+    return desiredRRYear;
+}
+
+// Setter function for desiredRRYear
+function setDesiredRRYear(newYear) {
+  desiredRRYear = newYear.toString();
+}
+
+// Getter function for desiredRRVendor
+function getDesiredRRVendor() {
+  return desiredRRVendor;
+}
+
+// Setter function for desiredRRVendor
+function setDesiredRRVendor(newVendor) {
+  desiredRRVendor = newVendor;
+}
+
+// Setter function for desiredRRMonth
+function setDesiredRRMonth(newMonth) {
+    step = 16.044;
+    if (typeof newMonth === 'number') {
+        // If newMonth is already a number, we can directly assign it,
+        // but we'll ensure it's within the range 1 to 12.
+        desiredRRMonth = Math.max(1, Math.min(12, newMonth));
+    } else {
+        // If newMonth is not a number, attempt to parse it as an integer.
+        // Ensure the parsed value is within the range 1 to 12.
+        desiredRRMonth = Math.max(1, Math.min(12, parseInt(newMonth, 10)));
+    }
+	// alert('newMonth: ' + newMonth + ' became desiredRRMonth: ' +  desiredRRMonth);
+}
+
+// Getter function for desiredRRMonth
+function getDesiredRRMonth() {
+	step = 16.041;
+	var lclMonth = desiredRRMonth;
+	// alert(step + '. lclMonth is ' + lclMonth);
+	var lclDate = new Date();
+	if (lclMonth !== null) {
+		if (typeof lclMonth === 'number' && lclMonth > 0) {
+			return lclMonth;
+		} 
+		else {
+			step = 161.0422;
+			lclDate.setMonth(lclDate.getMonth()-1);
+			setDesiredRRYear(lclDate.getFullYear());
+			step = 161.0423;
+			lclMonth = lclDate.getMonth();
+			step = 161.0424;
+			// alert(step + '. lclMonth is ' + lclMonth);
+			setDesiredRRMonth(lclMonth+1); // expected to be between 1 and 12
+			step = 161.0425;	
+		}
+		return lclMonth;
+	}
+	else {
+		step = 16.0421;
+		step = 16.0422;
+		lclDate.setMonth(lclDate.getMonth()-1);
+		setDesiredRRYear(lclDate.getFullYear());
+		step = 16.0423;
+		lclMonth = lclDate.getMonth(); // between 0 and 11
+		step = 16.0424;
+		// alert(step + '. lclMonth is ' + lclMonth);
+		setDesiredRRMonth(lclMonth+1); // expected to be between 1 and 12
+		step = 16.0425;		
+	}
+	step = 16.043;
+  //alert(step + '. getDesiredRRMonth is ' + desiredRRMonth);
+  return lclMonth;
+}
+
+function renderTheTable(parmHTML, sentby){
+	try {
+		html = '<table id="dynamicHtml" >';
+// 			html += '<thead id="dynamichead"><tr><th colspan="10" style="border-style: none;">';
+// 				html += '<div id="browserTopImageDiv">';
+// 					html += '<img id="browserTopImageImg" src="https://nycdsdev1.service-now.com/ac4fb16a1b59b9106c1036ef034bcb46.iix"></img>';
+// 				html += '</div>';
+// 				html += '</th></tr>';	
+// 				html += '<tr class="avoid-break avoid-break-after"><th colspan="10" style="border-style: none;">';
+// 					html += '<div style="max-width: 768px; position:sticky; ">'+ getHtmlTop() + '</div>';
+// 				html += '</th></tr>';
+// 				html += '<tr class="avoid-break avoid-break-after">' + getHtmlDynamicTableHeader();
+// 			html += '</thead>';
+			html += '<tbody>';
+				html += parmHTML; // has tr, th, and td tags
+			html += '</tbody>';
+		html += '</table>';
+
+		document.getElementById('render_table').innerHTML = html;
+	} 
+	catch (error) {
+		document.getElementById('render_table').innerHTML = error.toString();
+	}
+}
+
+
+function getHtmlTop() {
+var htmlTop = '';
+
+htmlTop += '<tr><th>';
+htmlTop = '<table id="staticHtml" cellspacing="0"><tbody><tr style="height:11pt"><td style="width:50pt;border-top-style:solid;border-top-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s15" style="padding-left: 5pt;padding-right: 5pt;text-indent: 10pt;text-align: left;">DATE PREPARED</p></td><td style="width:40pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p class="s15" style="padding-top: 2pt;padding-left: 3pt;text-indent: 0pt;line-height: 8pt;text-align: left;">RECEIVED</p></td><td style="width:14pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p class="s16" style="padding-top: 2pt;padding-left: 1pt;text-indent: 0pt;line-height: 8pt;text-align: left;">BY</p></td><td style="width:172pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:10pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:30pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:35pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:3pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:23pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:5pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:61pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s17" style="padding-left: 2pt;padding-right: 1pt;text-indent: 5pt;text-align: left;">OMPA OR<br/><br/>CONTRACT NO.</p></td><td style="width:62pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s19" style="text-indent: 0pt;line-height: 8pt;text-align: left;">ORDER NO.</p></td><td style="width:35pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" rowspan="2"><p class="s19" style="padding-top: 1pt;padding-left: 2pt;text-indent: 0pt;text-align: left;">SHIPPING</p><p class="s19" style="padding-left: 2pt;text-indent: 0pt;text-align: left;">INSTR NO.</p></td><td style="width:34pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt" rowspan="2"><p class="s19" style="padding-top: 1pt;padding-left: 2pt;text-indent: 0pt;text-align: left;">RECEIVING</p><p class="s19" style="padding-left: 2pt;text-indent: 0pt;text-align: left;">REPORT NO.</p></td></tr><tr style="height:10pt"><td style="width:42pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt;background-color:#D3D3D3;" colspan="2"><p class="s24" style="padding-left: 2pt;text-indent: 0pt;text-align: left;background-color:#D3D3D3;">STOREHOUSE</p></td><td style="width:290pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="7"><p class="s15" style="padding-left: 3pt;text-indent: 0pt;line-height: 8pt;text-align: left;">AGENCY AND UNIT</p></td></tr><tr style="height:26pt"><td style="width:50pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:42pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;background-color:#D3D3D3" colspan="2"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:290pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="7"><p class="s25" style="padding-left: 3pt;text-indent: 0pt;text-align: left;">ADDRESS<span class="s26">DSNY IT 357 Pearl St 19th fl</span></p></td><td style="width:61pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s27" style="padding-top: 5pt;padding-left: 2pt;text-indent: 0pt;text-align: left;">Credit Card</p></td><td style="width:62pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:35pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td><td style="width:34pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br/><br/></p></td></tr><tr style="height:55pt"><td style="width:250pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="4"><p class="s15" style="padding-top: 1pt;text-indent: 0pt;text-align: left;">RECEIVED FROM: NAME OF SELLER (VENDOR)</p><p><div id="nameOfSeller">'+ getDesiredRRVendor()  +'</div></p></td><td style="width:78pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="4"><p class="s15" style="padding-left: 11pt;text-indent: 0pt;text-align: left;">BILL OF LADING /<br/><br/>DEL. TICKET NO.</p></td><td style="width:246pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt" colspan="6"><table style="width:100%"><tbody><tr><td valign="top" colspan="2" style="width:100%"><span class="s15" style="padding-left: 11pt;text-indent: 0pt;text-align: left;">CHECK ONE:</span></td></tr><tr><td colspan="1" style="width:10%"><span class="s32" style="padding-top: 3pt;padding-left: 2pt;padding-right: 1pt;line-height: 39%;text-align: top;"><span class="s31">□</span></span></td><td colspan="1" style="width:90%;text-align: left;"><span class="s32" style="padding-left: 2pt;padding-right: 1pt;text-align: left;"><span style=" color: #131313;">THIS IS A PARTIAL DELIVERY</span><br/><br/><span style=" color: #4F4F4F;">(MORE DELIVERIS DUE ON SAME ORDER)</span></span></td></tr><tr><td valign="top" colspan="1" style="width:10%"><span class="s32" style="padding-left: 2pt;padding-right: 1pt;line-height: 39%;text-align: left;"><span class="s31">□</span></span></td><td valign="top" colspan="1" style="width:90%;text-align: left;"><span class="s32" style="padding-left: 2pt;padding-right: 1pt;text-align: left;"><span style=" color: #131313;">FINAL DELIVERY</span><br/><br/></span></td></tr></tbody></table></tr></tbody></table>';
+
+	// htmlTop += '</th></tr>';
+
+	return htmlTop;
+}
+
+
+
+]]></client_script>
+        <description>Retrieve rows from x_dosny_bit_procur_bit_procurement_credit_card_line_items and present those in a nicely formatted HTML table. This script will use a specified rr_year and rr_month from the x_dosny_bit_procur_bit_procurement_receiving_report reference table.&#13;
+&#13;
+This version will show a continuous table in the browser.  It will page-break the dynamic table when there are more than what will fit on the first printed page.&#13;
+Extra page break at the first when multiple pages are needed (print mode).  The 'by vendor' choice will result in a row totaling any sales tax paid on a transaction.</description>
+        <direct>false</direct>
+        <endpoint>x_dosny_vendorrepo_ReceivingReportWithSalesTaxV09.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Receiving Report</title>
+    <style>
+	@media print {
+    /* Apply print-specific styles */
+		a::after {
+            content: " (" attr(href) ")"; /* Display the href attribute after the link text */
+            display: none; /* Hide the actual anchor tag */
+			}
+		@page { /* Define page size and margins */
+			size:8.5in 11in;  /* width height */
+			margin: 5px 5px;
+			margin-right 1.75in;	
+			}
+
+	}
+	/* setting the display property to table-row ensures tr tag behaves like table rows even when dynamically generated. */
+	tr {
+		display: table-row;
+	}
+	td {
+		display: table-cell;
+	}
+
+	/* setting the display property to table-row ensures tr tag behaves like table rows even when dynamically generated. */
+	tr {
+		display: table-row;
+	}
+	td {
+		display: table-cell;
+	}
+    p {
+      color: #131313;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 7pt;
+      margin: 0pt;
+    }
+	/* Always break before the element */
+	.break-before {
+		-webkit-region-page-break-before: always;
+		}
+	/* Avoid page break before the element */
+	.avoid-break {
+		-webkit-region-page-break-before: avoid;
+		}
+	/* Always break after the element */
+	.break-after {
+		-webkit-region-page-break-after: always;
+		}
+	/* Avoid page break after the element */
+	.avoid-break-after {
+		-webkit-region-page-break-after: avoid;
+		}
+    .s15 {
+      color: #131313;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 7pt;
+    }
+	.s15a {
+      color: #131313;
+	  background-color: #D3D3D3;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 7pt;
+    }
+    .s16 {
+      color: black;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 7pt;
+    }
+    .s17 {
+      color: #262626;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 6pt;
+    }
+    .s19 {
+      color: #A5A5A5;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 6pt;
+    }
+    .s24 {
+      color: #131313;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 6pt;
+    }
+    .s25 {
+      color: #131313;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 7pt;
+      vertical-align: 4pt;
+    }
+
+    .s26 {
+      color: black;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 12pt;
+    }
+
+    .s27 {
+      color: black;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 10.5pt;
+    }
+    .s31 { /* check box */
+      color: #131313;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 17pt;
+      vertical-align: 12pt;
+    }
+
+    .s32 {
+      color: #262626;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 6pt;
+    }
+	.inline-block {
+		display: inline-block;
+		margin-right: 10px; /* Add some spacing between them if needed */
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}		
+	.rrcolall {
+		border-top-style: solid; 
+		border-top-width: 1pt; 
+		border-left-style: solid; 
+		border-left-width: 1pt; 
+		border-bottom-style: solid; 
+		border-bottom-width: 1pt; 
+		border-right-style: solid; 
+		border-right-width: 1pt;
+		}
+	.rrcol01 {
+		text-align: center;
+		min-width: 56pt;
+		max-width: 56pt;	
+		}
+	.rrcol02 {
+		word-wrap: break-word; /* Wrap content within cells if needed */
+		text-align: left;
+		min-width: 260pt; /* the col 2a and 2b overlap so 200 + 64 > 258 plus two for boarder widths in the header */
+		max-width: 260pt;
+		overflow:hidden;
+		max-height: 93pt;
+		font-family: "Courier New", monospace;
+		font-size: 10px;
+		}
+	.rrcol02a {
+		background-color:#D3D3D3;
+		text-align: center;
+		min-width: 64pt;
+		max-width: 64pt;
+			}
+	.rrcol02b {
+		text-align: center;
+		min-width: 198pt; /* the col 2a and 2b overlap so 198 + 64 > 262 */
+		max-width: 198pt;
+			}	
+	.rrcol02Total {
+		word-wrap: break-word; /* Wrap content within cells if needed */
+		text-align: left;
+		min-width: 260pt; /* the col 2a and 2b overlap so 200 + 64 > 258 plus two for boarder widths in the header */
+		max-width: 260pt;
+		overflow:hidden;
+		max-height: 93pt;
+		}
+	.rrcol03 {
+		background-color:#D3D3D3;
+		min-width: 38pt;
+		max-width: 38pt;	
+			}
+	.rrcol04 {
+		background-color:#D3D3D3;
+		min-width: 23pt;
+		max-width: 23pt;	
+			}
+	.rrcol05 {
+		background-color:#D3D3D3;
+		min-width: 40pt;
+		max-width: 40pt;	
+			}
+	.rrcol06 {
+		text-align: center;
+		min-width: 43pt;
+		max-width: 43pt;	
+		}
+	.rrcol07 {
+		text-align: center;
+		min-width: 23pt;
+		max-width: 23pt;	
+		}
+	.rrcol08 {
+		text-align: center;
+		min-width: 43pt;
+		max-width: 43pt;	
+		}
+	.rrcol09header {
+		text-align: center;
+		min-width: 47pt;
+		max-width: 47pt;	
+		width:0;
+		}	
+	.rrcol09 {
+		text-align: right;
+		min-width: 47pt;
+		max-width: 47pt;
+		margin-right:5pt;
+
+		}				
+	#tableContainerOuter {
+		position: relative;
+		top: 0;
+		right: 5px;
+		margin-left: 0;
+		margin-right: 0;
+		padding-left:15px;
+		padding-right:0;
+		height: 10in;
+		width: 800px;
+		
+		@media print {
+			position: relative;
+			top: 0;
+			left: 9px;
+			margin-right: 1.75in;
+			max-width: 8.85in;
+			min-width: 100%;
+			min-height: 100%;
+			} 
+		}
+	.tableContainerRow {
+		width: 100%;
+		margin-left: 0;
+		padding-left:0;
+		margin-right: 0;
+		padding-right:0;
+		top: 0;
+		}
+	#rptTitle {
+		display: inline-block;
+		width: 765px;
+		position: relative;
+		top: 0;		
+		
+		@media print {
+			display: none !important;			
+			}
+		}
+	#rptCtrl {
+		display: inline-block;
+		width: 765px;
+		position: relative;
+		top: 0;
+		border-bottom: solid;
+		
+		@media print {
+			display: none !important;		
+			}
+		}
+	#tableContainerMain {
+		position: relative;
+		top: 0;
+		margin-left: -30px;
+		margin-top: 5px;
+		max-width: 800px;
+		
+		@media print {
+			position: relative;
+			top: 0;
+			/* max-height: calc(100vh - 1in); Set the max height to 0.5 inches less than the viewport height 
+			/* margin-bottom: 0.5in; */
+			/* max-height: auto; */
+			}
+		}		
+	#browserTopImageDiv {
+		max-width: 768px;
+		border-style: none; 
+		border-top-width: 1pt; 
+
+		@media print {
+			position: relative; 
+			top: 1px;
+			margin-left: 0;
+			max-width: 768px;
+			max-height: 340px;		
+			}
+		}
+	#browserTopImageDivIntermediate {
+		max-width: 768px;
+		border-style: none; 
+		border-top-width: 1pt; 
+
+		@media print {
+			position: relative; /* vital to print preview in Chrome */
+			top: 0;
+			margin-left: 0;
+			max-width: 768px;
+			max-height: 340px;		
+			}
+		}		
+	#browserTopImageImg {
+		max-width: 99%; /* Ensure the image doesn't exceed the div's width */
+		max-height: 99%; /* Ensure the image doesn't exceed the div's height */
+		display: block; /* Remove any extra spacing below the image */
+		margin: 0 auto; /* Center the image horizontally if necessary */
+		
+		@media print {
+			max-width: 95%; /* Ensure the image doesn't exceed the div's width */
+			max-height: 95%; /* Ensure the image doesn't exceed the div's height */
+			display: block; /* Remove any extra spacing below the image */
+			margin: 0 auto; /* Center the image horizontally if necessary */
+			visibility: visible; /* vital to the Chrome print preview */
+			}
+		}
+	#staticHtml {
+		position: relative;
+		top:0;
+		display: table-header-group;
+		
+		tr {
+		 page-break-after: avoid;
+		}
+		
+		@media print {
+			position: relative;
+			top: 0;
+			}
+		}
+	#render_table {
+		max-width: 800px; /* Set the table width as needed */
+		min-width: 800px; /* Set the table width as needed */
+		margin-left:0;
+		margin-right:10pt;
+		left 30px;
+		}
+	#dynamicHtml {
+		position: relative;
+		top: 0;
+		display: inline-block; /* this is necessary for the scroll bar to appear */
+		border-collapse:collapse;
+		margin-left:0;
+		margin-right:10pt;
+		bottom: 0;
+		max-width: 800px; /* Set the table width as needed */
+		min-width: 800px; /* Set the table width as needed */
+		left 30px;
+
+	#dynamichead {
+		position: relative;
+		top: 0;
+		display: inline-block; /* this is necessary for the scroll bar to appear */
+		border-collapse:collapse;
+		margin-left:0;
+		margin-right:10pt;
+		bottom: 0;
+		max-width: 800px; /* Set the table width as needed */
+		min-width: 800px; /* Set the table width as needed */
+		
+		@media print {
+			position: relative;
+			top: 0;
+			left: 0;			
+			max-width: 800px; /* Set the table width as needed */
+			min-width: 800px; /* Set the table width as needed */
+			}
+		}
+	#browserBottomImageDivLast {
+		position: relative;
+		margin-bottom: 0 !important;	
+		margin-left: 0;
+		margin-top: 5px;
+		max-width: 768px; /* Set the table width as needed */
+		
+		@media print {
+			position: relative; /* vital to print preview in Chrome */
+			bottom: 0 !important;
+			}			
+		}
+	#browserBottomImageDiv {
+		position: relative;
+		bottom: 0 !important;
+		margin-left: 0;
+		margin-top: 5px;
+		max-width: 768px; /* Set the table width as needed */
+		
+		@media print {
+			position: relative; /* vital to print preview in Chrome */
+			margin-bottom: 0.8in !important;
+			}			
+		}
+	#browserBottomImageImg {
+		max-width: 99%; /* Ensure the image doesn't exceed the div's width */
+		max-height: 99%; /* Ensure the image doesn't exceed the div's height */
+		display: block; /* Remove any extra spacing below the image */
+		margin: 0 auto; /* Center the image horizontally if necessary */
+		object-fit: cover;
+		border-bottom-style: solid; 
+		border-bottom-width: 1pt; 	
+		
+		@media print {
+			max-width: 99%; /* Ensure the image doesn't exceed the div's width */
+			max-height: 99%; /* Ensure the image doesn't exceed the div's height */
+			display: block; /* Remove any extra spacing below the image */
+			margin: 0 auto; /* Center the image horizontally if necessary */
+			visibility: visible; /* vital to the Chrome print preview */
+			border-bottom-style: none; 
+			}
+		}
+
+    </style>
+</head>
+<body>
+<!-- 	<form id="frmReceivingReport"  onSubmit="javascript:refreshTbl();"> -->
+		<div id="tableContainerOuter" class="container">
+		    <div id="rptTitle" class="row tableContainerRow">
+				  <div class="col-md-3" id='render_buttonPrint'>Place for Button</div>
+				  <div class="col-md-9"  id='rrTitle'>Receiving Report Month and Year Choices</div>
+		    </div>			
+		    <!-- Year, Month, and Vendor Selects -->
+		    <div id="rptCtrl" class="row tableContainerRow avoid-break avoid-break-after">
+				<div class="col-md-3">
+					<div id="render_yearSelect">Default year select</div>
+				</div>
+				<div class="col-md-3">
+					<div id="render_monthSelect">Default month select</div>
+				</div>
+				<div class="col-md-6 text-right">
+					<div id="render_vendorSelect">Default vendor select</div>
+				</div>
+		    </div>
+			
+			<div id="tableContainerMain" class="row tableContainerRow">
+				<div class="col-md-12">
+					<!-- render_table includes table thead th and td tbody and tfoot tags -->
+						<div id="render_table"></div>
+				</div>
+			</div>			
+	
+		</div>
+<!-- 	</form> -->
+
+</body>
+
+</html>
+</j:jelly>]]></html>
+        <name>ReceivingReportWithSalesTaxV09</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>sfarkas</sys_created_by>
+        <sys_created_on>2023-10-18 14:19:29</sys_created_on>
+        <sys_id>0d7118541b0a31106c1036ef034bcbad</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>ReceivingReportWithSalesTaxV09</sys_name>
+        <sys_package display_value="ReceivingReport" source="x_dosny_vendorrepo">bbcb77921bcdf110baac766e034bcb72</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ReceivingReport">bbcb77921bcdf110baac766e034bcb72</sys_scope>
+        <sys_update_name>sys_ui_page_0d7118541b0a31106c1036ef034bcbad</sys_update_name>
+        <sys_updated_by>sfarkas</sys_updated_by>
+        <sys_updated_on>2023-10-18 16:30:04</sys_updated_on>
+    </sys_ui_page>
+</record_update>

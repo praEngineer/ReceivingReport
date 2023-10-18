@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="e78008c41b4af110baac766e034bcb9f" extends="sys_import_set_row" label="ReceivingReport60dayRawData" max_length="40" name="x_dosny_vendorrepo_receivingreport60dayrawdata" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=1099 Indicator" label="1099 Indicator" max_length="40" name="u_1099_indicator" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Account Number" label="Account Number" max_length="40" name="u_account_number" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Approval Indicator 1" label="Approval Indicator 1" max_length="40" name="u_approval_indicator_1" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Approval Indicator 2" label="Approval Indicator 2" max_length="40" name="u_approval_indicator_2" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Approval Indicator 3" label="Approval Indicator 3" max_length="40" name="u_approval_indicator_3" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Approval Indicator 4" label="Approval Indicator 4" max_length="40" name="u_approval_indicator_4" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Approval Indicator 5" label="Approval Indicator 5" max_length="40" name="u_approval_indicator_5" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Billed To Account" label="Billed To Account" max_length="40" name="u_billed_to_account" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Cardholder First Name" label="Cardholder First Name" max_length="40" name="u_cardholder_first_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Cardholder Last Name" label="Cardholder Last Name" max_length="40" name="u_cardholder_last_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Cardholder Middle Initial" label="Cardholder Middle Initial" max_length="40" name="u_cardholder_middle_initial" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Central Bill Account" label="Central Bill Account" max_length="40" name="u_central_bill_account" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Chart of Accounts" label="Chart of Accounts " max_length="40" name="u_chart_of_accounts" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Customer Code" label="Customer Code" max_length="40" name="u_customer_code" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Custom Field Value 1" label="Custom Field Value 1" max_length="40" name="u_custom_field_value_1" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Custom Field Value 10" label="Custom Field Value 10" max_length="40" name="u_custom_field_value_10" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Custom Field Value 2" label="Custom Field Value 2" max_length="40" name="u_custom_field_value_2" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Custom Field Value 3" label="Custom Field Value 3" max_length="40" name="u_custom_field_value_3" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Custom Field Value 4" label="Custom Field Value 4" max_length="40" name="u_custom_field_value_4" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Custom Field Value 5" label="Custom Field Value 5" max_length="40" name="u_custom_field_value_5" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Custom Field Value 6" label="Custom Field Value 6" max_length="40" name="u_custom_field_value_6" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Custom Field Value 7" label="Custom Field Value 7" max_length="40" name="u_custom_field_value_7" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Custom Field Value 8" label="Custom Field Value 8" max_length="40" name="u_custom_field_value_8" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Custom Field Value 9" label="Custom Field Value 9" max_length="40" name="u_custom_field_value_9" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Dispute Indicator" label="Dispute Indicator" max_length="40" name="u_dispute_indicator" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Dispute Status" label="Dispute Status" max_length="40" name="u_dispute_status" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Diversion Account" label="Diversion Account" max_length="40" name="u_diversion_account" type="string"/>
+        <element attributes="import_attribute_name=Exchange Rate" label="Exchange Rate" max_length="40" name="u_exchange_rate" type="integer"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Hierarchy Description" label="Hierarchy Description" max_length="40" name="u_hierarchy_description" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Hierarchy ID" label="Hierarchy ID" max_length="40" name="u_hierarchy_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Item Description" label="Item Description" max_length="40" name="u_item_description" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Item Detail Tax Amount" label="Item Detail Tax Amount" max_length="40" name="u_item_detail_tax_amount" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Item Quantity" label="Item Quantity" max_length="40" name="u_item_quantity" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Item Unit Price Amount" label="Item Unit Price Amount" max_length="40" name="u_item_unit_price_amount" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Line Item Total" label="Line Item Total" max_length="40" name="u_line_item_total" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=MCC" label="MCC" max_length="40" name="u_mcc" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=MCC Description" label="MCC Description" max_length="50" name="u_mcc_description" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Merchant Address 1" label="Merchant Address 1" max_length="40" name="u_merchant_address_1" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Merchant Address 2" label="Merchant Address 2" max_length="40" name="u_merchant_address_2" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Merchant City" label="Merchant City" max_length="40" name="u_merchant_city" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Merchant Country" label="Merchant Country" max_length="40" name="u_merchant_country" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Merchant Name" label="Merchant Name" max_length="40" name="u_merchant_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Merchant Postal Code" label="Merchant Postal Code" max_length="40" name="u_merchant_postal_code" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Merchant State/Province" label="Merchant State/Province" max_length="40" name="u_merchant_state_province" type="string"/>
+        <element attributes="import_attribute_name=Merchant Surcharge" label="Merchant Surcharge" max_length="40" name="u_merchant_surcharge" type="integer"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Merchant Type" label="Merchant Type" max_length="44" name="u_merchant_type" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Order ID" label="Order ID" max_length="40" name="u_order_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Order Status" label="Order Status" max_length="40" name="u_order_status" type="string"/>
+        <element attributes="import_attribute_name=Original Amount" label="Original Amount" max_length="15" name="u_original_amount" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Original Currency" label="Original Currency " max_length="40" name="u_original_currency" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Original Merchant Name" label="Original Merchant Name" max_length="40" name="u_original_merchant_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Parent Merchant Name" label="Parent Merchant Name" max_length="40" name="u_parent_merchant_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Post Date" label="Post Date" max_length="40" name="u_post_date" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Reference Number" label="Reference Number" max_length="40" name="u_reference_number" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Requestor" label="Requestor" max_length="40" name="u_requestor" type="string"/>
+        <element attributes="import_attribute_name=Sales Tax" label="Sales Tax" max_length="15" name="u_sales_tax" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Settled Currency" label="Settled Currency" max_length="40" name="u_settled_currency" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Socio-Economic Indicator 1" label="Socio-Economic Indicator 1" max_length="40" name="u_socio_economic_indicator_1" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Socio-Economic Indicator 2" label="Socio-Economic Indicator 2" max_length="40" name="u_socio_economic_indicator_2" type="string"/>
+        <element attributes="import_attribute_name=Transaction Amount" label="Transaction Amount" max_length="15" name="u_transaction_amount" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Transaction Approval Status" label="Transaction Approval Status" max_length="40" name="u_transaction_approval_status" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Transaction Approver Name 1" label="Transaction Approver Name 1" max_length="40" name="u_transaction_approver_name_1" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Transaction Approver Name 2" label="Transaction Approver Name 2" max_length="40" name="u_transaction_approver_name_2" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Transaction Approver Name 3" label="Transaction Approver Name 3" max_length="40" name="u_transaction_approver_name_3" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Transaction Approver Name 4" label="Transaction Approver Name 4" max_length="40" name="u_transaction_approver_name_4" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Transaction Approver Name 5" label="Transaction Approver Name 5" max_length="40" name="u_transaction_approver_name_5" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Transaction Code" label="Transaction Code" max_length="40" name="u_transaction_code" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Transaction Code Reason Code" label="Transaction Code Reason Code" max_length="40" name="u_transaction_code_reason_code" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Transaction Date" label="Transaction Date" max_length="40" name="u_transaction_date" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Transaction ID" label="Transaction ID" max_length="40" name="u_transaction_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Transaction Notes" label="Transaction Notes" max_length="56" name="u_transaction_notes" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Transaction Type" label="Transaction Type" max_length="40" name="u_transaction_type" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Transaction Item COA Segment Value 1" label="Transaction Item COA Segment Value 1" max_length="40" name="u_transaction__egment_value_1" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Transaction Item COA Segment Value 2" label="Transaction Item COA Segment Value 2" max_length="40" name="u_transaction__egment_value_2" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Transaction Item COA Segment Value 3" label="Transaction Item COA Segment Value 3" max_length="40" name="u_transaction__egment_value_3" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Transaction Item COA Segment Value 4" label="Transaction Item COA Segment Value 4" max_length="40" name="u_transaction__egment_value_4" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Transaction Item COA Segment Value 5" label="Transaction Item COA Segment Value 5" max_length="40" name="u_transaction__egment_value_5" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Transaction Item COA Segment Value 6" label="Transaction Item COA Segment Value 6" max_length="40" name="u_transaction__egment_value_6" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Transaction Item COA Segment Value 7" label="Transaction Item COA Segment Value 7" max_length="40" name="u_transaction__egment_value_7" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Transaction Item COA Segment Value 9" label="Transaction Item COA Segment Value 9" max_length="40" name="u_transaction__egment_value_9" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Transaction Convenience Check Number" label="Transaction Convenience Check Number" max_length="40" name="u_transaction__e_check_number" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Transaction Item COA Segment Value 10" label="Transaction Item COA Segment Value 10" max_length="40" name="u_transaction__gment_value_10" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Transaction Item COA Segment Value  8" label="Transaction Item COA Segment Value  8" max_length="40" name="u_transaction__gment_value__8" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Transaction Authorization Number" label="Transaction Authorization Number" max_length="40" name="u_transaction__ization_number" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Transaction Export Status Code" label="Transaction Export Status Code" max_length="40" name="u_transaction__rt_status_code" type="string"/>
+    </element>
+</database>

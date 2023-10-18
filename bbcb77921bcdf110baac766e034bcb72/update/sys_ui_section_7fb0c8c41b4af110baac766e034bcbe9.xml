@@ -1,0 +1,1261 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="7fb0c8c41b4af110baac766e034bcbe9" sys_domain="global" table="x_dosny_vendorrepo_receivingreport60dayrawdata" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>0</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>73b0c8c41b4af110baac766e034bcbf1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_1099_indicator</element>
+            <position>1</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c4c08cc41b4af110baac766e034bcb08</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_account_number</element>
+            <position>2</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c8c08cc41b4af110baac766e034bcb08</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_approval_indicator_1</element>
+            <position>3</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>ccc08cc41b4af110baac766e034bcb08</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_approval_indicator_2</element>
+            <position>4</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c0c08cc41b4af110baac766e034bcb09</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_approval_indicator_3</element>
+            <position>5</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c4c08cc41b4af110baac766e034bcb09</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_approval_indicator_4</element>
+            <position>6</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c8c08cc41b4af110baac766e034bcb09</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_approval_indicator_5</element>
+            <position>7</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>ccc08cc41b4af110baac766e034bcb09</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_billed_to_account</element>
+            <position>8</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c0c08cc41b4af110baac766e034bcb0a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_central_bill_account</element>
+            <position>9</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c4c08cc41b4af110baac766e034bcb0a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_chart_of_accounts</element>
+            <position>10</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c8c08cc41b4af110baac766e034bcb0a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_customer_code</element>
+            <position>11</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>ccc08cc41b4af110baac766e034bcb0a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_custom_field_value_10</element>
+            <position>12</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c0c08cc41b4af110baac766e034bcb0b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_dispute_indicator</element>
+            <position>13</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c4c08cc41b4af110baac766e034bcb0b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_item_unit_price_amount</element>
+            <position>14</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c8c08cc41b4af110baac766e034bcb0b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_mcc_description</element>
+            <position>15</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>ccc08cc41b4af110baac766e034bcb0b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_merchant_address_1</element>
+            <position>16</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c0c08cc41b4af110baac766e034bcb0c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_merchant_address_2</element>
+            <position>17</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c4c08cc41b4af110baac766e034bcb0c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_merchant_country</element>
+            <position>18</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c8c08cc41b4af110baac766e034bcb0c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_merchant_surcharge</element>
+            <position>19</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>ccc08cc41b4af110baac766e034bcb0c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_order_id</element>
+            <position>20</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c0c08cc41b4af110baac766e034bcb0d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_original_currency</element>
+            <position>21</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c4c08cc41b4af110baac766e034bcb0d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_original_merchant_name</element>
+            <position>22</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c8c08cc41b4af110baac766e034bcb0d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_parent_merchant_name</element>
+            <position>23</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>ccc08cc41b4af110baac766e034bcb0d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_transaction_amount</element>
+            <position>24</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c0c08cc41b4af110baac766e034bcb0e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_transaction_approval_status</element>
+            <position>25</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c4c08cc41b4af110baac766e034bcb0e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_transaction_approver_name_2</element>
+            <position>26</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c8c08cc41b4af110baac766e034bcb0e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_transaction_code</element>
+            <position>27</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>ccc08cc41b4af110baac766e034bcb0e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_transaction__egment_value_2</element>
+            <position>28</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c0c08cc41b4af110baac766e034bcb0f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_transaction__egment_value_3</element>
+            <position>29</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c4c08cc41b4af110baac766e034bcb0f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_transaction__egment_value_4</element>
+            <position>30</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c8c08cc41b4af110baac766e034bcb0f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_transaction__egment_value_5</element>
+            <position>31</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>ccc08cc41b4af110baac766e034bcb0f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_transaction__egment_value_6</element>
+            <position>32</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c0c08cc41b4af110baac766e034bcb10</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_transaction__egment_value_7</element>
+            <position>33</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c4c08cc41b4af110baac766e034bcb10</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_transaction__egment_value_9</element>
+            <position>34</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c8c08cc41b4af110baac766e034bcb10</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_transaction__gment_value_10</element>
+            <position>35</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>ccc08cc41b4af110baac766e034bcb10</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_transaction__gment_value__8</element>
+            <position>36</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c0c08cc41b4af110baac766e034bcb11</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_cardholder_first_name</element>
+            <position>37</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c4c08cc41b4af110baac766e034bcb11</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_cardholder_last_name</element>
+            <position>38</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c8c08cc41b4af110baac766e034bcb11</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_cardholder_middle_initial</element>
+            <position>39</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>ccc08cc41b4af110baac766e034bcb11</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_custom_field_value_1</element>
+            <position>40</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c0c08cc41b4af110baac766e034bcb12</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_custom_field_value_2</element>
+            <position>41</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c4c08cc41b4af110baac766e034bcb12</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_custom_field_value_3</element>
+            <position>42</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c8c08cc41b4af110baac766e034bcb12</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_custom_field_value_4</element>
+            <position>43</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>ccc08cc41b4af110baac766e034bcb12</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>44</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c0c08cc41b4af110baac766e034bcb13</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_custom_field_value_5</element>
+            <position>45</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c4c08cc41b4af110baac766e034bcb13</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_custom_field_value_6</element>
+            <position>46</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c8c08cc41b4af110baac766e034bcb13</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_custom_field_value_7</element>
+            <position>47</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>ccc08cc41b4af110baac766e034bcb13</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_custom_field_value_8</element>
+            <position>48</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c0c08cc41b4af110baac766e034bcb14</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_custom_field_value_9</element>
+            <position>49</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c4c08cc41b4af110baac766e034bcb14</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_dispute_status</element>
+            <position>50</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c8c08cc41b4af110baac766e034bcb14</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_diversion_account</element>
+            <position>51</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>ccc08cc41b4af110baac766e034bcb14</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_exchange_rate</element>
+            <position>52</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c0c08cc41b4af110baac766e034bcb15</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_hierarchy_description</element>
+            <position>53</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c4c08cc41b4af110baac766e034bcb15</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_hierarchy_id</element>
+            <position>54</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c8c08cc41b4af110baac766e034bcb15</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_item_description</element>
+            <position>55</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>ccc08cc41b4af110baac766e034bcb15</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_item_detail_tax_amount</element>
+            <position>56</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c0c08cc41b4af110baac766e034bcb16</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_item_quantity</element>
+            <position>57</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c4c08cc41b4af110baac766e034bcb16</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_line_item_total</element>
+            <position>58</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c8c08cc41b4af110baac766e034bcb16</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_mcc</element>
+            <position>59</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>ccc08cc41b4af110baac766e034bcb16</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_merchant_city</element>
+            <position>60</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c0c08cc41b4af110baac766e034bcb17</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_merchant_name</element>
+            <position>61</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c4c08cc41b4af110baac766e034bcb17</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_merchant_postal_code</element>
+            <position>62</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c8c08cc41b4af110baac766e034bcb17</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_merchant_state_province</element>
+            <position>63</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>ccc08cc41b4af110baac766e034bcb17</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_merchant_type</element>
+            <position>64</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c0c08cc41b4af110baac766e034bcb18</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_order_status</element>
+            <position>65</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c4c08cc41b4af110baac766e034bcb18</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_original_amount</element>
+            <position>66</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c8c08cc41b4af110baac766e034bcb18</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_post_date</element>
+            <position>67</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>ccc08cc41b4af110baac766e034bcb18</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_reference_number</element>
+            <position>68</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c0c08cc41b4af110baac766e034bcb19</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_requestor</element>
+            <position>69</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c4c08cc41b4af110baac766e034bcb19</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_sales_tax</element>
+            <position>70</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c8c08cc41b4af110baac766e034bcb19</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_settled_currency</element>
+            <position>71</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>ccc08cc41b4af110baac766e034bcb19</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_socio_economic_indicator_1</element>
+            <position>72</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c0c08cc41b4af110baac766e034bcb1a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_socio_economic_indicator_2</element>
+            <position>73</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c4c08cc41b4af110baac766e034bcb1a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_transaction_approver_name_1</element>
+            <position>74</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c8c08cc41b4af110baac766e034bcb1a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_transaction_approver_name_3</element>
+            <position>75</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>ccc08cc41b4af110baac766e034bcb1a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_transaction_approver_name_4</element>
+            <position>76</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c0c08cc41b4af110baac766e034bcb1b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_transaction_approver_name_5</element>
+            <position>77</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c4c08cc41b4af110baac766e034bcb1b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_transaction_code_reason_code</element>
+            <position>78</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c8c08cc41b4af110baac766e034bcb1b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_transaction_date</element>
+            <position>79</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>ccc08cc41b4af110baac766e034bcb1b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_transaction_id</element>
+            <position>80</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c0c08cc41b4af110baac766e034bcb1c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_transaction_notes</element>
+            <position>81</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c4c08cc41b4af110baac766e034bcb1c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_transaction_type</element>
+            <position>82</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c8c08cc41b4af110baac766e034bcb1c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_transaction__egment_value_1</element>
+            <position>83</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>ccc08cc41b4af110baac766e034bcb1c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_transaction__e_check_number</element>
+            <position>84</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c0c08cc41b4af110baac766e034bcb1d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_transaction__ization_number</element>
+            <position>85</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c4c08cc41b4af110baac766e034bcb1d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_transaction__rt_status_code</element>
+            <position>86</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>c8c08cc41b4af110baac766e034bcb1d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>87</position>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_id>ccc08cc41b4af110baac766e034bcb1d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dosny_vendorrepo_receivingreport60dayrawdata" sys_domain="global" view="Default view">7fb0c8c41b4af110baac766e034bcbe9</sys_ui_section>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_dosny_vendorrepo_receivingreport60dayrawdata</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>sfarkas</sys_created_by>
+            <sys_created_on>2023-10-17 18:25:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7fb0c8c41b4af110baac766e034bcbe9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_dosny_vendorrepo_receivingreport60dayrawdata</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="ReceivingReport" source="x_dosny_vendorrepo">bbcb77921bcdf110baac766e034bcb72</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="ReceivingReport">bbcb77921bcdf110baac766e034bcb72</sys_scope>
+            <sys_update_name>sys_ui_section_7fb0c8c41b4af110baac766e034bcbe9</sys_update_name>
+            <sys_updated_by>sfarkas</sys_updated_by>
+            <sys_updated_on>2023-10-17 18:25:22</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

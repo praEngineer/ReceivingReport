@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="System Import Sets" source="com.glide.system_import_set">e26a8f35db231300f93cdb85ca961955</dependency>
+        <min_version>1.0.0</min_version>
+        <sys_created_by>sfarkas</sys_created_by>
+        <sys_created_on>2023-10-17 18:24:33</sys_created_on>
+        <sys_id>c09048c41b4af110baac766e034bcb77</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="ReceivingReport" source="x_dosny_vendorrepo">bbcb77921bcdf110baac766e034bcb72</sys_package>
+        <sys_updated_by>sfarkas</sys_updated_by>
+        <sys_updated_on>2023-10-17 18:24:33</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>
