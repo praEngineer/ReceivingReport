@@ -165,6 +165,16 @@ function insertLineBreaks(text, charactersPerLine) {
   return result;
 }
 
+// Create our number formatter.
+var formatter = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+
+  // These options are needed to round to whole numbers if that's what you want.
+  //minimumFractionDigits: 0, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
+  //maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
+});
+
 function getRecordsJSON(response) {
 	var answer = "";
 	step = 1.1;
@@ -287,7 +297,7 @@ function getRecordsJSON(response) {
 		if (total_sales_tax > 0 && lclVendor.length > 0 ) {
 			lclVendor = 'Sales Tax paid to ' + lclVendor.replace('*',''); // othersise interpreted as multiplication
 			formattedRow = currRow < 10 ? 'Row0' + currRow : 'Row' + currRow;
-					html += '<tr id="Row"'+formattedRow +'" class="avoid-break"><td class="rrcolall rrcol01" id="' + formattedRow +'Cell01">' + '&nbsp;' + '</td><td class="rrcolall rrcol02" colspan="2"  id="' + formattedRow +'Cell02">' + lclVendor + '<br/>' + '&nbsp;' + '</td><td class="rrcolall rrcol03" id="' + formattedRow +'Cell03">' +  '&nbsp;' + '</td><td class="rrcolall rrcol04" id="' + formattedRow +'Cell04">' +  '&nbsp;' + '</td><td class="rrcolall rrcol05" id="' + formattedRow +'Cell05">' +  '&nbsp;' + '<td class="rrcolall rrcol06" id="' + formattedRow +'Cell06">' + '&nbsp;' + '</td><td class="rrcolall rrcol07" id="' + formattedRow +'Cell07">' +  '&nbsp;' + '<td class="rrcolall rrcol08" id="' + formattedRow +'Cell08">' + Intl.NumberFormat().format(total_sales_tax) + '</td><td class="rrcolall rrcol09" id="' + formattedRow +'Cell09">' + '&nbsp;' + '</td></tr>';
+					html += '<tr id="Row"'+formattedRow +'" class="avoid-break"><td class="rrcolall rrcol01" id="' + formattedRow +'Cell01">' + '&nbsp;' + '</td><td class="rrcolall rrcol02" colspan="2"  id="' + formattedRow +'Cell02">' + lclVendor + '<br/>' + '&nbsp;' + '</td><td class="rrcolall rrcol03" id="' + formattedRow +'Cell03">' +  '&nbsp;' + '</td><td class="rrcolall rrcol04" id="' + formattedRow +'Cell04">' +  '&nbsp;' + '</td><td class="rrcolall rrcol05" id="' + formattedRow +'Cell05">' +  '&nbsp;' + '<td class="rrcolall rrcol06" id="' + formattedRow +'Cell06">' + '&nbsp;' + '</td><td class="rrcolall rrcol07" id="' + formattedRow +'Cell07">' +  '&nbsp;' + '<td class="rrcolall rrcol08" id="' + formattedRow +'Cell08">' + formatter.format(total_sales_tax) + '</td><td class="rrcolall rrcol09" id="' + formattedRow +'Cell09">' + '&nbsp;' + '</td></tr>';
 					currRow += 1; // blank row is considered a data row on the table
 					tblRow += 2; // assumes two rows for each description
 		}
@@ -1174,13 +1184,13 @@ Extra page break at the first when multiple pages are needed (print mode).  The 
         <sys_created_by>sfarkas</sys_created_by>
         <sys_created_on>2023-10-18 14:19:29</sys_created_on>
         <sys_id>0d7118541b0a31106c1036ef034bcbad</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>ReceivingReportWithSalesTaxV09</sys_name>
         <sys_package display_value="ReceivingReport" source="x_dosny_vendorrepo">bbcb77921bcdf110baac766e034bcb72</sys_package>
         <sys_policy/>
         <sys_scope display_value="ReceivingReport">bbcb77921bcdf110baac766e034bcb72</sys_scope>
         <sys_update_name>sys_ui_page_0d7118541b0a31106c1036ef034bcbad</sys_update_name>
         <sys_updated_by>sfarkas</sys_updated_by>
-        <sys_updated_on>2023-10-18 16:30:04</sys_updated_on>
+        <sys_updated_on>2023-10-30 17:10:23</sys_updated_on>
     </sys_ui_page>
 </record_update>
